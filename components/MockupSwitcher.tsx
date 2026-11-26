@@ -10,17 +10,20 @@ interface MockupSwitcherProps {
 
 export default function MockupSwitcher({ current }: MockupSwitcherProps) {
   return (
-    <aside aria-label="Mockup Version Switcher" className="fixed top-20 right-4 z-50 animate-fadeIn hidden sm:flex items-center gap-1.5 p-1.5 bg-[#002D56]/90 backdrop-blur-xl rounded-full border border-white/20 shadow-2xl text-xs">
-      <div className="flex items-center gap-1 px-2.5 py-1 text-white/70 font-semibold tracking-wider uppercase text-[10px]">
+    <aside
+      aria-label="Mockup Version Switcher"
+      className="fixed bottom-6 right-6 z-50 animate-fadeIn hidden sm:flex items-center gap-1.5 p-1.5 bg-[#001E3B]/90 backdrop-blur-xl rounded-full border border-white/25 shadow-2xl text-xs"
+    >
+      <div className="flex items-center gap-1 px-3 py-1 text-white/75 font-semibold tracking-wider uppercase text-[10px]">
         <Layers className="w-3.5 h-3.5 text-[#FFB347]" />
         <span>Mockup:</span>
       </div>
 
       <Link
         href="/mockup-1"
-        className={`px-3 py-1.5 rounded-full font-semibold transition-all ${
+        className={`px-3.5 py-1.5 rounded-full font-semibold transition-all ${
           current === "mockup-1"
-            ? "bg-white text-[#004583] shadow-md scale-105"
+            ? "bg-white text-[#004583] shadow-md scale-105 font-bold"
             : "text-white/80 hover:text-white hover:bg-white/10"
         }`}
       >
@@ -29,14 +32,14 @@ export default function MockupSwitcher({ current }: MockupSwitcherProps) {
 
       <Link
         href="/"
-        className={`px-3 py-1.5 rounded-full font-semibold flex items-center gap-1 transition-all ${
+        className={`px-3.5 py-1.5 rounded-full font-semibold flex items-center gap-1 transition-all ${
           current === "mockup-2"
             ? "bg-gradient-to-r from-[#FFB347] to-[#E59830] text-slate-950 shadow-md scale-105 font-bold"
             : "text-white/80 hover:text-white hover:bg-white/10"
         }`}
       >
         <Sparkles className="w-3 h-3" />
-        Version 2 (Tropical Modern)
+        Version 2 (Tropical)
       </Link>
     </aside>
   );
