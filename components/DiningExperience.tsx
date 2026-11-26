@@ -5,11 +5,11 @@ import { DINING_DATA } from "@/data/hotelData";
 
 export default function DiningExperience() {
   const waDiningUrl = `https://wa.me/628113502280?text=${encodeURIComponent(
-    "Halo Marlin Restaurant & Beach Club, saya ingin reservasi meja / menanyakan menu santap tepi pantai."
+    "Hello Marlin Restaurant & Beach Club, I would like to inquire about table reservations and beachfront dining."
   )}`;
 
   return (
-    <section id="dining" className="py-24 bg-[#0A2239] text-white relative overflow-hidden">
+    <section id="dining" className="py-24 bg-[#061524] text-white relative overflow-hidden">
       {/* Decorative background glow */}
       <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#C69C6D]/10 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 left-10 w-96 h-96 bg-[#134057]/40 rounded-full blur-3xl pointer-events-none" />
@@ -22,10 +22,10 @@ export default function DiningExperience() {
             Culinary Journeys & Beach Club
           </div>
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight">
-            Sensasi Kuliner Pesisir & Santap Tepi Laut
+            Coastal Gastronomy & Oceanfront Dining
           </h2>
           <p className="mt-4 text-white/80 text-sm sm:text-base leading-relaxed">
-            Dari hidangan legendaris Ayam Betutu Selat Bali hingga tangkapan laut segar bakar kayu, nikmati kelezatan rasa dengan latar suara deburan ombak dan siluet pulau Bali.
+            From authentic Ayam Betutu Selat Bali to wood-fired fresh coastal catches, savor rich regional flavors set against the rhythm of gentle waves and the silhouette of Bali island.
           </p>
         </div>
 
@@ -45,9 +45,9 @@ export default function DiningExperience() {
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0A2239] via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#061524] via-transparent to-transparent" />
 
-                <div className="absolute top-4 left-4 bg-[#0A2239]/80 backdrop-blur-md px-3 py-1 rounded-full text-xs font-semibold text-[#D8B48D] border border-white/10">
+                <div className="absolute top-4 left-4 bg-[#061524]/85 backdrop-blur-md px-3 py-1 rounded-full text-xs font-semibold text-[#D8B48D] border border-white/10">
                   {venue.atmosphere}
                 </div>
 
@@ -74,7 +74,7 @@ export default function DiningExperience() {
                   {/* Signature Dishes */}
                   <div className="bg-white/5 rounded-2xl p-4 border border-white/10">
                     <span className="text-xs font-bold uppercase tracking-wider text-[#D8B48D] block mb-2.5 flex items-center gap-1.5">
-                      <Sparkles className="w-3.5 h-3.5" /> Menu Rekomendasi Chef:
+                      <Sparkles className="w-3.5 h-3.5" /> Chef&apos;s Signature Recommendations:
                     </span>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                       {venue.signatureDishes.map((dish, i) => (
@@ -90,7 +90,7 @@ export default function DiningExperience() {
                 {/* Reservation Action */}
                 <div className="mt-8 pt-5 border-t border-white/10 flex flex-wrap items-center justify-between gap-4">
                   <div className="text-xs text-white/60">
-                    <span>Terbuka untuk tamu menginap & pengunjung luar</span>
+                    <span>Welcoming both in-house resort guests & outside visitors</span>
                   </div>
                   <a
                     href={waDiningUrl}
@@ -99,7 +99,7 @@ export default function DiningExperience() {
                     className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#C69C6D] hover:bg-[#D8B48D] text-slate-950 font-bold text-xs uppercase tracking-wider transition-all shadow-md"
                   >
                     <MessageCircle className="w-4 h-4 text-slate-950" />
-                    <span>Reservasi Meja</span>
+                    <span>Reserve a Table</span>
                   </a>
                 </div>
               </div>

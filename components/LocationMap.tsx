@@ -4,27 +4,27 @@ import { HOTEL_INFO } from "@/data/hotelData";
 
 const TRANSIT_HUBS = [
   {
-    name: "Pelabuhan Feri Ketapang (Penyeberangan Bali)",
-    distance: "3,2 km",
-    time: "5 Menit",
+    name: "Ketapang Ferry Port (Bali Strait Crossing)",
+    distance: "3.2 km",
+    time: "5 Minutes",
     icon: <Ship className="w-4 h-4 text-sky-600" />,
   },
   {
-    name: "Stasiun Kereta Api Ketapang (Banyuwangi Baru)",
-    distance: "4,0 km",
-    time: "7 Menit",
+    name: "Ketapang Railway Station (Banyuwangi Baru)",
+    distance: "4.0 km",
+    time: "7 Minutes",
     icon: <Train className="w-4 h-4 text-emerald-600" />,
   },
   {
-    name: "Bandara Internasional Banyuwangi (BWX)",
+    name: "Banyuwangi International Airport (BWX)",
     distance: "22 km",
-    time: "35 Menit",
+    time: "35 Minutes",
     icon: <Plane className="w-4 h-4 text-purple-600" />,
   },
   {
-    name: "Paltuding (Basecamp Pendakian Kawah Ijen)",
+    name: "Paltuding (Mount Ijen Blue Fire Basecamp)",
     distance: "38 km",
-    time: "60 Menit",
+    time: "60 Minutes",
     icon: <Car className="w-4 h-4 text-amber-600" />,
   },
 ];
@@ -43,10 +43,10 @@ export default function LocationMap() {
             Prime Location & Access
           </div>
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0A2239] tracking-tight">
-            Lokasi Sangat Strategis di Pesisir Banyuwangi
+            A Prime Coastal Enclave in Banyuwangi
           </h2>
           <p className="mt-4 text-slate-600 text-sm sm:text-base leading-relaxed">
-            Hanya beberapa menit dari dermaga feri menuju Pulau Bali dan stasiun kereta api utama, serta menjadi titik tolak ternyaman menuju pendakian Kawah Ijen.
+            Moments away from the ferry port to the island of Bali and the main railway station, and the most restful starting point for your Mount Ijen trek.
           </p>
         </div>
 
@@ -60,7 +60,7 @@ export default function LocationMap() {
                 </div>
                 <div>
                   <h3 className="font-serif text-lg font-bold text-[#0A2239]">
-                    Alamat Resmi Resor
+                    Official Resort Address
                   </h3>
                   <p className="mt-1 text-xs sm:text-sm text-slate-600 leading-relaxed">
                     {HOTEL_INFO.address}
@@ -71,7 +71,7 @@ export default function LocationMap() {
               {/* Transit Distance List */}
               <div className="mt-6">
                 <span className="text-xs font-bold uppercase tracking-wider text-slate-400 block mb-3">
-                  Waktu Tempuh Titik Transportasi:
+                  Transit Driving Times:
                 </span>
                 <div className="space-y-3">
                   {TRANSIT_HUBS.map((hub, i) => (
@@ -98,10 +98,10 @@ export default function LocationMap() {
             {/* Shuttle Service Card */}
             <div className="mt-8 pt-6 border-t border-slate-100 bg-[#FAF7F2] p-4 rounded-2xl">
               <p className="text-xs font-bold text-[#0A2239] mb-1">
-                Butuh Antar-Jemput Stasiun / Bandara?
+                Require Airport or Train Station Transfers?
               </p>
               <p className="text-[11px] text-slate-600 mb-3">
-                Hotel menyediakan armada mobil ber-AC dan sopir terpercaya untuk penjemputan Anda.
+                Ketapang Indah provides private chauffeured vehicles for seamless and comfortable transfers.
               </p>
               <div className="flex items-center gap-2">
                 <a
@@ -111,15 +111,15 @@ export default function LocationMap() {
                   className="flex-1 py-2.5 px-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-semibold text-xs text-center transition-colors flex items-center justify-center gap-1.5"
                 >
                   <Navigation className="w-3.5 h-3.5" />
-                  <span>Buka Google Maps</span>
+                  <span>Google Maps</span>
                 </a>
                 <a
-                  href="https://wa.me/628113502280?text=Halo%20Ketapang%20Indah%20Hotel,%20saya%20ingin%20memesan%20layanan%20shuttle%20antar-jemput."
+                  href="https://wa.me/628113502280?text=Hello%20Ketapang%20Indah%20Hotel,%20I%20would%20like%20to%20arrange%20airport%20transfer%20service."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex-1 py-2.5 px-3 rounded-xl bg-[#C69C6D] hover:bg-[#D8B48D] text-slate-950 font-bold text-xs text-center transition-colors"
                 >
-                  Pesan Shuttle
+                  Book Transfer
                 </a>
               </div>
             </div>
@@ -135,7 +135,7 @@ export default function LocationMap() {
               allowFullScreen={true}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Peta Lokasi Ketapang Indah Hotel Banyuwangi"
+              title="Location Map of Ketapang Indah Hotel Banyuwangi"
               className="absolute inset-0 w-full h-full"
             />
           </div>

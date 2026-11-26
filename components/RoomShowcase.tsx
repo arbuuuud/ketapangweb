@@ -41,10 +41,10 @@ export default function RoomShowcase() {
               Accommodations Collection
             </div>
             <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0A2239] tracking-tight">
-              Pilihan Kamar, Cottage & Suite
+              Rooms, Cottages & Ocean Suites
             </h2>
             <p className="mt-3 text-slate-600 text-sm sm:text-base max-w-2xl leading-relaxed">
-              Setiap kamar dirancang dengan memadukan kenyamanan modern dan keteduhan alam tropis Banyuwangi. Pilih suaka peristirahatan yang paling tepat untuk Anda dan keluarga.
+              Every sanctuary blends modern coastal refinement with the natural serenity of Banyuwangi. Choose your ideal retreat for personal rejuvenation or a family holiday.
             </p>
           </div>
 
@@ -59,7 +59,7 @@ export default function RoomShowcase() {
                   : "text-slate-600 hover:text-slate-900 hover:bg-slate-100/60"
               }`}
             >
-              Semua ({ROOMS_DATA.length})
+              All ({ROOMS_DATA.length})
             </button>
             <button
               type="button"
@@ -81,7 +81,7 @@ export default function RoomShowcase() {
                   : "text-slate-600 hover:text-slate-900 hover:bg-slate-100/60"
               }`}
             >
-              Cottage Kebun Kelapa
+              Garden Cottages
             </button>
             <button
               type="button"
@@ -145,7 +145,7 @@ export default function RoomShowcase() {
                     )}
 
                     <span className="px-3 py-1 rounded-full text-xs font-semibold bg-white/90 text-slate-900 backdrop-blur-md shadow-sm">
-                      {room.sqm} m²
+                      {room.sqm} sqm
                     </span>
                   </div>
 
@@ -165,7 +165,7 @@ export default function RoomShowcase() {
                         >
                           <Image
                             src={img}
-                            alt={`${room.name} thumb ${idx + 1}`}
+                            alt={`${room.name} thumbnail ${idx + 1}`}
                             width={32}
                             height={32}
                             className="w-full h-full object-cover"
@@ -175,7 +175,7 @@ export default function RoomShowcase() {
                     </div>
                   )}
 
-                  {/* Room Name on Photo */}
+                  {/* Room View on Photo */}
                   <div className="absolute bottom-4 right-4 text-right">
                     <span className="text-[11px] uppercase tracking-wider text-white/80 block">
                       {room.view}
@@ -194,7 +194,7 @@ export default function RoomShowcase() {
                     <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5 my-4 py-3 border-y border-slate-100 text-xs text-slate-700">
                       <div className="flex items-center gap-2">
                         <Maximize2 className="w-4 h-4 text-[#C69C6D] shrink-0" />
-                        <span>Luas {room.sqm} m²</span>
+                        <span>Size {room.sqm} sqm</span>
                       </div>
                       <div className="flex items-center gap-2">
                         <BedDouble className="w-4 h-4 text-[#C69C6D] shrink-0" />
@@ -202,7 +202,7 @@ export default function RoomShowcase() {
                       </div>
                       <div className="flex items-center gap-2 col-span-2 sm:col-span-1">
                         <Users className="w-4 h-4 text-[#C69C6D] shrink-0" />
-                        <span>Kapasitas {room.capacity}</span>
+                        <span>Max {room.capacity}</span>
                       </div>
                     </div>
 
@@ -225,16 +225,16 @@ export default function RoomShowcase() {
                   <div className="mt-6 pt-5 border-t border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                     <div>
                       <span className="text-[11px] uppercase tracking-wider text-slate-400 block">
-                        Tarif Resmi Mulai Dari
+                        Official Direct Rate From
                       </span>
                       <div className="flex items-baseline gap-1.5">
                         <span className="font-serif text-2xl font-bold text-[#0A2239]">
                           {room.priceStart}
                         </span>
-                        <span className="text-xs text-slate-500">/ malam</span>
+                        <span className="text-xs text-slate-500">/ night</span>
                       </div>
                       <span className="text-[11px] font-semibold text-emerald-700 flex items-center gap-1 mt-0.5">
-                        ✓ Termasuk Sarapan & Pajak
+                        ✓ Includes Daily Breakfast & Taxes
                       </span>
                     </div>
 
@@ -243,10 +243,10 @@ export default function RoomShowcase() {
                         type="button"
                         onClick={() => setSelectedRoom(room)}
                         className="px-3.5 py-3 rounded-xl border border-slate-200 text-slate-700 hover:bg-slate-100 text-xs font-semibold flex items-center gap-1.5 transition-colors"
-                        title="Lihat Detail Lengkap"
+                        title="View Room Specifications"
                       >
                         <Info className="w-4 h-4 text-slate-500" />
-                        <span>Detail</span>
+                        <span>Details</span>
                       </button>
 
                       <a
@@ -256,7 +256,7 @@ export default function RoomShowcase() {
                         className="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-[#C69C6D] via-[#D8B48D] to-[#B8860B] text-slate-950 font-bold text-xs uppercase tracking-wider shadow-md hover:shadow-glow hover:scale-[1.02] active:scale-95 transition-all"
                       >
                         <Calendar className="w-3.5 h-3.5" />
-                        <span>Pesan Kamar Ini</span>
+                        <span>Book This Room</span>
                       </a>
                     </div>
                   </div>
@@ -275,7 +275,7 @@ export default function RoomShowcase() {
               type="button"
               onClick={() => setSelectedRoom(null)}
               className="absolute top-5 right-5 p-2 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 transition-colors"
-              aria-label="Tutup"
+              aria-label="Close"
             >
               <X className="w-5 h-5" />
             </button>
@@ -288,7 +288,7 @@ export default function RoomShowcase() {
                 className="object-cover"
               />
               <div className="absolute top-4 left-4 bg-[#C69C6D] text-slate-950 text-xs font-bold px-3 py-1 rounded-full">
-                {selectedRoom.sqm} m² • {selectedRoom.view}
+                {selectedRoom.sqm} sqm • {selectedRoom.view}
               </div>
             </div>
 
@@ -301,25 +301,25 @@ export default function RoomShowcase() {
 
             <div className="my-6 grid grid-cols-2 gap-3 p-4 bg-slate-50 rounded-2xl text-xs sm:text-sm text-slate-800">
               <div>
-                <span className="text-slate-400 block text-xs">Tempat Tidur</span>
+                <span className="text-slate-400 block text-xs">Bedding</span>
                 <span className="font-semibold">{selectedRoom.bedType}</span>
               </div>
               <div>
-                <span className="text-slate-400 block text-xs">Kapasitas Tamu</span>
+                <span className="text-slate-400 block text-xs">Guest Capacity</span>
                 <span className="font-semibold">{selectedRoom.capacity}</span>
               </div>
               <div>
-                <span className="text-slate-400 block text-xs">Pemandangan</span>
+                <span className="text-slate-400 block text-xs">View</span>
                 <span className="font-semibold">{selectedRoom.view}</span>
               </div>
               <div>
-                <span className="text-slate-400 block text-xs">Tarif Mulai</span>
+                <span className="text-slate-400 block text-xs">Direct Rate</span>
                 <span className="font-semibold text-emerald-700">{selectedRoom.priceStart}</span>
               </div>
             </div>
 
             <h4 className="font-serif text-base font-bold text-[#0A2239] mb-3">
-              Fasilitas & Keunggulan Kamar:
+              Room Features & Amenities:
             </h4>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-6">
               {selectedRoom.features.map((feat, idx) => (
@@ -332,7 +332,7 @@ export default function RoomShowcase() {
 
             <div className="flex items-center justify-between gap-4 pt-4 border-t border-slate-100">
               <div>
-                <span className="text-xs text-slate-500">Tarif Resmi Langsung</span>
+                <span className="text-xs text-slate-500">Official Direct Rate</span>
                 <p className="font-serif text-2xl font-bold text-[#0A2239]">
                   {selectedRoom.priceStart}
                 </p>
@@ -343,7 +343,7 @@ export default function RoomShowcase() {
                 rel="noopener noreferrer"
                 className="px-6 py-3.5 rounded-full bg-gradient-to-r from-[#C69C6D] via-[#D8B48D] to-[#B8860B] text-slate-950 font-bold text-xs uppercase tracking-wider shadow-md hover:scale-105 transition-all"
               >
-                Lanjutkan Pemesanan
+                Proceed to Reservation
               </a>
             </div>
           </div>

@@ -16,21 +16,21 @@ const jakarta = Plus_Jakarta_Sans({
 
 export const metadata: Metadata = {
   title: "Ketapang Indah Hotel Banyuwangi | Official Luxury Beach Resort & Direct Booking",
-  description: "Official Website of Ketapang Indah Hotel Banyuwangi. 4-star beachfront resort nestled in a 6-hectare lush coconut grove facing Bali Strait. Best rate guarantee for direct bookings.",
+  description: "Official Website of Ketapang Indah Hotel Banyuwangi. 4-star beachfront resort nestled in a 6-hectare lush coconut grove facing the Bali Strait. Best rate guarantee for direct bookings.",
   keywords: [
     "Ketapang Indah Hotel",
+    "Ketapang Indah Hotel Banyuwangi",
     "Hotel Banyuwangi",
-    "Resort Banyuwangi",
     "Beachfront Resort Banyuwangi",
-    "Hotel dekat Pelabuhan Ketapang",
-    "Hotel dekat Kawah Ijen",
+    "Mount Ijen Hotel Basecamp",
+    "Bali Strait Hotel",
     "Marlin Beach Club Banyuwangi",
-    "Direct Booking Hotel Banyuwangi"
+    "Ketapang Ferry Port Hotel"
   ],
   authors: [{ name: "Ketapang Indah Hotel" }],
   openGraph: {
     title: "Ketapang Indah Hotel Banyuwangi | Official Beachfront Resort",
-    description: "Experience genuine East Javanese coastal hospitality. 6 hectares of tropical coconut palms, oceanfront dining, and seamless direct booking.",
+    description: "Experience genuine coastal hospitality. 6 hectares of tropical coconut palms, oceanfront dining, and seamless direct booking.",
     url: "https://www.ketapangindahhotel.com",
     siteName: "Ketapang Indah Hotel",
     images: [
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
         alt: "Ketapang Indah Hotel Oceanfront Resort & Pool",
       },
     ],
-    locale: "id_ID",
+    locale: "en_US",
     type: "website",
   },
 };
@@ -52,7 +52,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="id" className={`${playfair.variable} ${jakarta.variable} scroll-smooth`}>
+    <html lang="en" className={`${playfair.variable} ${jakarta.variable} scroll-smooth`}>
       <head>
         <link rel="icon" href="/images/logo.png" />
       </head>

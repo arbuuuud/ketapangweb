@@ -11,13 +11,13 @@ export default function GuestReviews() {
           <div>
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#C69C6D]/15 text-[#A37C4F] text-xs font-bold uppercase tracking-widest mb-3">
               <Award className="w-3.5 h-3.5 text-[#C69C6D]" />
-              Guest Satisfaction & Trust
+              Guest Satisfaction & Reputation
             </div>
             <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0A2239] tracking-tight">
-              Dipercaya Ribuan Pelancong dari Seluruh Dunia
+              Cherished by Travelers from Around the Globe
             </h2>
             <p className="mt-3 text-slate-600 text-sm sm:text-base max-w-2xl leading-relaxed">
-              Keasrian kebun kelapa, panorama matahari terbit Selat Bali, dan kehangatan keramahan staf kami meninggalkan kenangan abadi bagi setiap tamu.
+              The tranquility of our lush coconut grove, the magical sunrise over the Bali Strait, and the heartfelt warmth of our associates leave an enduring impression on every journey.
             </p>
           </div>
 
@@ -35,7 +35,7 @@ export default function GuestReviews() {
                   ))}
                 </div>
                 <p className="text-xs font-bold text-slate-900">TripAdvisor Travelers&apos; Choice</p>
-                <p className="text-[11px] text-slate-500">2.100+ ulasan terverifikasi</p>
+                <p className="text-[11px] text-slate-500">2,100+ verified traveler reviews</p>
               </div>
             </div>
 
@@ -51,7 +51,7 @@ export default function GuestReviews() {
                   ))}
                 </div>
                 <p className="text-xs font-bold text-slate-900">Google Reviews Rating</p>
-                <p className="text-[11px] text-slate-500">3.800+ ulasan positif</p>
+                <p className="text-[11px] text-slate-500">3,800+ authentic guest reviews</p>
               </div>
             </div>
           </div>

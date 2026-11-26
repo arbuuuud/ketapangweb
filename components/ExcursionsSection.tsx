@@ -14,10 +14,10 @@ export default function ExcursionsSection() {
             Banyuwangi Wonders & Excursions
           </div>
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0A2239] tracking-tight">
-            Markas Utama Petualangan Kawah Ijen & Sekitarnya
+            The Premier Base for Mount Ijen & East Java
           </h2>
           <p className="mt-4 text-slate-600 text-sm sm:text-base leading-relaxed">
-            Ketapang Indah Hotel menjadi pilihan utama wisatawan mancanegara dan domestik sebagai basecamp pendakian Kawah Ijen, penyeberangan fajar ke Pulau Bali, dan safari alam liar Baluran.
+            Ketapang Indah Hotel is the favored staging hub for international explorers ascending to the Mount Ijen Blue Fire crater, crossing to Bali at dawn, and venturing on wild safaris in Baluran.
           </p>
         </div>
 
@@ -61,12 +61,12 @@ export default function ExcursionsSection() {
 
               <div className="p-6 pt-0">
                 <a
-                  href="https://wa.me/628113502280?text=Halo%20Ketapang%20Indah%20Hotel,%20saya%20ingin%20info%20paket%20tour%20Kawah%20Ijen%20/%20Banyuwangi."
+                  href="https://wa.me/628113502280?text=Hello%20Ketapang%20Indah%20Hotel,%20I%20would%20like%20to%20arrange%20a%20Mount%20Ijen%20tour."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full inline-flex items-center justify-center gap-2 py-3 rounded-xl bg-slate-100 hover:bg-[#C69C6D] hover:text-slate-950 text-slate-800 font-semibold text-xs transition-all"
                 >
-                  <span>Pesan Layanan Tour & Pemandu</span>
+                  <span>Arrange Tour & Certified Guide</span>
                   <ArrowUpRight className="w-4 h-4" />
                 </a>
               </div>

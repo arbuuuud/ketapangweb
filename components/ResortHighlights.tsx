@@ -14,10 +14,10 @@ export default function ResortHighlights() {
             Resort Facilities & Wellness
           </div>
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0A2239] tracking-tight">
-            Fasilitas Resor Berkelas di Tengah Alam Asri
+            Curated Resort Amenities Amidst Pristine Nature
           </h2>
           <p className="mt-4 text-slate-600 text-sm sm:text-base leading-relaxed">
-            Dari kesegaran kolam laguna tepi laut, relaksasi spa rempah tradisional, hingga megahnya perayaan pernikahan dan pertemuan bisnis skala internasional.
+            From leisurely swims in our oceanfront lagoon pool and traditional herbal spa therapies, to majestic seaside nuptials and corporate gatherings.
           </p>
         </div>
 
@@ -66,23 +66,23 @@ export default function ResortHighlights() {
         <div className="mt-14 bg-[#FAF7F2] rounded-3xl p-8 sm:p-10 border border-slate-200 flex flex-col lg:flex-row items-center justify-between gap-8">
           <div className="max-w-2xl">
             <span className="text-xs font-bold uppercase tracking-wider text-[#C69C6D] block mb-2">
-              MICE, Gathering & Wedding Specialist
+              MICE, Gatherings & Oceanfront Nuptials
             </span>
             <h3 className="font-serif text-2xl sm:text-3xl font-bold text-[#0A2239]">
-              Rencanakan Acara & Pernikahan Impian Anda di Ketapang Indah
+              Host Your Visionary Events & Dream Weddings at Ketapang Indah
             </h3>
             <p className="mt-2 text-sm text-slate-600 leading-relaxed">
-              Tim perencana acara profesional kami siap mewujudkan perayaan pernikahan tepi pantai, gathering korporasi, hingga rapat kerja dengan fasilitas audio-visual lengkap dan paket katering eksklusif.
+              Our dedicated event planning team orchestrates romantic seaside receptions, international symposia, and executive retreats with state-of-the-art audiovisual setups and bespoke culinary banquets.
             </p>
           </div>
           <div className="flex flex-col sm:flex-row items-center gap-3 shrink-0">
             <a
-              href="https://wa.me/628113502280?text=Halo%20Ketapang%20Indah%20Hotel,%20saya%20ingin%20konsultasi%20paket%20Meeting%20/%20Wedding."
+              href="https://wa.me/628113502280?text=Hello%20Ketapang%20Indah%20Hotel,%20I%20would%20like%20to%20consult%20regarding%20MICE%20or%20Wedding%20packages."
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto px-6 py-3.5 rounded-full bg-[#0A2239] hover:bg-[#134057] text-white font-bold text-xs uppercase tracking-wider transition-all text-center"
             >
-              Konsultasi Paket Acara
+              Consult with Event Team
             </a>
             <a
               href="https://www.ketapangindahhotel.com/weddings/packages"
@@ -90,7 +90,7 @@ export default function ResortHighlights() {
               rel="noopener noreferrer"
               className="w-full sm:w-auto px-6 py-3.5 rounded-full border border-[#0A2239]/20 hover:bg-white text-[#0A2239] font-bold text-xs uppercase tracking-wider transition-all text-center"
             >
-              Unduh Brosur MICE
+              Download MICE Kit
             </a>
           </div>
         </div>

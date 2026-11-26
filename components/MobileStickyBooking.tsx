@@ -6,7 +6,7 @@ import { HOTEL_INFO } from "@/data/hotelData";
 
 export default function MobileStickyBooking() {
   const waUrl = `https://wa.me/628113502280?text=${encodeURIComponent(
-    "Halo Ketapang Indah Hotel, saya ingin booking kamar dengan jaminan best rate promo website."
+    "Hello Ketapang Indah Hotel, I would like to reserve a room with the best rate guarantee."
   )}`;
 
   return (
@@ -19,11 +19,11 @@ export default function MobileStickyBooking() {
             <span>Best Rate Guaranteed</span>
           </div>
           <div className="flex items-baseline gap-1">
-            <span className="text-[11px] text-slate-500">Mulai</span>
+            <span className="text-[11px] text-slate-500">From</span>
             <span className="font-serif text-base font-bold text-[#0A2239]">
               IDR 580K
             </span>
-            <span className="text-[10px] text-slate-400">/ malam</span>
+            <span className="text-[10px] text-slate-400">/ night</span>
           </div>
         </div>
 
@@ -33,7 +33,7 @@ export default function MobileStickyBooking() {
             href={waUrl}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Hubungi WhatsApp"
+            aria-label="Contact Concierge"
             className="w-10 h-10 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white flex items-center justify-center shrink-0 shadow-sm transition-all"
           >
             <MessageCircle className="w-5 h-5" />
@@ -46,7 +46,7 @@ export default function MobileStickyBooking() {
             className="inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl bg-gradient-to-r from-[#C69C6D] via-[#D8B48D] to-[#B8860B] text-slate-950 font-bold text-xs uppercase tracking-wider shadow-md active:scale-95 transition-all"
           >
             <Calendar className="w-3.5 h-3.5" />
-            <span>Pesan Sekarang</span>
+            <span>Book Now</span>
           </a>
         </div>
       </div>

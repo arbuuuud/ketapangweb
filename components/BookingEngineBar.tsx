@@ -5,7 +5,6 @@ import { Calendar, Users, Tag, Search, ShieldCheck, Sparkles, ChevronDown, Check
 import { HOTEL_INFO } from "@/data/hotelData";
 
 export default function BookingEngineBar() {
-  // Generate default dates: today & tomorrow in YYYY-MM-DD
   const today = new Date();
   const tomorrow = new Date();
   tomorrow.setDate(today.getDate() + 1);
@@ -26,17 +25,17 @@ export default function BookingEngineBar() {
         <div className="flex flex-wrap items-center justify-between gap-2 pb-4 mb-4 border-b border-slate-100 text-xs sm:text-sm">
           <div className="flex items-center gap-2 text-slate-800 font-semibold">
             <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-            <span>Pemesanan Resmi Langsung (Official Direct Booking)</span>
+            <span>Official Direct Reservation</span>
           </div>
           <div className="flex items-center gap-4 text-slate-500 text-xs">
             <span className="flex items-center gap-1 text-emerald-700 font-medium">
-              <Check className="w-3.5 h-3.5 text-emerald-600" /> Jaminan Harga Termurah
+              <Check className="w-3.5 h-3.5 text-emerald-600" /> Best Rate Guarantee
             </span>
             <span className="hidden md:flex items-center gap-1 text-amber-700 font-medium">
-              <Sparkles className="w-3.5 h-3.5 text-amber-600" /> Gratis Sarapan & Welcome Drink
+              <Sparkles className="w-3.5 h-3.5 text-amber-600" /> Complimentary Daily Breakfast
             </span>
             <span className="hidden sm:flex items-center gap-1 text-sky-700 font-medium">
-              <ShieldCheck className="w-3.5 h-3.5 text-sky-600" /> Bebas Biaya Booking
+              <ShieldCheck className="w-3.5 h-3.5 text-sky-600" /> No Hidden Booking Fees
             </span>
           </div>
         </div>
@@ -51,7 +50,7 @@ export default function BookingEngineBar() {
           {/* Check-in Date */}
           <div className="lg:col-span-3 flex flex-col gap-1.5">
             <label htmlFor="entrada" className="text-xs font-bold uppercase tracking-wider text-slate-600 flex items-center gap-1.5">
-              <Calendar className="w-3.5 h-3.5 text-[#C69C6D]" /> Check-In
+              <Calendar className="w-3.5 h-3.5 text-[#C69C6D]" /> Check-In Date
             </label>
             <div className="relative">
               <input
@@ -77,7 +76,7 @@ export default function BookingEngineBar() {
           {/* Check-out Date */}
           <div className="lg:col-span-3 flex flex-col gap-1.5">
             <label htmlFor="salida" className="text-xs font-bold uppercase tracking-wider text-slate-600 flex items-center gap-1.5">
-              <Calendar className="w-3.5 h-3.5 text-[#C69C6D]" /> Check-Out
+              <Calendar className="w-3.5 h-3.5 text-[#C69C6D]" /> Check-Out Date
             </label>
             <div className="relative">
               <input
@@ -96,7 +95,7 @@ export default function BookingEngineBar() {
           {/* Guests Selector */}
           <div className="lg:col-span-3 flex flex-col gap-1.5 relative">
             <span className="text-xs font-bold uppercase tracking-wider text-slate-600 flex items-center gap-1.5">
-              <Users className="w-3.5 h-3.5 text-[#C69C6D]" /> Tamu & Kamar
+              <Users className="w-3.5 h-3.5 text-[#C69C6D]" /> Guests & Rooms
             </span>
             <button
               type="button"
@@ -104,7 +103,7 @@ export default function BookingEngineBar() {
               className="w-full bg-slate-50 hover:bg-slate-100 border border-slate-200 rounded-xl px-3.5 py-3 text-sm font-semibold text-slate-900 text-left flex items-center justify-between focus:outline-none focus:ring-2 focus:ring-[#C69C6D] transition-all"
             >
               <span className="truncate">
-                {adults} Dewasa{children > 0 ? `, ${children} Anak` : ""}
+                {adults} Adult{adults > 1 ? "s" : ""}{children > 0 ? `, ${children} Child${children > 1 ? "ren" : ""}` : ""}
               </span>
               <ChevronDown className="w-4 h-4 text-slate-400 shrink-0" />
             </button>
@@ -114,8 +113,8 @@ export default function BookingEngineBar() {
               <div className="absolute top-full left-0 right-0 mt-2 bg-white rounded-2xl shadow-xl border border-slate-100 p-4 z-50 animate-fadeIn">
                 <div className="flex items-center justify-between py-2 border-b border-slate-100">
                   <div>
-                    <p className="text-xs font-bold text-slate-900">Dewasa</p>
-                    <p className="text-[11px] text-slate-500">Usia 12+ tahun</p>
+                    <p className="text-xs font-bold text-slate-900">Adults</p>
+                    <p className="text-[11px] text-slate-500">Ages 12+ years</p>
                   </div>
                   <div className="flex items-center gap-2">
                     <button
@@ -138,8 +137,8 @@ export default function BookingEngineBar() {
 
                 <div className="flex items-center justify-between py-2">
                   <div>
-                    <p className="text-xs font-bold text-slate-900">Anak-Anak</p>
-                    <p className="text-[11px] text-slate-500">Usia 0 - 11 tahun</p>
+                    <p className="text-xs font-bold text-slate-900">Children</p>
+                    <p className="text-[11px] text-slate-500">Ages 0 - 11 years</p>
                   </div>
                   <div className="flex items-center gap-2">
                     <button
@@ -165,20 +164,20 @@ export default function BookingEngineBar() {
                   onClick={() => setGuestDropdownOpen(false)}
                   className="mt-3 w-full py-2 bg-slate-900 text-white rounded-lg text-xs font-bold hover:bg-slate-800"
                 >
-                  Selesai
+                  Done
                 </button>
               </div>
             )}
           </div>
 
-          {/* Promo Code & Submit Button (Column 3) */}
+          {/* Promo Code & Submit Button */}
           <div className="lg:col-span-3 flex flex-col sm:flex-row lg:flex-col gap-2">
             <div className="relative hidden lg:block">
               <Tag className="w-3.5 h-3.5 text-slate-400 absolute left-3 top-3" />
               <input
                 type="text"
                 name="codpromo"
-                placeholder="Kode Promo (Opsional)"
+                placeholder="Promo Code (Optional)"
                 value={promoCode}
                 onChange={(e) => setPromoCode(e.target.value)}
                 className="w-full bg-slate-50 hover:bg-slate-100 border border-slate-200 rounded-xl pl-8 pr-3 py-1.5 text-xs font-medium text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-[#C69C6D]"
@@ -187,10 +186,10 @@ export default function BookingEngineBar() {
 
             <button
               type="submit"
-              className="w-full py-3.5 px-6 rounded-xl bg-gradient-to-r from-[#C69C6D] via-[#D8B48D] to-[#B8860B] text-slate-950 font-bold text-sm tracking-wider uppercase shadow-glow hover:shadow-xl hover:scale-[1.01] active:scale-95 transition-all flex items-center justify-center gap-2"
+              className="w-full py-3.5 px-6 rounded-xl bg-gradient-to-r from-[#C69C6D] via-[#D8B48D] to-[#B8860B] text-slate-950 font-bold text-xs uppercase tracking-[0.16em] shadow-glow hover:shadow-xl hover:scale-[1.01] active:scale-95 transition-all flex items-center justify-center gap-2"
             >
               <Search className="w-4 h-4" />
-              <span>Cek Ketersediaan</span>
+              <span>Check Availability</span>
             </button>
           </div>
         </form>

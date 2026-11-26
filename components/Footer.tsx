@@ -13,7 +13,7 @@ import { HOTEL_INFO } from "@/data/hotelData";
 
 export default function Footer() {
   const waUrl = `https://wa.me/628113502280?text=${encodeURIComponent(
-    "Halo Ketapang Indah Hotel, saya ingin menanyakan reservasi."
+    "Hello Ketapang Indah Hotel, I would like to inquire about reservations."
   )}`;
 
   return (
@@ -22,31 +22,21 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-16 border-b border-white/10">
           {/* Column 1: Brand & Description (4 cols) */}
           <div className="lg:col-span-4">
-            <Link href="/" className="flex items-center gap-3 mb-6 group">
-              <div className="relative w-12 h-12 bg-white/10 rounded-full p-2 border border-white/20">
-                <Image
-                  src="/images/logo-white.png"
-                  alt="Ketapang Indah Hotel Logo"
-                  fill
-                  sizes="48px"
-                  className="object-contain p-1"
-                />
-              </div>
-              <div className="flex flex-col">
-                <span className="font-serif text-xl font-bold tracking-wider uppercase text-white">
-                  Ketapang Indah
-                </span>
-                <span className="text-[10px] tracking-[0.25em] text-[#C69C6D] uppercase font-medium">
-                  Banyuwangi • East Java
-                </span>
-              </div>
+            <Link href="/" className="inline-block mb-6 transition-opacity hover:opacity-90">
+              <Image
+                src="/images/logo-white.png"
+                alt="Ketapang Indah Hotel"
+                width={190}
+                height={55}
+                className="h-11 sm:h-12 w-auto object-contain"
+              />
             </Link>
 
             <p className="text-sm text-white/70 leading-relaxed pr-4 mb-6">
-              Resor tepi pantai bintang-4 seluas 6 hektar di pesisir Banyuwangi. Menghadirkan keteduhan ribuan pohon kelapa tropis, deburan ombak Selat Bali, dan kenyamanan akomodasi terbaik menuju Kawah Ijen.
+              A 4-star beachfront resort nestled across 6 hectares of tropical coconut palms in Banyuwangi. Offering peaceful seclusion, gentle ocean breezes from the Bali Strait, and the premier gateway to Mount Ijen.
             </p>
 
-            <div className="flex items-center gap-3 text-xs text-white/80">
+            <div className="flex items-center gap-2.5 text-xs text-white/80">
               <ShieldCheck className="w-4 h-4 text-emerald-400" />
               <span>Official Website • Direct Booking Protection</span>
             </div>
@@ -54,13 +44,13 @@ export default function Footer() {
 
           {/* Column 2: Quick Links (2 cols) */}
           <div className="lg:col-span-2">
-            <h3 className="font-serif text-base font-bold text-[#D8B48D] mb-5 tracking-wide">
-              Eksplorasi Resor
+            <h3 className="font-serif text-xs font-bold text-[#D8B48D] uppercase tracking-[0.2em] mb-5">
+              Explore Resort
             </h3>
-            <ul className="space-y-3 text-sm text-white/70">
+            <ul className="space-y-3 text-xs tracking-wide text-white/75 uppercase">
               <li>
                 <a href="#rooms" className="hover:text-white transition-colors flex items-center gap-1.5">
-                  <ChevronRight className="w-3.5 h-3.5 text-[#C69C6D]" /> Kamar & Suite
+                  <ChevronRight className="w-3.5 h-3.5 text-[#C69C6D]" /> Accommodations
                 </a>
               </li>
               <li>
@@ -75,55 +65,55 @@ export default function Footer() {
               </li>
               <li>
                 <a href="#facilities" className="hover:text-white transition-colors flex items-center gap-1.5">
-                  <ChevronRight className="w-3.5 h-3.5 text-[#C69C6D]" /> Kolam Laguna
+                  <ChevronRight className="w-3.5 h-3.5 text-[#C69C6D]" /> Lagoon Pool
                 </a>
               </li>
               <li>
                 <a href="#excursions" className="hover:text-white transition-colors flex items-center gap-1.5">
-                  <ChevronRight className="w-3.5 h-3.5 text-[#C69C6D]" /> Wisata Kawah Ijen
+                  <ChevronRight className="w-3.5 h-3.5 text-[#C69C6D]" /> Mount Ijen Trek
                 </a>
               </li>
             </ul>
           </div>
 
-          {/* Column 3: Tipe Akomodasi (3 cols) */}
+          {/* Column 3: Room Types (3 cols) */}
           <div className="lg:col-span-3">
-            <h3 className="font-serif text-base font-bold text-[#D8B48D] mb-5 tracking-wide">
-              Koleksi Kamar
+            <h3 className="font-serif text-xs font-bold text-[#D8B48D] uppercase tracking-[0.2em] mb-5">
+              Accommodations
             </h3>
-            <ul className="space-y-3 text-sm text-white/70">
+            <ul className="space-y-2.5 text-sm text-white/70">
               <li>
                 <a href="#rooms" className="hover:text-white transition-colors">
-                  Ocean View Suite (75 m²)
+                  Ocean View Suite (75 sqm)
                 </a>
               </li>
               <li>
                 <a href="#rooms" className="hover:text-white transition-colors">
-                  Cottage Garden View (32 m²)
+                  Cottage Garden View (32 sqm)
                 </a>
               </li>
               <li>
                 <a href="#rooms" className="hover:text-white transition-colors">
-                  Garden Superior Room (25 m²)
+                  Garden Superior Room (25 sqm)
                 </a>
               </li>
               <li>
                 <a href="#rooms" className="hover:text-white transition-colors">
-                  Superior Room (25 m²)
+                  Superior Room (25 sqm)
                 </a>
               </li>
               <li>
                 <a href="#rooms" className="hover:text-white transition-colors">
-                  Standard Room (22 m²)
+                  Standard Room (22 sqm)
                 </a>
               </li>
             </ul>
           </div>
 
-          {/* Column 4: Kontak & NAP Resmi (3 cols) */}
+          {/* Column 4: Contact & NAP (3 cols) */}
           <div className="lg:col-span-3">
-            <h3 className="font-serif text-base font-bold text-[#D8B48D] mb-5 tracking-wide">
-              Kontak & Reservasi
+            <h3 className="font-serif text-xs font-bold text-[#D8B48D] uppercase tracking-[0.2em] mb-5">
+              Contact & Reservations
             </h3>
             <div className="space-y-3.5 text-xs sm:text-sm text-white/75">
               <div className="flex items-start gap-3">
@@ -157,7 +147,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="w-full inline-flex items-center justify-center py-2.5 px-4 rounded-xl bg-gradient-to-r from-[#C69C6D] to-[#B8860B] text-slate-950 font-bold text-xs uppercase tracking-wider shadow-md hover:scale-[1.02] transition-all"
               >
-                Booking Online Resmi
+                Official Online Booking
               </a>
             </div>
           </div>
@@ -165,11 +155,11 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/50">
-          <p>© {new Date().getFullYear()} Ketapang Indah Hotel. Hak cipta dilindungi undang-undang.</p>
+          <p>© {new Date().getFullYear()} Ketapang Indah Hotel Banyuwangi. All rights reserved.</p>
           <div className="flex items-center gap-6">
-            <span>Check-in: 14:00 WIB</span>
+            <span>Check-in: 02:00 PM</span>
             <span>•</span>
-            <span>Check-out: 12:00 WIB</span>
+            <span>Check-out: 12:00 PM</span>
             <span>•</span>
             <span className="text-[#D8B48D]">Official Direct Web</span>
           </div>

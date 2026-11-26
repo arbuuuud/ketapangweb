@@ -35,10 +35,10 @@ export default function DirectPrivileges() {
             Official Booking Privileges
           </div>
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0A2239] tracking-tight">
-            Keuntungan Istimewa Memesan Langsung di Website Resmi
+            Exclusive Privileges When You Reserve Directly
           </h2>
           <p className="mt-4 text-slate-600 text-sm sm:text-base leading-relaxed">
-            Dapatkan pengalaman menginap terbaik tanpa biaya tersembunyi. Hotel menjamin tarif terendah resmi, fleksibilitas perubahan jadwal, dan aneka benefit eksklusif yang tidak tersedia di aplikasi pihak ketiga.
+            Experience genuine peace of mind without hidden intermediary markups. Our official direct website ensures our lowest price guarantee, flexible dates, and bespoke benefits designed for your stay.
           </p>
         </div>
 
@@ -63,34 +63,34 @@ export default function DirectPrivileges() {
 
               <div className="mt-5 pt-4 border-t border-slate-100 flex items-center text-xs font-semibold text-emerald-700">
                 <CheckCircle2 className="w-4 h-4 mr-1.5 text-emerald-600" />
-                <span>Otomatis aktif saat booking direct</span>
+                <span>Automatically applied on direct bookings</span>
               </div>
             </div>
           ))}
         </div>
 
         {/* Reassurance Banner */}
-        <div className="mt-12 bg-gradient-to-r from-[#0A2239] to-[#134057] rounded-2xl p-6 sm:p-8 text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-luxury">
+        <div className="mt-12 bg-gradient-to-r from-[#061524] to-[#134057] rounded-2xl p-6 sm:p-8 text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-luxury">
           <div className="flex items-center gap-4">
             <div className="w-12 h-12 rounded-full bg-[#C69C6D]/20 border border-[#C69C6D]/40 flex items-center justify-center text-[#D8B48D] shrink-0">
               <ShieldCheck className="w-6 h-6" />
             </div>
             <div>
               <h3 className="font-serif text-base sm:text-lg font-bold">
-                Menemukan harga lebih murah di OTA?
+                Found a lower published rate elsewhere?
               </h3>
               <p className="text-xs sm:text-sm text-white/80">
-                Kami siap menyamakan harga ditambah diskon tambahan 5% khusus untuk reservasi langsung.
+                We will gladly match that price and provide an additional 5% courtesy discount on your direct stay.
               </p>
             </div>
           </div>
           <a
-            href="https://wa.me/628113502280?text=Halo%20Ketapang%20Indah%20Hotel,%20saya%20ingin%20klaim%20Best%20Rate%20Guarantee%20Official%20Site."
+            href="https://wa.me/628113502280?text=Hello%20Ketapang%20Indah%20Hotel,%20I%20would%20like%20to%20claim%20the%20Best%20Rate%20Guarantee."
             target="_blank"
             rel="noopener noreferrer"
             className="shrink-0 text-xs font-bold uppercase tracking-wider px-6 py-3 rounded-full bg-[#C69C6D] hover:bg-[#D8B48D] text-slate-950 transition-all shadow-md"
           >
-            Klaim Best Rate via WhatsApp
+            Claim Best Rate via Concierge
           </a>
         </div>
       </div>
