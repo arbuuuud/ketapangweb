@@ -1,59 +1,63 @@
 import React from "react";
-import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
-import BookingEngineBar from "@/components/BookingEngineBar";
-import DirectPrivileges from "@/components/DirectPrivileges";
-import RoomShowcase from "@/components/RoomShowcase";
-import DiningExperience from "@/components/DiningExperience";
-import ResortHighlights from "@/components/ResortHighlights";
-import ExcursionsSection from "@/components/ExcursionsSection";
-import GuestReviews from "@/components/GuestReviews";
-import LocationMap from "@/components/LocationMap";
-import MobileStickyBooking from "@/components/MobileStickyBooking";
-import Footer from "@/components/Footer";
 import SchemaJsonLd from "@/components/SchemaJsonLd";
+import MockupSwitcher from "@/components/MockupSwitcher";
+import NavbarTropical from "@/components/mockup2/NavbarTropical";
+import HeroCinematic from "@/components/mockup2/HeroCinematic";
+import ResortStory from "@/components/mockup2/ResortStory";
+import RoomShowcaseEditorial from "@/components/mockup2/RoomShowcaseEditorial";
+import PanoramaBanner from "@/components/mockup2/PanoramaBanner";
+import DiningTropical from "@/components/mockup2/DiningTropical";
+import ResortGalleryMosaic from "@/components/mockup2/ResortGalleryMosaic";
+import ExcursionsEditorial from "@/components/mockup2/ExcursionsEditorial";
+import GuestProofTropical from "@/components/mockup2/GuestProofTropical";
+import LocationMapTropical from "@/components/mockup2/LocationMapTropical";
+import MobileStickyBookingTropical from "@/components/mockup2/MobileStickyBookingTropical";
+import FooterTropical from "@/components/mockup2/FooterTropical";
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen relative flex flex-col bg-[#FAF9F5]">
-      {/* Schema.org Deep Knowledge Graph for Search & AI Engines */}
+    <main className="min-h-screen relative flex flex-col bg-[#FAF8F5] text-[#142231]">
+      {/* Schema.org Deep Knowledge Graph */}
       <SchemaJsonLd />
 
-      {/* Main Transparent / Solid Navigation Bar */}
-      <Navbar />
+      {/* Floating Mockup Switcher (Allows instant switching to Mockup 1) */}
+      <MockupSwitcher current="mockup-2" />
 
-      {/* Cinematic Resort Hero Section */}
-      <Hero />
+      {/* Transparent Glass Navigation Bar */}
+      <NavbarTropical />
 
-      {/* Floating High-Conversion Direct Booking Bar */}
-      <BookingEngineBar />
+      {/* Full-Screen Edge-to-Edge Cinematic Hero with Floating Glass Capsule */}
+      <HeroCinematic />
 
-      {/* Value Proposition: Keuntungan Memesan Langsung di Website Resmi */}
-      <DirectPrivileges />
+      {/* 6-Hectare Tropical Coconut Grove Sanctuary Narrative */}
+      <ResortStory />
 
-      {/* Curated Accommodations Collection (Rooms, Cottages, Suites) */}
-      <RoomShowcase />
+      {/* Magazine Editorial Accommodations Showcase (Rooms, Cottages, Suites) */}
+      <RoomShowcaseEditorial />
 
-      {/* Oceanfront Culinary Journeys: Marlin Beach Club & Wahoo Lounge */}
-      <DiningExperience />
+      {/* Full-Bleed Experiential Dawn Horizon Banner & Direct Privileges */}
+      <PanoramaBanner />
 
-      {/* Resort Lifestyle & Amenities: Pool, The Omah Spa, MICE & Wedding */}
-      <ResortHighlights />
+      {/* Marlin Beach Club & Sunset Coastal Gastronomy */}
+      <DiningTropical />
 
-      {/* Gateway to Wonders: Kawah Ijen Blue Fire & East Java Tours */}
-      <ExcursionsSection />
+      {/* Asymmetric Photo Mosaic (Pool, Spa, Beach, Grounds, Weddings) */}
+      <ResortGalleryMosaic />
 
-      {/* Verified Guest Testimonials & Rating Proof (TripAdvisor & Google) */}
-      <GuestReviews />
+      {/* Regional Adventures: Midnight Mount Ijen Blue Fire Basecamp */}
+      <ExcursionsEditorial />
 
-      {/* Strategic Location & Transit Breakdown */}
-      <LocationMap />
+      {/* Global Guest Proof & TripAdvisor / Google Ratings */}
+      <GuestProofTropical />
 
-      {/* Mobile Sticky Quick Booking Bar */}
-      <MobileStickyBooking />
+      {/* Geographic Connectivity & Transfer Services */}
+      <LocationMapTropical />
 
-      {/* Semantic Footer with Complete NAP & Direct Links */}
-      <Footer />
+      {/* Mobile Sticky Quick Booking */}
+      <MobileStickyBookingTropical />
+
+      {/* Tropical Resort Footer */}
+      <FooterTropical />
     </main>
   );
 }
