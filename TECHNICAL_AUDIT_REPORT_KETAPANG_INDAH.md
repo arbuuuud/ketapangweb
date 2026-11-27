@@ -90,7 +90,7 @@ None of the essential security headers are configured on the web server:
 
 ### Deficit 7: Direct Booking Friction & OTA Commission Leakage
 - **Current Observation**: Booking widgets suffer from delayed initialization caused by the 23 blocking JavaScript files. Mobile guests on cellular connections face visual lag before finding check-in/out date selectors.
-- **Revenue Toll**: Frustrated visitors return to OTA platforms (Traveloka, Agoda, Booking.com), costing Ketapang Indah **18% to 22% in commissions** on bookings that should have been captured 100% direct.
+- **Revenue Toll**: Frustrated visitors return to OTA platforms (Traveloka, Agoda, Booking.com), costing Ketapang Indah **18% to 22% in commissions** on bookings that should have been captured directly.
 
 ---
 
@@ -130,7 +130,7 @@ None of the essential security headers are configured on the web server:
 
 ### Recommendation 4: Streamlined BackHotelite Direct Booking Integration
 - Embed a lightweight, instant-response booking bar that passes check-in, check-out, and guest parameters directly into the hotel's official BackHotelite booking engine (`search-dispo.htm`).
-- Recapture tens of millions of Rupiah monthly by retaining 100% of direct room revenues.
+- Recapture tens of millions of Rupiah monthly by replacing expensive 18%–22% OTA commissions with a fair 10% direct performance model, saving 8%–12% in net margin.
 
 ---
 

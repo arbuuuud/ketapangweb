@@ -109,7 +109,7 @@ async function createJourneyOnDeckKetapang() {
     const cards = [
       {
         title: 'High OTA Commissions (18% - 22%)',
-        desc: 'When travelers search for Banyuwangi & Mount Ijen stays, OTAs (Traveloka, Agoda, Booking.com) dominate clicks. The hotel surrenders 18% to 22% in commissions on guests who already intended to book Ketapang Indah.'
+        desc: 'When travelers search for Banyuwangi & Mount Ijen stays, OTAs dominate clicks, charging 18% to 22% in commissions. Direct booking with JourneyOn halves this cost via a 10% performance fee, saving 8% to 12% in net margin.'
       },
       {
         title: 'Bookers Move to AI Search',
@@ -291,11 +291,11 @@ async function createJourneyOnDeckKetapang() {
       fill: { color: BRAND_DARK }
     });
     slide.addText([
-      { text: 'Shifting just ' },
+      { text: 'Shifting ' },
       { text: '100 room nights per month', options: { bold: true, color: COLOR_HIGHLIGHT } },
-      { text: ' from OTAs to direct booking recaptures ' },
-      { text: '~IDR 18M to IDR 25M monthly (~IDR 216M–300M / year)', options: { bold: true, color: COLOR_HIGHLIGHT } },
-      { text: ' in lost commissions.' }
+      { text: ' from OTAs (18%–22%) to JourneyOn direct booking (10%) ' },
+      { text: 'cuts commission expense in half', options: { bold: true, color: COLOR_HIGHLIGHT } },
+      { text: ', returning tens of millions into hotel profit.' }
     ], {
       x: 0.95, y: 4.35, w: 8.1, h: 0.35,
       fontSize: 9, color: 'FFFFFF', fontFace: 'Helvetica'
@@ -423,32 +423,32 @@ async function createJourneyOnDeckKetapang() {
   }
 
   // ==========================================================
-  // SLIDE 7: COMMERCIAL IMPACT & DIRECT RECAPTURE
+  // SLIDE 7: COMMERCIAL IMPACT & DISTRIBUTION MODEL
   // ==========================================================
   {
     const slide = pres.addSlide();
     applyContentSlide(
       slide,
       'FINANCIAL VALUE CREATION',
-      'Recapturing 18% to 22% OTA commissions & building direct digital equity',
+      'Halving distribution costs: 10% performance model vs 18%–22% OTA drain',
       7
     );
 
     const metrics = [
       {
-        val: '18% – 22%',
-        label: 'OTA Commission Saved',
-        desc: 'Commission fee recaptured on every booking shifted from Traveloka, Agoda, and Booking.com to direct web.'
+        val: '10%',
+        label: 'JourneyOn Direct Commission',
+        desc: 'Fair performance fee charged only on successful bookings, halving the 18%–22% OTA commission drain.'
       },
       {
-        val: '100+ Keys',
-        label: 'Monthly Direct Shift Target',
-        desc: 'Preserves ~IDR 18M to IDR 25M monthly (~IDR 216M–300M / year) in hotel gross operating profit.'
+        val: '+8% to +12%',
+        label: 'Net Margin Recaptured',
+        desc: 'Direct profit margin addition retained by Ketapang Indah on every room night shifted from OTAs.'
       },
       {
-        val: '0% Fee',
-        label: 'Direct Revenue Retention',
-        desc: 'Ketapang Indah keeps 100% of room margins and owns guest data for repeat holiday bookings.'
+        val: '100% Owned',
+        label: 'Direct Guest Data & Equity',
+        desc: 'Hotel owns guest contact info and booking history for lifetime repeat stays, corporate accounts, and MICE.'
       }
     ];
 
@@ -484,9 +484,9 @@ async function createJourneyOnDeckKetapang() {
       fill: { color: BRAND_DARK }
     });
     slide.addText([
-      { text: 'Direct BackHotelite integration passes check-in/out dates, guest counts, and promo codes ' },
-      { text: 'with zero redirect friction', options: { bold: true, color: COLOR_HIGHLIGHT } },
-      { text: '.' }
+      { text: 'Performance-aligned partnership: ' },
+      { text: 'JourneyOn earns 10% only when bookings succeed', options: { bold: true, color: COLOR_HIGHLIGHT } },
+      { text: ', cutting OTA commission costs by half while Ketapang Indah retains high profit margins.' }
     ], {
       x: 0.95, y: 4.35, w: 8.1, h: 0.35,
       fontSize: 9, color: 'FFFFFF', fontFace: 'Helvetica'

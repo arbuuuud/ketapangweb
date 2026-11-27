@@ -16,8 +16,8 @@
 ### Kicker: THE PARADIGM SHIFT
 ### Headline: How Modern Travelers & Event Planners Choose Coastal Resorts
 - **Card 1: High OTA Commission Drain (18% – 22%)**
-  - When travelers search for Banyuwangi & Mount Ijen stays, OTAs (Traveloka, Agoda, Booking.com) dominate the clicks.
-  - The hotel pays 18% to 22% in commissions on guests who already know and intended to stay at Ketapang Indah.
+  - When travelers search for Banyuwangi & Mount Ijen stays, OTAs (Traveloka, Agoda, Booking.com) dominate clicks, charging 18% to 22% in commissions.
+  - Direct booking with JourneyOn cuts this cost in half with a 10% performance commission, returning 8% to 12% in net margin to the hotel.
 - **Card 2: Rise of Conversational AI Search (ChatGPT, Perplexity, Gemini)**
   - Over 40% of international, luxury, and corporate travelers now use conversational AI engines:
     *"Recommend the best 4-star beachfront resort in Banyuwangi with Bali Strait sunrise views, private cottages, and meeting facilities for 500 pax."*
@@ -55,7 +55,7 @@
   - HTTP Security Headers: Current **10 / 100** vs JourneyOn **100 / 100** (🔴 High Risk)
   - Direct Booking UX & Speed: Current **55 / 100** vs JourneyOn **96 / 100** (🟡 Moderate)
 - **Bottom Callout**:
-  - Shifting just 100 room nights per month to direct booking saves ~IDR 18M–25M monthly (~IDR 216M–300M/year) in recaptured OTA commissions.
+  - Shifting 100 room nights per month from OTAs (18%–22%) to JourneyOn direct booking (10%) cuts commission expense in half, returning tens of millions directly into hotel gross operating profit.
 
 ---
 
@@ -83,14 +83,16 @@
 
 ---
 
-## SLIDE 7: COMMERCIAL IMPACT & DIRECT BOOKING RECAPTURE
+## SLIDE 7: COMMERCIAL IMPACT & DISTRIBUTION MODEL
 ### Kicker: FINANCIAL VALUE CREATION
-### Headline: Recapturing 18% to 22% OTA Commissions & Building Direct Digital Equity
-- **Metric 1: 18% to 22%** — Commission saved on every direct booking shifted from OTAs.
-- **Metric 2: 100+ Room Nights** — Modest monthly direct shift preserves ~IDR 18M–25M/mo (~IDR 216M–300M/year).
-- **Metric 3: 0% Direct Intermediary Fee** — The hotel keeps 100% of room margin and guest contact data.
+### Headline: Halving Distribution Costs: 10% Performance Model vs 18%–22% OTA Drain
+- **Metric 1: 10%** — Fair Direct Commission (Performance fee vs 18%–22% OTA rates, halving distribution cost).
+- **Metric 2: +8% to +12%** — Net Margin Recaptured (Direct profit addition retained by Ketapang Indah on every booking).
+- **Metric 3: 100% Owned** — First-Party Guest Data & Equity (Hotel owns direct guest contact data for lifetime repeat stays & MICE).
 - **Seamless BackHotelite Direct Integration**:
-  - Embedded high-speed booking bar passes check-in/out dates, adult/child counts, and promo codes directly into BackHotelite without visual friction.
+  - Embedded high-speed booking bar passes check-in/out dates, adult/child counts, and promo codes directly into BackHotelite.
+- **Partnership Alignment**:
+  - Performance-aligned model: JourneyOn earns 10% only when direct bookings succeed, aligning our success with Ketapang Indah's revenue growth.
 
 ---
 
