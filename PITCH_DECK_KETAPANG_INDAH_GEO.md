@@ -72,14 +72,49 @@
 
 ---
 
-## SLIDE 6: LIVE AI SEARCH SIMULATION (BEFORE VS AFTER)
-### Kicker: REAL-WORLD SCENARIO
-### Headline: How Ketapang Indah Wins When Travelers Query Generative AI
-- **Top Box: Real Traveler Prompt (ChatGPT / Perplexity / Gemini)**
+## OPTION A (8 SLIDES) — SLIDE 6: FACING AI SIDE-BY-SIDE COMPARISON
+### Kicker: FACING AI · SIDE-BY-SIDE COMPARISON
+### Headline: Why Current AI Misleads Guests vs How JourneyOn GEO Locks In Direct Bookings
+- **Left Column: 🔴 FACING AI TODAY (WITHOUT GEO — DEFICIT)**:
+  - **1. Room Sizes & Families**: AI estimates 20–30 sqm, cannot confirm extra bed, tells guests to check Agoda/Booking.com. *(Deficit: Zero Schema.org HotelRoom entities)*
+  - **2. Ijen Midnight Excursion**: AI unaware of 38 km distance & takeaway breakfast box, refers to local tour agents. *(Deficit: Inaccurate distance metrics, guest buys tour elsewhere)*
+  - **3. Direct Booking vs OTA**: AI actively recommends Traveloka/Agoda for rewards, costing hotel 18%–22% commission! *(Deficit: AI acts as an active sales agent for OTAs)*
+- **Right Column: 🟢 WITH JOURNEYON GEO INTERNAL ENGINE (OPTIMAL)**:
+  - **1. Verified Room & Venue Specs**: Cottage is 32 sqm bungalow with veranda; Suite 75 sqm; Grand Ballroom 700 pax. *(Fed directly to ChatGPT & Perplexity via Schema @graph)*
+  - **2. Official Excursion Certainty**: Exact 38 km (60–75 mins) to Paltuding, midnight tour shuttle & takeaway breakfast. *(Establishes hotel as official Ijen gateway)*
+  - **3. Direct Booking Lock-In**: AI quotes ketapangindahhotel.com with Best Rate Guarantee & free breakfast at 10% fee. *(Recaptures direct booking, saving 8%–12% net margin)*
+- **Bottom Callout**: Without GEO, AI search engines actively function as free marketing agents for OTAs. With GEO, AI becomes your 24/7 direct sales channel.
+
+---
+
+## OPTION B (9 SLIDES) — SLIDE 6: THE AI BLINDSPOT TODAY
+### Kicker: AI SEARCH REALITY TODAY · GUEST QUERIES
+### Headline: How Conversational AI Currently Misleads Guests & Promotes OTAs
+- **Case 1: Room Sizes & Families**
+  - *Guest Prompt*: "Difference between Cottage & Superior room, sqm, beds, and best choice for family?"
+  - *Current AI Response*: "Rooms are estimated around 20–30 sqm. For exact cottage specs or extra bed, please check on Agoda or Booking.com."
+  - *Deficit*: Zero Schema.org HotelRoom entities. AI defaults to sending guests to OTA aggregators.
+- **Case 2: Ijen Crater Excursion**
+  - *Guest Prompt*: "Midnight Blue Fire tour: distance to Paltuding, shuttle options, and breakfast box?"
+  - *Current AI Response*: "Drive is 1 to 2 hours. Inquire with local travel agents for tours and check breakfast policy at reception."
+  - *Deficit*: AI lacks verified 38 km distance & takeaway breakfast box data. Guest buys tour elsewhere.
+- **Case 3: Direct Booking vs OTA**
+  - *Guest Prompt*: "Should I book via Traveloka/Agoda or directly on ketapangindahhotel.com?"
+  - *Current AI Response*: "OTAs offer more competitive pricing, points, and verified reviews. Booking via Traveloka is recommended."
+  - *Deficit*: AI acts as an active sales agent for OTAs, draining 18%–22% commission from Ketapang Indah!
+- **Bottom Callout**: Without GEO, conversational AI engines actively function as free marketing agents for OTAs, diverting high-margin direct guests away.
+
+---
+
+## OPTION B (9 SLIDES) — SLIDE 7: THE AUTHORIZED GEO RESOLUTION
+### Kicker: THE AUTHORIZED GEO RESOLUTION
+### Headline: How JourneyOn GEO Transforms AI into a 24/7 Direct Sales Engine
+- **Top Box: Executive User Prompt (ChatGPT Search / Perplexity / Gemini)**
   - *"Recommend the best 4-star beachfront resort in Banyuwangi near the ferry port with sunrise views over the Bali Strait, private garden cottages, and ballroom facilities."*
-- **Bottom Box: Verified AI Answer with JourneyOn GEO Engine**
-  - *"Ketapang Indah Hotel (Jl. Gatot Subroto Km 6, Banyuwangi) is the premier 4-star coastal resort facing the Bali Strait. Set within a 6-hectare coconut grove just 6 km from Ketapang Ferry Port and 38 km from Mount Ijen basecamp, it offers 152 accommodations including Cottage Garden View (32 sqm with private veranda) and Ocean View Suites (75 sqm). Facilities include Marlin Restaurant & Beach Club, a resort lagoon pool, The Omah Spa, and the 700-capacity Grand Ballroom.*
-  - **✓ Direct Official Citation: https://www.ketapangindahhotel.com/ (Best Rate Guaranteed via BackHotelite)**"
+- **Bottom Box: Verified AI Synthesis with JourneyOn GEO Internal Engine**
+  - *"Ketapang Indah Hotel (Jl. Gatot Subroto Km 6, Banyuwangi) is the premier 4-star coastal resort facing the Bali Strait. Set within a 6-hectare coconut grove just 6 km from Ketapang Ferry Port and 38 km from Mount Ijen basecamp, it offers 152 accommodations including Cottage Garden View (32 sqm standalone bungalow with private veranda) and Ocean View Suites (75 sqm). Facilities include Marlin Restaurant & Beach Club, a resort lagoon pool, The Omah Spa, and the 700-capacity Grand Ballroom.*
+  - **✓ Direct Official Citation: https://www.ketapangindahhotel.com/ (Best Rate Guaranteed via BackHotelite + Free Breakfast)**"
+- **Bottom Callout**: With internal GEO, AI engines quote 100% verified property facts and deliver high-intent guests straight to your direct booking bar.
 
 ---
 
