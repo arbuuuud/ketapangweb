@@ -256,17 +256,17 @@ async function buildV2Deck() {
   }
 
   // =========================================================================
-  // SLIDE 7: RAPID 14-DAY ROADMAP
+  // SLIDE 7: 1-MONTH IMPLEMENTATION ROADMAP
   // =========================================================================
   {
     const slide = pres.addSlide();
-    applyContentSlide(slide, 'RAPID IMPLEMENTATION · 14-DAY TIMELINE', 'Fast 14-day turnaround with zero operational disruption to hotel operations', 7);
+    applyContentSlide(slide, 'IMPLEMENTATION ROADMAP · 1-MONTH TIMELINE', 'Structured 1-month rollout ensuring precision, thorough QA, and zero downtime', 7);
 
     const steps = [
-      { step: 'PHASE 1 · DAYS 1–4', title: 'Cloud Isolation & Web', desc: 'Deploy Next.js 14 on isolated cloud VPS. Setup WAF, SSL, and DNS remapping with zero interference to hotel mail servers.' },
-      { step: 'PHASE 2 · DAYS 5–8', title: 'Booking Engine Sync', desc: 'Assist OMNI Hotelier setup & verify 2-way Channel Manager to Booking.com, Agoda, Traveloka, and Tiket.com. Test payment gateway.' },
-      { step: 'PHASE 3 · DAYS 9–11', title: 'AI Knowledge Ingestion', desc: 'Ingest 152 rooms, ballroom specs, and Marlin menus into AI Concierge. Connect Web Chat Drawer & Official WhatsApp.' },
-      { step: 'PHASE 4 · DAYS 12–14', title: 'QA & Official Launch', desc: 'Execute live booking test, zero-clash human takeover verification, front office training, and official go-live!' }
+      { step: 'WEEK 1 · FOUNDATION', title: 'Mockup Selection & Assets', desc: 'Stakeholder kickoff & select Mockup 1 vs 2 at ketapangweb.vercel.app. Gather high-res photography, 152-room specs, Marlin menus, and MICE packages. Map server & DNS security.' },
+      { step: 'WEEK 2 · ENGINEERING', title: 'Website Development & GEO', desc: 'Build custom Next.js 14 frontend (<0.8s speed). Implement SSR Schema.org @graph (152 rooms & ballroom 700 pax) + /llms.txt. Deploy isolated cloud VPS without touching mail server.' },
+      { step: 'WEEK 3 · INTEGRATION', title: 'Booking Engine & AI Ingestion', desc: 'Setup OMNI Hotelier IBE & 2-way Channel Manager to OTAs (Agoda, Booking, Traveloka). Integrate QRIS/VA payments. Ingest hotel knowledge base & parity rules into AI Booking Assistance.' },
+      { step: 'WEEK 4 · VALIDATION', title: 'QA, Training & Go-Live', desc: 'End-to-end booking & payment QA across devices. Test AI Booking Assistance on Web & WhatsApp + Zero-Clash takeover. Front office & Sales SOP training, zero-downtime DNS cutover, & launch!' }
     ];
 
     steps.forEach((s, idx) => {
@@ -279,7 +279,7 @@ async function buildV2Deck() {
     });
 
     slide.addShape(pres.ShapeType.roundRect, { x: 0.8, y: 4.25, w: 8.4, h: 0.55, r: 0.06, fill: { color: BRAND_DARK } });
-    slide.addText([{ text: 'Ready to Deploy Ketapang Indah\'s Unified Direct Revenue Engine? ' }, { text: '14-Day Rapid Deployment Guaranteed.', options: { bold: true, color: COLOR_HIGHLIGHT } }, { text: ' Contact: partnership@journeyon.id' }], { x: 0.95, y: 4.35, w: 8.1, h: 0.35, fontSize: 8.5, color: 'FFFFFF', fontFace: 'Helvetica' });
+    slide.addText([{ text: 'Ready to Deploy Ketapang Indah\'s Unified Direct Revenue Engine? ' }, { text: 'Structured 1-Month Rollout Guaranteed.', options: { bold: true, color: COLOR_HIGHLIGHT } }, { text: ' Contact: partnership@journeyon.id' }], { x: 0.95, y: 4.35, w: 8.1, h: 0.35, fontSize: 8.5, color: 'FFFFFF', fontFace: 'Helvetica' });
   }
 
   // =========================================================================
@@ -305,7 +305,7 @@ async function buildV2Deck() {
   }
 
   // =========================================================================
-  // SLIDE 9: PRICING 1 · WEBSITE REVAMP & AI BOOKING ASSISTANCE
+  // SLIDE 9: PRICING 1 · CORE INVESTMENT MODEL (MONTHLY HIGHLIGHTED)
   // =========================================================================
   {
     const slide = pres.addSlide();
@@ -313,37 +313,42 @@ async function buildV2Deck() {
 
     const cards = [
       {
-        tag: 'PILLAR 1 · ONE-TIME SETUP',
-        val: 'IDR 30.000.000',
-        label: 'Website Revamp & GEO Engine',
-        color: BRAND_DARK,
+        tag: 'MONTHLY RECURRING · AI CONCIERGE',
+        val: 'IDR 3.000.000',
+        valSub: '/ bln',
+        promo: 'IDR 5.000.000/mo (Ketapang Exclusive)',
+        label: '24/7 AI Booking Assistance',
+        color: COLOR_OPTIMAL,
         bullets: [
-          'Published Market Rate: IDR 50.000.000',
-          'Exclusive Loyalty Discount: -IDR 20.000.000 (Nett)',
-          'Full Next.js 14 rebuild, server cloud isolation, Schema.org @graph 152 keys, /llms.txt, conversion tracking & 1st year maintenance.'
-        ]
-      },
-      {
-        tag: 'PILLAR 2 · AI BOOKING ASSISTANCE',
-        val: 'IDR 2.500.000 Setup',
-        label: '+ IDR 3.000.000 / Month',
-        color: COLOR_KICKER,
-        bullets: [
-          'Setup & Knowledge Ingestion: IDR 2.500.000 (One-Time)',
-          'Monthly Subscription: IDR 5.000.000/mo -> IDR 3.000.000 / month (Exclusive Ketapang Discount).',
-          'Omnichannel 24/7: Deployed on Web Chat Drawer & Official WhatsApp (+62 877-5678-0745), 132+ languages, live rate sync & Zero-Clash takeover.'
+          'Setup & Ingestion Fee: IDR 2.500.000 (One-Time Setup).',
+          'Omnichannel 24/7: Deployed on Web Chat Drawer & Official WhatsApp (+62 877-5678-0745).',
+          'Capabilities: 132+ languages, <3s response, live rate-match & secret promo codes, Zero-Clash takeover.'
         ]
       },
       {
         tag: 'ROOM PERFORMANCE MODEL',
         val: '10% Commission',
-        label: 'Direct Booking Fee',
-        color: COLOR_OPTIMAL,
+        valSub: '',
+        promo: 'Zero Risk · Success-Only Model',
+        label: 'Direct Booking Success Fee',
+        color: COLOR_KICKER,
         bullets: [
           'Performance-only: charged strictly on successful direct web & AI reservations.',
           'Cuts OTA fees by half: Saves 8%–12% net margin vs 18%–22% OTA commissions.',
-          '100% Guest Data Ownership retained by hotel.',
-          'Note: Recommended IBE OMNI (~IDR 2M/mo) subscribed directly by hotel.'
+          '100% Guest Data Ownership retained by hotel for future retargeting & loyalty.'
+        ]
+      },
+      {
+        tag: 'ONE-TIME ASSET · WEBSITE REVAMP',
+        val: 'IDR 30.000.000',
+        valSub: '',
+        promo: 'IDR 50.000.000 (-IDR 20.000.000 Loyalty)',
+        label: 'Permanent Digital Foundation',
+        color: BRAND_DARK,
+        bullets: [
+          'Custom Jamstack Rebuild: Next.js 14 frontend (<0.8s load speed), mobile-first tropical UX.',
+          'GEO Engine: Full SSR Schema.org @graph (152 units & ballroom 700 pax) + domain /llms.txt.',
+          'Cloud Infrastructure: Isolated cloud VPS, WAF security, conversion tracking & 1st year maintenance.'
         ]
       }
     ];
@@ -352,12 +357,15 @@ async function buildV2Deck() {
       const xPos = 0.8 + idx * 2.9;
       slide.addShape(pres.ShapeType.roundRect, { x: xPos, y: 1.35, w: 2.65, h: 2.7, r: 0.08, fill: { color: BG_WHITE }, line: { color: CARD_BORDER, width: 1 } });
       slide.addShape(pres.ShapeType.rect, { x: xPos, y: 1.35, w: 2.65, h: 0.06, fill: { color: c.color } });
-      slide.addText(c.tag, { x: xPos + 0.18, y: 1.48, w: 2.3, h: 0.2, fontSize: 7, bold: true, color: c.color, fontFace: 'Helvetica', charSpacing: 0.8 });
-      slide.addText(c.val, { x: xPos + 0.18, y: 1.72, w: 2.3, h: 0.35, fontSize: 13, bold: true, color: c.color, fontFace: 'Georgia', align: 'center' });
-      slide.addText(c.label, { x: xPos + 0.18, y: 2.08, w: 2.3, h: 0.22, fontSize: 7.2, bold: true, color: COLOR_KICKER, fontFace: 'Helvetica', align: 'center', textTransform: 'uppercase' });
+      slide.addText(c.tag, { x: xPos + 0.18, y: 1.48, w: 2.3, h: 0.2, fontSize: 6.8, bold: true, color: c.color, fontFace: 'Helvetica', charSpacing: 0.8 });
+      
+      const valText = c.valSub ? [{ text: c.val, options: { bold: true, fontSize: 13, color: c.color, fontFace: 'Georgia' } }, { text: ' ' + c.valSub, options: { fontSize: 8.5, color: COLOR_TEXT_MUTED, fontFace: 'Helvetica' } }] : c.val;
+      slide.addText(valText, { x: xPos + 0.18, y: 1.7, w: 2.3, h: 0.32, fontSize: 13, bold: true, color: c.color, fontFace: 'Georgia', align: 'center' });
+      slide.addText(c.promo, { x: xPos + 0.18, y: 2.02, w: 2.3, h: 0.18, fontSize: 6.8, color: c.color, fontFace: 'Helvetica', align: 'center', bold: true });
+      slide.addText(c.label, { x: xPos + 0.18, y: 2.2, w: 2.3, h: 0.2, fontSize: 7, bold: true, color: COLOR_TEXT_HEAD, fontFace: 'Helvetica', align: 'center', textTransform: 'uppercase' });
       
       const bObj = c.bullets.map(b => ({ text: b, options: { bullet: true, fontSize: 7.2, color: COLOR_TEXT_BODY, lineSpacingMultiple: 1.2 } }));
-      slide.addText(bObj, { x: xPos + 0.18, y: 2.35, w: 2.3, h: 1.6, fontFace: 'Helvetica' });
+      slide.addText(bObj, { x: xPos + 0.18, y: 2.45, w: 2.3, h: 1.5, fontFace: 'Helvetica' });
     });
 
     slide.addShape(pres.ShapeType.roundRect, { x: 0.8, y: 4.25, w: 8.4, h: 0.55, r: 0.06, fill: { color: BRAND_DARK } });
