@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Unified Direct Revenue Engine - Pitch Deck (Ketapang Indah Hotel)</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap');
+
+  @page {
+    size: 297mm 167mm; /* 16:9 widescreen landscape */
+    margin: 0;
+  }
+
+  * {
+    box-sizing: border-box;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #0A0E17;
+  }
+
+  .slide {
+    width: 297mm;
+    height: 167mm;
+    page-break-after: always;
+    position: relative;
+    padding: 13mm 20mm 11mm 20mm;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+  .slide:last-child {
+    page-break-after: avoid;
+  }
+
+  .slide-light {
+    background-color: #F4F6F2;
+    color: #1A3A38;
+  }
+  .slide-dark {
+    background-color: #1A3A38;
+    color: #FFFFFF;
+  }
+
+  /* Decorative Brand Circles for Dark Cover */
+  .circle-large {
+    position: absolute;
+    width: 140mm;
+    height: 140mm;
+    border-radius: 50%;
+    background-color: #234B49;
+    top: -20mm;
+    right: 15mm;
+    z-index: 1;
+  }
+  .circle-small {
+    position: absolute;
+    width: 80mm;
+    height: 80mm;
+    border-radius: 50%;
+    background-color: #234B49;
+    bottom: -15mm;
+    right: -10mm;
+    z-index: 1;
+  }
+  .cover-content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  /* Typography */
+  .kicker {
+    font-size: 8.2pt;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    color: #9E8A55;
+    margin-bottom: 3mm;
+  }
+  .headline {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 18pt;
+    font-weight: 700;
+    line-height: 1.25;
+    color: #1A3A38;
+    margin: 0 0 4.5mm 0;
+  }
+  .cover-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 26pt;
+    font-weight: 700;
+    line-height: 1.15;
+    color: #FFFFFF;
+    margin: 0 0 4.5mm 0;
+    max-width: 230mm;
+  }
+  .cover-subtitle {
+    font-size: 11pt;
+    color: #E2E8F0;
+    line-height: 1.35;
+    max-width: 210mm;
+    margin-bottom: 9mm;
+  }
+  .cover-footer {
+    font-size: 8.5pt;
+    color: #94A3B8;
+  }
+
+  /* Content Cards */
+  .card-grid-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5.5mm;
+    margin-bottom: 4mm;
+  }
+  .card-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6mm;
+    margin-bottom: 4mm;
+  }
+  .card-grid-4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 4.5mm;
+    margin-bottom: 4mm;
+  }
+
+  .card {
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    padding: 4.5mm 5.5mm;
+    border: 1px solid #E2E8F0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+  }
+  .card h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 10pt;
+    color: #1A3A38;
+    margin: 0 0 2mm 0;
+    line-height: 1.25;
+  }
+  .card p {
+    font-size: 7.8pt;
+    color: #475569;
+    line-height: 1.4;
+    margin: 0;
+  }
+
+  .badge-tag {
+    font-size: 7.2pt;
+    font-weight: 700;
+    color: #9E8A55;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    margin-bottom: 1.5mm;
+  }
+
+  /* Dark Callout Banner */
+  .dark-banner {
+    background-color: #1A3A38;
+    color: #FFFFFF;
+    border-radius: 4px;
+    padding: 3.2mm 5.5mm;
+    font-size: 8.2pt;
+    display: flex;
+    align-items: center;
+  }
+  .dark-banner strong {
+    color: #E5B044;
+  }
+
+  /* Metric Card */
+  .metric-card {
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    padding: 4.5mm 5mm;
+    border: 1px solid #E2E8F0;
+    border-top: 3px solid #1A3A38;
+    text-align: center;
+  }
+  .metric-val {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 20pt;
+    font-weight: 700;
+    color: #1A3A38;
+    margin-bottom: 1mm;
+  }
+  .metric-label {
+    font-size: 7.5pt;
+    font-weight: 700;
+    color: #9E8A55;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: 1.5mm;
+  }
+  .metric-desc {
+    font-size: 7.5pt;
+    color: #64748B;
+    line-height: 1.35;
+  }
+
+  /* Timeline Grid */
+  .timeline-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 4.5mm;
+    margin-bottom: 4mm;
+  }
+  .timeline-card {
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-top: 3px solid #9E8A55;
+    border-radius: 4px;
+    padding: 4mm 4.5mm;
+  }
+  .timeline-step {
+    font-size: 7.2pt;
+    font-weight: 700;
+    color: #9E8A55;
+    letter-spacing: 0.8px;
+    margin-bottom: 1.5mm;
+    text-transform: uppercase;
+  }
+  .timeline-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 9.5pt;
+    font-weight: 700;
+    color: #1A3A38;
+    margin-bottom: 1.5mm;
+  }
+  .timeline-desc {
+    font-size: 7.4pt;
+    color: #475569;
+    line-height: 1.35;
+  }
+
+  /* WhatsApp Simulation Styles */
+  .chat-box {
+    background: #E5DDD5;
+    border-radius: 6px;
+    padding: 4mm 5mm;
+    border: 1px solid #CBD5E1;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5mm;
+    height: 100%;
+  }
+  .chat-bubble-guest {
+    align-self: flex-end;
+    background: #E7FFDB;
+    color: #1E293B;
+    padding: 2.5mm 3.5mm;
+    border-radius: 6px 6px 0 6px;
+    font-size: 7.4pt;
+    line-height: 1.35;
+    max-width: 82%;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+  }
+  .chat-bubble-ai {
+    align-self: flex-start;
+    background: #FFFFFF;
+    color: #1E293B;
+    padding: 2.5mm 3.5mm;
+    border-radius: 6px 6px 6px 0;
+    font-size: 7.4pt;
+    line-height: 1.35;
+    max-width: 88%;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+  }
+  .chat-bubble-badge {
+    font-size: 6.8pt;
+    font-weight: 700;
+    color: #059669;
+    display: inline-block;
+    margin-bottom: 1mm;
+  }
+
+  /* Slide Footer */
+  .slide-footer {
+    position: absolute;
+    bottom: 4mm;
+    left: 20mm;
+    right: 20mm;
+    font-size: 7.2pt;
+    color: #64748B;
+    display: flex;
+    justify-content: space-between;
+  }
+</style>
+</head>
+<body>
+
+<!-- ========================================================================= -->
+<!-- SLIDE 1: COVER -->
+<!-- ========================================================================= -->
+<div class="slide slide-dark">
+  <div class="circle-large"></div>
+  <div class="circle-small"></div>
+  <div class="cover-content">
+    <div class="kicker" style="color: #E5B044;">JOURNEYON AI · UNIFIED DIRECT REVENUE PROPOSAL</div>
+    <div class="cover-title">Unified Direct Revenue Engine & Digital Transformation</div>
+    <div class="cover-subtitle">Next-Gen Web & GEO Architecture + OMNI Hotelier (IBE & Channel Manager) + 24/7 Autonomous AI Booking Concierge on WhatsApp & Web</div>
+    <div class="cover-footer">Prepared for Board of Directors & General Manager · Ketapang Indah Hotel Banyuwangi · November 2026</div>
+  </div>
+</div>
+
+<!-- ========================================================================= -->
+<!-- SLIDE 2: CURRENT REVENUE LEAKAGE -->
+<!-- ========================================================================= -->
+<div class="slide slide-light">
+  <div class="kicker">THE PROBLEM · DIRECT REVENUE LEAKAGE</div>
+  <div class="headline">Why coastal resorts lose direct bookings to OTAs in 2026</div>
+  
+  <div class="card-grid-3">
+    <div class="card" style="border-top: 3px solid #DC2626;">
+      <div class="badge-tag" style="color: #DC2626;">DEFICIT 1 · AI SEARCH INVISIBILITY</div>
+      <h3>Invisible to Modern AI Search</h3>
+      <p>Over 40% of luxury & international travelers now ask ChatGPT, Perplexity, and Gemini to recommend Banyuwangi resorts. Without Schema.org and /llms.txt, AI models cannot verify room specs or rates — citing OTAs instead.</p>
+    </div>
+    <div class="card" style="border-top: 3px solid #DC2626;">
+      <div class="badge-tag" style="color: #DC2626;">DEFICIT 2 · OFF-HOURS INQUIRIES</div>
+      <h3>27% Inquiries Land Off-Hours</h3>
+      <p>International guests from Singapore, Australia, and Europe message between 20.00–06.00 WIB. With the reservation desk offline, inquiries go unanswered for hours — driving guests straight to Agoda or Booking.com.</p>
+    </div>
+    <div class="card" style="border-top: 3px solid #DC2626;">
+      <div class="badge-tag" style="color: #DC2626;">DEFICIT 3 · HIGH OTA COMMISSIONS</div>
+      <h3>18% to 22% Margin Drain</h3>
+      <p>Every booking surrendered to OTAs incurs high commission fees (Rp 150.000–Rp 400.000+ per night). Without instant price-matching and direct stay perks, guests default to third-party portals.</p>
+    </div>
+  </div>
+
+  <div class="dark-banner">
+    <span>Ketapang Indah has 152 keys, cottages, and Bali Strait beachfront. A fragmented website and slow response quietly drain <strong>hundreds of millions of Rupiah</strong> into OTA commissions every year.</span>
+  </div>
+
+  <div class="slide-footer">
+    <span>JourneyOn AI · Unified Direct Revenue Proposal for Ketapang Indah Hotel Banyuwangi</span>
+    <span>Slide 2</span>
+  </div>
+</div>
+
+<!-- ========================================================================= -->
+<!-- SLIDE 3: UNIFIED 3-PILLAR ECOSYSTEM -->
+<!-- ========================================================================= -->
+<div class="slide slide-light">
+  <div class="kicker">THE SOLUTION · UNIFIED ECOSYSTEM ARCHITECTURE</div>
+  <div class="headline">Three interconnected layers engineered to maximize direct bookings & net margin</div>
+
+  <div class="card-grid-3">
+    <div class="card" style="border-top: 3px solid #1A3A38;">
+      <div class="badge-tag">PILLAR 1 · THE FOUNDATION</div>
+      <h3>Modern Web & GEO Engine</h3>
+      <p style="margin-bottom: 2mm;"><strong>High-Speed Jamstack (Next.js 14):</strong> Sub-second load (&lt;0.8s), 96+ Google Lighthouse score, mobile-first resort layout, and clean DNS isolation from hotel mail servers.</p>
+      <p><strong>Generative Engine Optimization:</strong> Server-side Schema.org @graph (152 keys, Marlin Resto, Grand Ballroom) + /llms.txt so AI search cites Ketapang Indah #1.</p>
+    </div>
+    <div class="card" style="border-top: 3px solid #9E8A55;">
+      <div class="badge-tag" style="color: #9E8A55;">PILLAR 2 · TRANSACTION ENGINE</div>
+      <h3>OMNI Hotelier (IBE & CM)</h3>
+      <p style="margin-bottom: 2mm;"><strong>Recommended Partner (~IDR 2M/mo):</strong> Centralized 2-way Channel Manager syncing inventory & rates automatically across Agoda, Booking.com, Traveloka, Tiket.com, and Expedia.</p>
+      <p><strong>White-Label Booking Engine:</strong> Mobile-first direct booking widget with multi-payment gateway (QRIS 0.7%, VA, Card) on the hotel's own domain.</p>
+    </div>
+    <div class="card" style="border-top: 3px solid #059669;">
+      <div class="badge-tag" style="color: #059669;">PILLAR 3 · ACTIVE CONVERTER</div>
+      <h3>24/7 AI Booking Concierge</h3>
+      <p style="margin-bottom: 2mm;"><strong>Always-On Revenue Assistant:</strong> Operates 24/7 on WhatsApp & Web Drawer. Responds in &lt;3s in 132+ languages, pulling live rates directly from OMNI Hotelier.</p>
+      <p><strong>Closes & Upsells:</strong> Defuses price hesitation with direct perks, routes 700-pax MICE ballroom leads, and pauses automatically when staff replies (Zero-Clash).</p>
+    </div>
+  </div>
+
+  <div class="dark-banner">
+    <span>Synergy: The <strong>Website & GEO</strong> capture high-intent demand, <strong>OMNI Hotelier</strong> synchronizes inventory, and <strong>AI Concierge</strong> converts conversations into paid direct bookings 24/7.</span>
+  </div>
+
+  <div class="slide-footer">
+    <span>JourneyOn AI · Unified Direct Revenue Proposal for Ketapang Indah Hotel Banyuwangi</span>
+    <span>Slide 3</span>
+  </div>
+</div>
+
+<!-- ========================================================================= -->
+<!-- SLIDE 4: PILLAR 1 - WEBSITE & GEO -->
+<!-- ========================================================================= -->
+<div class="slide slide-light">
+  <div class="kicker">PILLAR 1 · MODERN WEB REVAMP & GEO DATA ENGINE</div>
+  <div class="headline">Eliminating legacy bottlenecks and establishing permanent AI search authority</div>
+
+  <div class="card-grid-2">
+    <div class="card">
+      <div class="badge-tag">MODERN HEADLESS FRONTEND</div>
+      <h3>Next.js 14 Headless Resort Web</h3>
+      <ul style="margin: 0; padding-left: 4.5mm; font-size: 7.7pt; color: #475569; line-height: 1.45;">
+        <li><strong>Sub-Second Loading (&lt;0.8s):</strong> Eliminates 23 bloated legacy scripts and outdated October CMS, achieving 96+ Core Web Vitals.</li>
+        <li><strong>Server Security Isolation:</strong> Decouples the public website to an isolated cloud environment with WAF and DDoS defense, protecting internal hotel mail servers.</li>
+        <li><strong>Photo-Centric Tropical Aesthetic:</strong> Asymmetric editorial showcase highlighting the 6-hectare coconut grove, oceanfront sunrise, and 5 distinct room tiers.</li>
+        <li><strong>Direct Frictionless Booking Bar:</strong> Sticky mobile booking drawer and instant date search connected directly to OMNI Hotelier.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="badge-tag">MACHINE-READABLE SEARCH PROTOCOL</div>
+      <h3>Generative Engine Optimization (GEO)</h3>
+      <ul style="margin: 0; padding-left: 4.5mm; font-size: 7.7pt; color: #475569; line-height: 1.45;">
+        <li><strong>Deep Schema.org @graph (SSR):</strong> Fully structured entity metadata for all 152 rooms (Cottage 32 sqm, Suite 75 sqm), Blambangan Ballroom (700 pax), and Marlin Beach Club.</li>
+        <li><strong>Standardized /llms.txt AI Feeds:</strong> Machine-readable markdown feeding ChatGPT, Claude, and Perplexity with verified property facts, tour distances, and direct perks.</li>
+        <li><strong>Instant IndexNow Push API:</strong> Direct price updates and seasonal stay promotions indexed by search crawlers in minutes.</li>
+        <li><strong>Owned Digital Equity:</strong> Unlike recurring Google PPC ads that vanish when budget runs out, GEO builds permanent organic authority.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="dark-banner">
+    <span>Live Mockup Ready: <strong>Mockup 1 (Modern Luxury)</strong> & <strong>Mockup 2 (Tropical Exclusive)</strong> are built and ready for review at <code>ketapangweb.vercel.app</code>.</span>
+  </div>
+
+  <div class="slide-footer">
+    <span>JourneyOn AI · Unified Direct Revenue Proposal for Ketapang Indah Hotel Banyuwangi</span>
+    <span>Slide 4</span>
+  </div>
+</div>
+
+<!-- ========================================================================= -->
+<!-- SLIDE 5: PILLAR 2 - OMNI HOTELIER IBE & CM -->
+<!-- ========================================================================= -->
+<div class="slide slide-light">
+  <div class="kicker">PILLAR 2 · RECOMMENDED IBE & CHANNEL MANAGER</div>
+  <div class="headline">OMNI Hotelier (~IDR 2M/mo): Seamless 2-way distribution & high-converting booking engine</div>
+
+  <div class="card-grid-3">
+    <div class="card" style="border-top: 3px solid #1A3A38;">
+      <div class="badge-tag">2-WAY CHANNEL MANAGER</div>
+      <h3>Allotment & Rate Sync</h3>
+      <p style="margin-bottom: 2mm;"><strong>Single Source of Truth:</strong> Real-time 2-way synchronization across Booking.com, Agoda, Traveloka, Tiket.com, and Expedia.</p>
+      <p><strong>Anti Double-Booking:</strong> Automatically adjusts allotment across all OTAs the second a direct or OTA reservation is made. Eliminates manual morning updates.</p>
+    </div>
+
+    <div class="card" style="border-top: 3px solid #9E8A55;">
+      <div class="badge-tag" style="color: #9E8A55;">DIRECT BOOKING ENGINE (IBE)</div>
+      <h3>Frictionless Mobile Checkout</h3>
+      <p style="margin-bottom: 2mm;"><strong>Official Hotel White-Label:</strong> Fast booking engine hosted on hotel domain with real-time room photo switcher, rate plans, and secret promo codes.</p>
+      <p><strong>Domestic & Global Payments:</strong> Pre-integrated with QRIS (0.7% MDR), Virtual Account, Credit Card (3D Secure), and E-Wallets. Uang langsung masuk ke rekening hotel.</p>
+    </div>
+
+    <div class="card" style="border-top: 3px solid #059669;">
+      <div class="badge-tag" style="color: #059669;">COST & NATIVE AI SYNERGY</div>
+      <h3>Save 50% vs Legacy Systems</h3>
+      <p style="margin-bottom: 2mm;"><strong>Economic Efficiency:</strong> At ~IDR 2.000.000/month, OMNI saves hotel ±IDR 12.000.000 annually compared to costly foreign engines (ROIBack ±IDR 2M+ / month).</p>
+      <p><strong>Native API to JourneyOn AI:</strong> Connects directly with our AI Concierge, allowing real-time rate queries and instant locked booking links in WhatsApp chats.</p>
+    </div>
+  </div>
+
+  <div class="dark-banner">
+    <span>OMNI Hotelier is the preferred hospitality tech across Bali & East Java, providing <strong>enterprise-grade channel reliability at an affordable flat monthly fee</strong>.</span>
+  </div>
+
+  <div class="slide-footer">
+    <span>JourneyOn AI · Unified Direct Revenue Proposal for Ketapang Indah Hotel Banyuwangi</span>
+    <span>Slide 5</span>
+  </div>
+</div>
+
+<!-- ========================================================================= -->
+<!-- SLIDE 6: PILLAR 3 - AI BOOKING CONCIERGE -->
+<!-- ========================================================================= -->
+<div class="slide slide-light">
+  <div class="kicker">PILLAR 3 · 24/7 AUTONOMOUS REVENUE CONCIERGE</div>
+  <div class="headline">Turning every guest conversation into a confirmed direct booking around the clock</div>
+
+  <div class="card-grid-4">
+    <div class="card" style="border-top: 3px solid #1A3A38;">
+      <div class="badge-tag">24/7 INSTANT SPEED</div>
+      <h3>&lt;3s Response Time</h3>
+      <p>Catches the 27% of high-value booking inquiries arriving off-hours (20.00–06.00 WIB) when front desk is away, preventing drop-offs to OTAs.</p>
+    </div>
+
+    <div class="card" style="border-top: 3px solid #9E8A55;">
+      <div class="badge-tag" style="color: #9E8A55;">MULTILINGUAL AI</div>
+      <h3>132+ Languages</h3>
+      <p>Natively converses in English, Indonesian, Mandarin, Russian, French, and German. Critical for international Mount Ijen transit travelers.</p>
+    </div>
+
+    <div class="card" style="border-top: 3px solid #059669;">
+      <div class="badge-tag" style="color: #059669;">PRICE NEGOTIATION</div>
+      <h3>Active Rate-Match</h3>
+      <p>Detects price hesitation when guests cite OTA rates. Applies secret direct promo codes and highlights perks (sunrise breakfast, Ijen box).</p>
+    </div>
+
+    <div class="card" style="border-top: 3px solid #E5B044;">
+      <div class="badge-tag" style="color: #B45309;">HUMAN-AI SYNERGY</div>
+      <h3>Zero-Clash Takeover</h3>
+      <p>AI automatically pauses the moment hotel staff types a reply. No awkward message collisions or overlapping responses.</p>
+    </div>
+  </div>
+
+  <div class="dark-banner">
+    <span>Not a rigid button chatbot. JourneyOn AI is built on <strong>state-of-the-art Large Language Models (LLMs)</strong> fine-tuned for luxury hospitality conversations.</span>
+  </div>
+
+  <div class="slide-footer">
+    <span>JourneyOn AI · Unified Direct Revenue Proposal for Ketapang Indah Hotel Banyuwangi</span>
+    <span>Slide 6</span>
+  </div>
+</div>
+
+<!-- ========================================================================= -->
+<!-- SLIDE 7: IN-CHAT BOOKING FLOW & SIMULATION -->
+<!-- ========================================================================= -->
+<div class="slide slide-light">
+  <div class="kicker">PILLAR 3 · IN-CHAT INTERACTION SIMULATION</div>
+  <div class="headline">A complete direct reservation closed in under 2 minutes — directly inside WhatsApp</div>
+
+  <div class="card-grid-2" style="align-items: stretch;">
+    <!-- LEFT: THE 4-STEP AI LOGIC -->
+    <div class="card" style="display: flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <div class="badge-tag">CONVERSION INTELLIGENCE</div>
+        <h3 style="margin-bottom: 2mm;">How JourneyOn AI Closes Direct Bookings</h3>
+        <p style="font-size: 7.7pt; color: #475569; margin-bottom: 2.5mm;">Unlike conventional bots that send static links, JourneyOn AI guides guests through the entire decision funnel:</p>
+      </div>
+
+      <div style="font-size: 7.6pt; color: #334155; line-height: 1.4;">
+        <div style="margin-bottom: 2mm; padding-left: 2.5mm; border-left: 2.5px solid #1A3A38;">
+          <strong>1. Intent & Date Extraction:</strong> Identifies dates, guest count (family/couple), cottage preference, and price sensitivity.
+        </div>
+        <div style="margin-bottom: 2mm; padding-left: 2.5mm; border-left: 2.5px solid #9E8A55;">
+          <strong>2. Live Omni Rate Query:</strong> Reads real-time inventory from OMNI Hotelier in seconds.
+        </div>
+        <div style="margin-bottom: 2mm; padding-left: 2.5mm; border-left: 2.5px solid #059669;">
+          <strong>3. Price-Match & Value Perks:</strong> Defuses OTA comparison with matched pricing and direct-exclusive benefits.
+        </div>
+        <div style="padding-left: 2.5mm; border-left: 2.5px solid #E5B044;">
+          <strong>4. Locked Direct Checkout:</strong> Delivers pre-filled checkout link for instant payment.
+        </div>
+      </div>
+
+      <div style="background: #F8FAFC; border: 1px solid #E2E8F0; padding: 2mm 3mm; border-radius: 4px; font-size: 7.2pt; color: #64748B;">
+        ✓ Direct booking rate increases by up to <strong>+35%</strong> when hesitation is defused immediately in chat.
+      </div>
+    </div>
+
+    <!-- RIGHT: WHATSAPP CHAT PREVIEW -->
+    <div class="chat-box">
+      <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #CBD5E1; padding-bottom: 1.5mm; margin-bottom: 1mm;">
+        <div style="font-size: 7.5pt; font-weight: 700; color: #0F172A;">Ketapang Indah Hotel · WhatsApp Official</div>
+        <div style="font-size: 6.8pt; color: #059669; font-weight: 600;">● Online (24/7 AI)</div>
+      </div>
+
+      <div class="chat-bubble-guest">
+        Hi! Looking for Cottage Garden View for 4 pax, 14–17 Dec (3 nights). On Agoda it's Rp 4.2M total. Any direct promo?
+      </div>
+
+      <div class="chat-bubble-ai">
+        <div class="chat-bubble-badge">JourneyOn AI · Live Omni Sync</div>
+        Hello! Warm greetings from Ketapang Indah 🌴<br>
+        Yes, our <strong>Cottage Garden View (32 sqm with veranda)</strong> is available! We can match the Agoda rate at <strong>IDR 4.100.000 nett</strong> — plus exclusive direct perks:
+        <br>• Free daily buffet breakfast for 4 pax
+        <br>• Takeaway breakfast boxes for your Mount Ijen midnight tour
+        <br>• 10% dining voucher at Marlin Restaurant & Beach Club
+        <br>Would you like me to hold this cottage for you?
+      </div>
+
+      <div class="chat-bubble-guest">
+        Yes please, that's much better than Agoda! Let's book it.
+      </div>
+
+      <div class="chat-bubble-ai">
+        Wonderful! Your cottage is held for 15 mins. Tap below to secure your stay via official direct payment:<br>
+        <span style="color: #0284C7; text-decoration: underline; font-weight: 600;">👉 [Official Direct Checkout: reserveonline.id/ketapang/cottage]</span><br>
+        Looking forward to welcoming you to Banyuwangi! ✨
+      </div>
+    </div>
+  </div>
+
+  <div class="dark-banner">
+    <span>Zero OTA commission leakage: The guest booked direct, received superior perks, and <strong>Ketapang Indah saved 8%–12% net margin</strong> while owning the guest profile.</span>
+  </div>
+
+  <div class="slide-footer">
+    <span>JourneyOn AI · Unified Direct Revenue Proposal for Ketapang Indah Hotel Banyuwangi</span>
+    <span>Slide 7</span>
+  </div>
+</div>
+
+<!-- ========================================================================= -->
+<!-- SLIDE 8: PILLAR 3 - MICE, BALLROOM & RESTO ROUTER -->
+<!-- ========================================================================= -->
+<div class="slide slide-light">
+  <div class="kicker">PILLAR 3 · MULTI-DEPARTMENT REVENUE ROUTING</div>
+  <div class="headline">Maximizing total guest spend across Blambangan Ballroom, Marlin & Ijen Tours</div>
+
+  <div class="card-grid-3">
+    <div class="card" style="border-top: 3px solid #1A3A38;">
+      <div class="badge-tag">MICE & WEDDINGS</div>
+      <h3>Blambangan Ballroom (700 Pax)</h3>
+      <p style="margin-bottom: 2mm;"><strong>24/7 Corporate RFP Capture:</strong> Qualifies large meeting inquiries, gala dinners, and beachfront lawn weddings.</p>
+      <p><strong>Smart Lead Dispatch:</strong> Auto-collects event dates, expected pax, theater/roundtable layout, and catering needs, then instantly alerts the Director of Sales / MICE PIC via WhatsApp.</p>
+    </div>
+
+    <div class="card" style="border-top: 3px solid #9E8A55;">
+      <div class="badge-tag" style="color: #9E8A55;">F&B RESERVATIONS</div>
+      <h3>Marlin Restaurant & Beach Club</h3>
+      <p style="margin-bottom: 2mm;"><strong>Table Reservations:</strong> Promotes signature oceanfront dining, Betutu Selat Bali, and sunset seafood BBQ to in-house and outside guests.</p>
+      <p><strong>Instant Table Holds:</strong> Handles dietary inquiries, seating requests, and books tables directly without burdening F&B service staff.</p>
+    </div>
+
+    <div class="card" style="border-top: 3px solid #059669;">
+      <div class="badge-tag" style="color: #059669;">REGIONAL EXCURSIONS</div>
+      <h3>Mount Ijen & Transport Hub</h3>
+      <p style="margin-bottom: 2mm;"><strong>High-Margin Tour Upselling:</strong> Sells certified Blue Flame trekking packages, gas mask rentals, and Paltuding shuttles.</p>
+      <p><strong>Transit Transfers:</strong> Books chauffeured transfers to Ketapang Ferry Port (6 km), Banyuwangi Train Station, and BWX Airport directly in the chat.</p>
+    </div>
+  </div>
+
+  <div class="dark-banner">
+    <span>One unified digital concierge transforms WhatsApp from a cost center into a <strong>24/7 multi-department sales engine</strong> generating rooms, banquet, F&B, and tour revenue.</span>
+  </div>
+
+  <div class="slide-footer">
+    <span>JourneyOn AI · Unified Direct Revenue Proposal for Ketapang Indah Hotel Banyuwangi</span>
+    <span>Slide 8</span>
+  </div>
+</div>
+
+<!-- ========================================================================= -->
+<!-- SLIDE 9: COMMERCIAL & INVESTMENT FRAMEWORK -->
+<!-- ========================================================================= -->
+<div class="slide slide-light">
+  <div class="kicker">FINANCIAL FRAMEWORK · INVESTMENT & DISTRIBUTION MODEL</div>
+  <div class="headline">Transparent, performance-aligned investment designed for rapid payback & margin recapture</div>
+
+  <div class="card-grid-3">
+    <div class="metric-card">
+      <div class="badge-tag">PILLAR 1 · ONE-TIME SETUP</div>
+      <div class="metric-val" style="font-size: 17pt;">IDR 25.000.000</div>
+      <div class="metric-label">Website Revamp & GEO Engine</div>
+      <div class="metric-desc" style="font-size: 7.2pt; text-align: left; margin-top: 2mm;">
+        • Published Market Rate: <del>IDR 45.000.000</del><br>
+        • <strong>Loyalty Partner Discount: -IDR 20.000.000</strong><br>
+        • Full Next.js 14 rebuild, server cloud isolation, Schema.org @graph 152 keys, /llms.txt, conversion tracking & 1st year maintenance.
+      </div>
+    </div>
+
+    <div class="metric-card" style="border-top: 3px solid #9E8A55;">
+      <div class="badge-tag" style="color: #9E8A55;">PILLAR 2 · MONTHLY TOOL</div>
+      <div class="metric-val" style="font-size: 17pt; color: #9E8A55;">~IDR 2.000.000</div>
+      <div class="metric-label">OMNI Hotelier (IBE & CM)</div>
+      <div class="metric-desc" style="font-size: 7.2pt; text-align: left; margin-top: 2mm;">
+        • Monthly subscription directly to OMNI Hotelier.<br>
+        • Full 2-way Channel Manager to Agoda, Booking.com, Traveloka, Tiket.com, Expedia.<br>
+        • White-label booking engine with multi-payment gateway. Replaces expensive legacy engines.
+      </div>
+    </div>
+
+    <div class="metric-card" style="border-top: 3px solid #059669;">
+      <div class="badge-tag" style="color: #059669;">PILLAR 3 · PERFORMANCE MODEL</div>
+      <div class="metric-val" style="font-size: 17pt; color: #059669;">10% Commission</div>
+      <div class="metric-label">JourneyOn Direct Booking Fee</div>
+      <div class="metric-desc" style="font-size: 7.2pt; text-align: left; margin-top: 2mm;">
+        • Performance-only: charged strictly on successful direct web & AI reservations.<br>
+        • <strong>Cuts OTA fees by half</strong>: Saves 8%–12% net margin vs 18%–22% OTA commissions.<br>
+        • 100% Guest Data Ownership retained by hotel.
+      </div>
+    </div>
+  </div>
+
+  <div class="dark-banner">
+    <span>Break-Even Calculation: Shifting just <strong>15–20 room nights per month</strong> from OTAs to direct booking <strong>fully recovers the entire system setup cost in month 1</strong>.</span>
+  </div>
+
+  <div class="slide-footer">
+    <span>JourneyOn AI · Unified Direct Revenue Proposal for Ketapang Indah Hotel Banyuwangi</span>
+    <span>Slide 9</span>
+  </div>
+</div>
+
+<!-- ========================================================================= -->
+<!-- SLIDE 10: RAPID 14-DAY ROADMAP -->
+<!-- ========================================================================= -->
+<div class="slide slide-light">
+  <div class="kicker">RAPID IMPLEMENTATION · 14-DAY TIMELINE</div>
+  <div class="headline">Fast 14-day turnaround with zero operational disruption to hotel operations</div>
+
+  <div class="timeline-grid">
+    <div class="timeline-card">
+      <div class="timeline-step">PHASE 1 · DAYS 1–4</div>
+      <div class="timeline-title">Cloud Isolation & Web</div>
+      <div class="timeline-desc">Deploy Next.js 14 on isolated cloud VPS. Setup WAF, SSL, and DNS remapping with zero interference to hotel mail servers.</div>
+    </div>
+    <div class="timeline-card">
+      <div class="timeline-step">PHASE 2 · DAYS 5–8</div>
+      <div class="timeline-title">OMNI Setup & OTA Sync</div>
+      <div class="timeline-desc">Configure OMNI Hotelier IBE and connect 2-way Channel Manager to Booking.com, Agoda, Traveloka, and Tiket.com. Test payment gateway.</div>
+    </div>
+    <div class="timeline-card">
+      <div class="timeline-step">PHASE 3 · DAYS 9–11</div>
+      <div class="timeline-title">AI Knowledge Ingestion</div>
+      <div class="timeline-desc">Ingest 152 rooms, ballroom specs, and Marlin menus into AI Concierge. Connect official hotel WhatsApp (+62 877-5678-0745) & Web Drawer.</div>
+    </div>
+    <div class="timeline-card">
+      <div class="timeline-step">PHASE 4 · DAYS 12–14</div>
+      <div class="timeline-title">QA & Official Launch</div>
+      <div class="timeline-desc">Execute live booking test, zero-clash human takeover verification, front office training, and official go-live!</div>
+    </div>
+  </div>
+
+  <div class="dark-banner" style="display: flex; justify-content: space-between; align-items: center;">
+    <div>
+      <strong style="color: #E5B044;">Ready to Deploy Ketapang Indah's Unified Direct Revenue Engine?</strong><br>
+      <span style="font-size: 7.4pt; color: #CBD5E1;">JourneyOn AI Hospitality Team · partnership@journeyon.id · Inquiries & Sign-off</span>
+    </div>
+    <div style="font-size: 8.2pt; font-weight: 700; color: #E5B044;">
+      14-Day Rapid Deployment Guaranteed
+    </div>
+  </div>
+
+  <div class="slide-footer">
+    <span>JourneyOn AI · Unified Direct Revenue Proposal for Ketapang Indah Hotel Banyuwangi</span>
+    <span>Slide 10</span>
+  </div>
+</div>
+
+</body>
+</html>
