@@ -40,8 +40,8 @@ function applyContentSlide(slide, kickerText, headlineText, slideNum, kickerColo
   });
 
   if (slideNum) {
-    slide.addText(`Slide ${slideNum}`, {
-      x: 8.0, y: 5.2, w: 1.2, h: 0.2,
+    slide.addText(typeof slideNum === 'number' ? `Slide ${slideNum}` : slideNum, {
+      x: 7.8, y: 5.2, w: 1.4, h: 0.2,
       fontSize: 7.5, color: COLOR_TEXT_MUTED, fontFace: 'Helvetica', align: 'right'
     });
   }
@@ -63,7 +63,7 @@ async function buildV2Deck() {
     
     slide.addText('JOURNEYON AI · STRATEGIC DIRECT REVENUE DECK (V2)', { x: 0.8, y: 0.7, w: 6.5, h: 0.3, fontSize: 8.5, bold: true, color: COLOR_HIGHLIGHT, charSpacing: 2, fontFace: 'Helvetica' });
     slide.addText('Turning Inquiries into\nDirect Revenue', { x: 0.8, y: 1.2, w: 7.5, h: 1.7, fontSize: 28, bold: true, color: 'FFFFFF', fontFace: 'Georgia', lineSpacingMultiple: 1.15 });
-    slide.addText('Next-Gen Web & GEO Engine · OMNI Hotelier IBE & CM (~Rp 2M/mo) · 24/7 AI WhatsApp Concierge', { x: 0.8, y: 3.2, w: 7.2, h: 0.6, fontSize: 11.5, color: 'E2E8F0', fontFace: 'Helvetica', lineSpacingMultiple: 1.2 });
+    slide.addText('Next-Gen Web & GEO Engine · 24/7 AI WhatsApp Concierge · Recommended OMNI IBE Sync', { x: 0.8, y: 3.2, w: 7.2, h: 0.6, fontSize: 11.5, color: 'E2E8F0', fontFace: 'Helvetica', lineSpacingMultiple: 1.2 });
     slide.addText('Prepared for Board of Directors & General Manager · Ketapang Indah Hotel Banyuwangi · November 2026', { x: 0.8, y: 4.75, w: 7.5, h: 0.3, fontSize: 8.5, color: '94A3B8', fontFace: 'Helvetica' });
   }
 
@@ -110,16 +110,16 @@ async function buildV2Deck() {
   }
 
   // =========================================================================
-  // SLIDE 3: UNIFIED 3-PILLAR ECOSYSTEM
+  // SLIDE 3: UNIFIED ECOSYSTEM ARCHITECTURE
   // =========================================================================
   {
     const slide = pres.addSlide();
-    applyContentSlide(slide, 'THE COMPLETE SOLUTION · 1 UNIFIED ECOSYSTEM', 'Three interconnected layers engineered to capture, manage & close direct revenue', 3);
+    applyContentSlide(slide, 'THE COMPLETE SOLUTION · 1 UNIFIED ECOSYSTEM', 'Two core JourneyOn pillars + seamless booking engine integration', 3);
 
     const pillars = [
       { tag: 'PILLAR 1 · THE FOUNDATION', title: 'Modern Web & GEO Engine', color: BRAND_DARK, desc1: 'Next.js 14 Headless Web: Sub-second speed (<0.8s), Core Web Vitals 96+, photo-centric tropical layout, and isolated cloud server security.', desc2: 'Generative Engine Optimization: SSR Schema.org @graph (152 keys, ballroom 700 pax) + domain /llms.txt so AI engines cite Ketapang Indah #1.' },
-      { tag: 'PILLAR 2 · TRANSACTION ENGINE', title: 'OMNI Hotelier (IBE & CM)', color: COLOR_KICKER, desc1: '~IDR 2.000.000 / month: Centralized 2-way Channel Manager syncing inventory & rates live across Agoda, Booking.com, Traveloka, Tiket.com, and Expedia.', desc2: 'High-Speed Booking Engine: White-label mobile checkout on hotel domain with instant QRIS (0.7%), Virtual Account, and Credit Cards.' },
-      { tag: 'PILLAR 3 · ACTIVE CONVERTER', title: '24/7 AI WhatsApp Concierge', color: COLOR_OPTIMAL, desc1: 'Always-On Revenue Assistant: Operates 24/7 on WhatsApp & Web. Answers in <3s in 132+ languages, pulling live rates from OMNI Hotelier.', desc2: 'Closes & Upsells: Defuses OTA price hesitation, routes 700-pax MICE leads, and pauses automatically when staff types (Zero-Clash).' }
+      { tag: 'PILLAR 2 · ACTIVE CONVERTER', title: '24/7 AI WhatsApp Concierge', color: COLOR_OPTIMAL, desc1: 'Always-On Revenue Assistant: Operates 24/7 on WhatsApp & Web. Answers in <3s in 132+ languages, pulling live rates from your booking engine.', desc2: 'Closes & Upsells: Defuses OTA price hesitation, routes 700-pax MICE leads, and pauses automatically when staff types (Zero-Clash).' },
+      { tag: 'PARTNER INTEGRATION', title: 'Direct Booking Engine Sync', color: COLOR_KICKER, desc1: 'Connected to Recommended IBE (OMNI): JourneyOn AI connects natively to OMNI Hotelier (~Rp 2M/mo subscribed directly by hotel) for real-time rates.', desc2: 'Frictionless Direct Booking: Mobile-first direct booking drawer and locked checkout links delivered directly inside WhatsApp chats.' }
     ];
 
     pillars.forEach((p, idx) => {
@@ -133,7 +133,7 @@ async function buildV2Deck() {
     });
 
     slide.addShape(pres.ShapeType.roundRect, { x: 0.8, y: 4.25, w: 8.4, h: 0.55, r: 0.06, fill: { color: BRAND_DARK } });
-    slide.addText([{ text: 'Ecosystem Synergy: The ' }, { text: 'Website & GEO', options: { bold: true, color: COLOR_HIGHLIGHT } }, { text: ' capture high-intent demand, ' }, { text: 'OMNI Hotelier', options: { bold: true, color: COLOR_HIGHLIGHT } }, { text: ' manages inventory, and ' }, { text: 'AI Concierge', options: { bold: true, color: COLOR_HIGHLIGHT } }, { text: ' closes direct bookings 24/7.' }], { x: 0.95, y: 4.35, w: 8.1, h: 0.35, fontSize: 8.5, color: 'FFFFFF', fontFace: 'Helvetica' });
+    slide.addText([{ text: 'Ecosystem Synergy: The ' }, { text: 'Website & GEO', options: { bold: true, color: COLOR_HIGHLIGHT } }, { text: ' capture high-intent demand, ' }, { text: 'AI Concierge', options: { bold: true, color: COLOR_HIGHLIGHT } }, { text: ' converts conversations, and ' }, { text: 'Direct IBE', options: { bold: true, color: COLOR_HIGHLIGHT } }, { text: ' locks transactions 24/7.' }], { x: 0.95, y: 4.35, w: 8.1, h: 0.35, fontSize: 8.5, color: 'FFFFFF', fontFace: 'Helvetica' });
   }
 
   // =========================================================================
@@ -183,53 +183,38 @@ async function buildV2Deck() {
   }
 
   // =========================================================================
-  // SLIDE 5: PILLAR 2 - OMNI HOTELIER IBE & CM
+  // SLIDE 5: PILLAR 2 - 24/7 AI WHATSAPP CONCIERGE
   // =========================================================================
   {
     const slide = pres.addSlide();
-    applyContentSlide(slide, 'PILLAR 2 · RECOMMENDED IBE & CHANNEL MANAGER', 'OMNI Hotelier (~Rp 2M/mo): High-converting booking engine & 2-way OTA distribution', 5);
+    applyContentSlide(slide, 'PILLAR 2 · 24/7 AUTONOMOUS REVENUE CONCIERGE', 'Turning every guest conversation into a confirmed direct booking around the clock', 5);
 
     const cards = [
-      {
-        tag: '2-WAY CHANNEL MANAGER',
-        title: 'Automated OTA Sync',
-        desc1: 'Single Inventory Pool: Real-time 2-way synchronization to Booking.com, Agoda, Traveloka, Tiket.com, and Expedia.',
-        desc2: 'Zero Double-Bookings: Automatically updates room allotment across all OTAs the moment a direct or OTA reservation occurs. Eliminates manual morning updates.'
-      },
-      {
-        tag: 'DIRECT BOOKING ENGINE (IBE)',
-        title: 'Mobile Direct Checkout',
-        desc1: 'Official Hotel White-Label: Fast booking engine on hotel domain with real-time room photo switcher, rate plans, and secret promo codes.',
-        desc2: 'Instant Indonesian Payments: QRIS (0.7% MDR), Virtual Account, Credit Card (3D Secure), and E-Wallets. Uang langsung masuk ke rekening hotel.'
-      },
-      {
-        tag: 'COST & NATIVE AI SYNERGY',
-        title: 'Save 50% vs Legacy Systems',
-        desc1: 'High ROI: At ~IDR 2.000.000/month, OMNI saves hotel ±IDR 12.000.000/year compared to expensive foreign engines (ROIBack ±IDR 2M+/mo).',
-        desc2: 'Native API to JourneyOn AI: Connects directly with our AI Concierge, allowing real-time rate queries and instant locked booking links in WhatsApp chats.'
-      }
+      { tag: '24/7 INSTANT SPEED', title: '<3s Response Time', desc: 'Catches the 27% of high-value booking inquiries arriving off-hours (20.00–06.00 WIB) when front desk is away, preventing drop-offs to OTAs.' },
+      { tag: 'MULTILINGUAL AI', title: '132+ Languages', desc: 'Natively converses in English, Indonesian, Mandarin, Russian, French, and German. Critical for international Mount Ijen transit travelers.' },
+      { tag: 'PRICE NEGOTIATION', title: 'Active Rate-Match', desc: 'Detects price hesitation when guests cite OTA rates. Applies secret direct promo codes and highlights perks (sunrise breakfast, Ijen box).' },
+      { tag: 'HUMAN-AI SYNERGY', title: 'Zero-Clash Takeover', desc: 'AI automatically pauses the moment hotel staff types a reply. No awkward message collisions or overlapping responses.' }
     ];
 
     cards.forEach((c, idx) => {
-      const xPos = 0.8 + idx * 2.9;
-      slide.addShape(pres.ShapeType.roundRect, { x: xPos, y: 1.35, w: 2.65, h: 2.7, r: 0.08, fill: { color: BG_WHITE }, line: { color: CARD_BORDER, width: 1 } });
-      slide.addShape(pres.ShapeType.rect, { x: xPos, y: 1.35, w: 2.65, h: 0.06, fill: { color: idx === 1 ? COLOR_KICKER : (idx === 2 ? COLOR_OPTIMAL : BRAND_DARK) } });
-      slide.addText(c.tag, { x: xPos + 0.18, y: 1.48, w: 2.3, h: 0.2, fontSize: 7, bold: true, color: COLOR_KICKER, fontFace: 'Helvetica', charSpacing: 0.8 });
-      slide.addText(c.title, { x: xPos + 0.18, y: 1.72, w: 2.3, h: 0.45, fontSize: 10.5, bold: true, color: COLOR_TEXT_HEAD, fontFace: 'Georgia' });
-      slide.addText(c.desc1, { x: xPos + 0.18, y: 2.22, w: 2.3, h: 0.85, fontSize: 7.6, color: COLOR_TEXT_BODY, fontFace: 'Helvetica', lineSpacingMultiple: 1.25 });
-      slide.addText(c.desc2, { x: xPos + 0.18, y: 3.12, w: 2.3, h: 0.85, fontSize: 7.6, color: COLOR_TEXT_BODY, fontFace: 'Helvetica', lineSpacingMultiple: 1.25 });
+      const xPos = 0.8 + idx * 2.15;
+      slide.addShape(pres.ShapeType.roundRect, { x: xPos, y: 1.35, w: 1.95, h: 2.7, r: 0.08, fill: { color: BG_WHITE }, line: { color: CARD_BORDER, width: 1 } });
+      slide.addShape(pres.ShapeType.rect, { x: xPos, y: 1.35, w: 1.95, h: 0.06, fill: { color: idx === 2 ? COLOR_OPTIMAL : (idx === 1 ? COLOR_KICKER : BRAND_DARK) } });
+      slide.addText(c.tag, { x: xPos + 0.15, y: 1.48, w: 1.65, h: 0.2, fontSize: 6.8, bold: true, color: COLOR_KICKER, fontFace: 'Helvetica', charSpacing: 0.8 });
+      slide.addText(c.title, { x: xPos + 0.15, y: 1.72, w: 1.65, h: 0.45, fontSize: 10, bold: true, color: COLOR_TEXT_HEAD, fontFace: 'Georgia' });
+      slide.addText(c.desc, { x: xPos + 0.15, y: 2.22, w: 1.65, h: 1.7, fontSize: 7.7, color: COLOR_TEXT_BODY, fontFace: 'Helvetica', lineSpacingMultiple: 1.25 });
     });
 
     slide.addShape(pres.ShapeType.roundRect, { x: 0.8, y: 4.25, w: 8.4, h: 0.55, r: 0.06, fill: { color: BRAND_DARK } });
-    slide.addText([{ text: 'OMNI Hotelier is the preferred hospitality tech across Bali & East Java, providing ' }, { text: 'enterprise channel reliability at a flat ~IDR 2M/mo fee', options: { bold: true, color: COLOR_HIGHLIGHT } }, { text: '.' }], { x: 0.95, y: 4.35, w: 8.1, h: 0.35, fontSize: 8.5, color: 'FFFFFF', fontFace: 'Helvetica' });
+    slide.addText([{ text: 'Not a rigid button chatbot. JourneyOn AI is built on ' }, { text: 'state-of-the-art Large Language Models (LLMs)', options: { bold: true, color: COLOR_HIGHLIGHT } }, { text: ' fine-tuned for luxury hospitality conversations.' }], { x: 0.95, y: 4.35, w: 8.1, h: 0.35, fontSize: 8.5, color: 'FFFFFF', fontFace: 'Helvetica' });
   }
 
   // =========================================================================
-  // SLIDE 6: PILLAR 3 - AI CONCIERGE & MULTI-DEPARTMENT CLOSING
+  // SLIDE 6: PILLAR 2 - IN-CHAT CLOSING SIMULATION & ROUTING
   // =========================================================================
   {
     const slide = pres.addSlide();
-    applyContentSlide(slide, 'PILLAR 3 · 24/7 AI WHATSAPP CONCIERGE', 'Closing reservations in under 2 minutes & routing MICE leads 24/7', 6);
+    applyContentSlide(slide, 'PILLAR 2 · LIVE CLOSING SIMULATION & ROUTING', 'Closing reservations in under 2 minutes & routing MICE leads 24/7', 6);
 
     // Left: WhatsApp Chat
     slide.addShape(pres.ShapeType.roundRect, { x: 0.8, y: 1.35, w: 4.1, h: 2.7, r: 0.08, fill: { color: 'E5DDD5' }, line: { color: 'CBD5E1', width: 1 } });
@@ -285,30 +270,31 @@ async function buildV2Deck() {
         color: BRAND_DARK,
         bullets: [
           'Published Market Rate: IDR 45.000.000',
-          'Loyalty Partner Discount: -IDR 20.000.000',
+          'Loyalty Partner Discount: -IDR 20.000.000 (Nett)',
           'Full Next.js 14 rebuild, server cloud isolation, Schema.org @graph 152 keys, /llms.txt, conversion tracking & 1st year maintenance.'
         ]
       },
       {
-        tag: 'PILLAR 2 · MONTHLY TOOL',
-        val: '~IDR 2.000.000',
-        label: 'OMNI Hotelier (IBE & CM)',
+        tag: 'PILLAR 2 · AI ASSISTANCE',
+        val: 'IDR 2.500.000 Setup',
+        label: '+ IDR 2.500.000 / Month',
         color: COLOR_KICKER,
         bullets: [
-          'Monthly subscription directly to OMNI Hotelier.',
-          'Full 2-way Channel Manager to Agoda, Booking.com, Traveloka, Tiket.com, Expedia.',
-          'White-label booking engine with multi-payment gateway. Replaces expensive legacy engines.'
+          'Setup & Knowledge Ingestion: IDR 2.500.000 (One-Time)',
+          'Monthly Fee: IDR 5.000.000/mo -> IDR 2.500.000 / month (50% Loyalty Discount because paired with 10% commission).',
+          '24/7 WhatsApp & Web AI, 132+ languages, Zero-Clash takeover, live rate-match & multi-dept routing.'
         ]
       },
       {
-        tag: 'PILLAR 3 · PERFORMANCE MODEL',
+        tag: 'PERFORMANCE MODEL',
         val: '10% Commission',
         label: 'JourneyOn Direct Booking Fee',
         color: COLOR_OPTIMAL,
         bullets: [
           'Performance-only: charged strictly on successful direct web & AI reservations.',
           'Cuts OTA fees by half: Saves 8%–12% net margin vs 18%–22% OTA commissions.',
-          '100% Guest Data Ownership retained by hotel.'
+          '100% Guest Data Ownership retained by hotel.',
+          'Note: Recommended IBE OMNI (~IDR 2M/mo) subscribed directly by hotel.'
         ]
       }
     ];
@@ -318,8 +304,8 @@ async function buildV2Deck() {
       slide.addShape(pres.ShapeType.roundRect, { x: xPos, y: 1.35, w: 2.65, h: 2.7, r: 0.08, fill: { color: BG_WHITE }, line: { color: CARD_BORDER, width: 1 } });
       slide.addShape(pres.ShapeType.rect, { x: xPos, y: 1.35, w: 2.65, h: 0.06, fill: { color: c.color } });
       slide.addText(c.tag, { x: xPos + 0.18, y: 1.48, w: 2.3, h: 0.2, fontSize: 7, bold: true, color: c.color, fontFace: 'Helvetica', charSpacing: 0.8 });
-      slide.addText(c.val, { x: xPos + 0.18, y: 1.72, w: 2.3, h: 0.35, fontSize: 13.5, bold: true, color: c.color, fontFace: 'Georgia', align: 'center' });
-      slide.addText(c.label, { x: xPos + 0.18, y: 2.08, w: 2.3, h: 0.22, fontSize: 7.2, bold: true, color: COLOR_KICKER, fontFace: 'Helvetica', align: 'center', textTransform: 'uppercase' });
+      slide.addText(c.val, { x: xPos + 0.18, y: 1.72, w: 2.3, h: 0.35, fontSize: 13, bold: true, color: c.color, fontFace: 'Georgia', align: 'center' });
+      slide.addText(c.label, { x: xPos + 0.18, y: 2.08, w: 2.3, h: 0.22, fontSize: 7, bold: true, color: COLOR_KICKER, fontFace: 'Helvetica', align: 'center', textTransform: 'uppercase' });
       
       const bObj = c.bullets.map(b => ({ text: b, options: { bullet: true, fontSize: 7.2, color: COLOR_TEXT_BODY, lineSpacingMultiple: 1.2 } }));
       slide.addText(bObj, { x: xPos + 0.18, y: 2.35, w: 2.3, h: 1.6, fontFace: 'Helvetica' });
@@ -338,7 +324,7 @@ async function buildV2Deck() {
 
     const steps = [
       { step: 'PHASE 1 · DAYS 1–4', title: 'Cloud Isolation & Web', desc: 'Deploy Next.js 14 on isolated cloud VPS. Setup WAF, SSL, and DNS remapping with zero interference to hotel mail servers.' },
-      { step: 'PHASE 2 · DAYS 5–8', title: 'OMNI Setup & OTA Sync', desc: 'Configure OMNI Hotelier IBE and connect 2-way Channel Manager to Booking.com, Agoda, Traveloka, and Tiket.com. Test payment gateway.' },
+      { step: 'PHASE 2 · DAYS 5–8', title: 'Booking Engine Sync', desc: 'Assist OMNI Hotelier setup & verify 2-way Channel Manager to Booking.com, Agoda, Traveloka, and Tiket.com. Test payment gateway.' },
       { step: 'PHASE 3 · DAYS 9–11', title: 'AI Knowledge Ingestion', desc: 'Ingest 152 rooms, ballroom specs, and Marlin menus into AI Concierge. Connect official hotel WhatsApp & Web Drawer.' },
       { step: 'PHASE 4 · DAYS 12–14', title: 'QA & Official Launch', desc: 'Execute live booking test, zero-clash human takeover verification, front office training, and official go-live!' }
     ];
@@ -354,6 +340,70 @@ async function buildV2Deck() {
 
     slide.addShape(pres.ShapeType.roundRect, { x: 0.8, y: 4.25, w: 8.4, h: 0.55, r: 0.06, fill: { color: BRAND_DARK } });
     slide.addText([{ text: 'Ready to Deploy Ketapang Indah\'s Unified Direct Revenue Engine? ' }, { text: '14-Day Rapid Deployment Guaranteed.', options: { bold: true, color: COLOR_HIGHLIGHT } }, { text: ' Contact: partnership@journeyon.id' }], { x: 0.95, y: 4.35, w: 8.1, h: 0.35, fontSize: 8.5, color: 'FFFFFF', fontFace: 'Helvetica' });
+  }
+
+  // =========================================================================
+  // SLIDE 9: THANK YOU & DISCUSSION
+  // =========================================================================
+  {
+    const slide = pres.addSlide();
+    slide.background = { color: BRAND_DARK };
+    slide.addShape(pres.ShapeType.ellipse, { x: 6.4, y: 0.4, w: 3.2, h: 3.2, fill: { color: BRAND_CIRCLE }, line: { color: BRAND_CIRCLE } });
+    slide.addShape(pres.ShapeType.ellipse, { x: 7.7, y: 3.0, w: 1.8, h: 1.8, fill: { color: BRAND_CIRCLE }, line: { color: BRAND_CIRCLE } });
+
+    slide.addText('JOURNEYON AI · NEXT STEPS & Q&A', { x: 0.8, y: 0.8, w: 8.4, h: 0.3, fontSize: 8.5, bold: true, color: COLOR_HIGHLIGHT, charSpacing: 2, fontFace: 'Helvetica', align: 'center' });
+    slide.addText('Thank You', { x: 0.8, y: 1.3, w: 8.4, h: 1.2, fontSize: 36, bold: true, color: 'FFFFFF', fontFace: 'Georgia', align: 'center' });
+    slide.addText('Let\'s transform Ketapang Indah Hotel into Banyuwangi\'s premier direct revenue powerhouse.', { x: 1.2, y: 2.5, w: 7.6, h: 0.5, fontSize: 11, color: 'E2E8F0', fontFace: 'Helvetica', align: 'center' });
+
+    // Contact Box
+    slide.addShape(pres.ShapeType.roundRect, { x: 1.5, y: 3.3, w: 7.0, h: 0.9, r: 0.08, fill: { color: '234B49' }, line: { color: '2D5E5C', width: 1 } });
+    slide.addText('DIRECT CONTACT\npartnership@journeyon.id', { x: 1.7, y: 3.45, w: 2.1, h: 0.6, fontSize: 8, color: 'FFFFFF', fontFace: 'Helvetica', lineSpacingMultiple: 1.2 });
+    slide.addText('TECHNICAL LEAD\nEngineering & AI Solutions', { x: 3.9, y: 3.45, w: 2.1, h: 0.6, fontSize: 8, color: 'FFFFFF', fontFace: 'Helvetica', lineSpacingMultiple: 1.2 });
+    slide.addText('LIVE MOCKUP PREVIEW\nketapangweb.vercel.app', { x: 6.1, y: 3.45, w: 2.2, h: 0.6, fontSize: 8, color: COLOR_HIGHLIGHT, bold: true, fontFace: 'Helvetica', lineSpacingMultiple: 1.2 });
+
+    slide.addText('Ketapang Indah Hotel Banyuwangi × JourneyOn AI · Strategic Direct Revenue Partnership · November 2026', { x: 0.8, y: 4.75, w: 8.4, h: 0.3, fontSize: 8.5, color: '94A3B8', fontFace: 'Helvetica', align: 'center' });
+  }
+
+  // =========================================================================
+  // SLIDE 10: [APPENDIX] RECOMMENDED IBE & CHANNEL MANAGER: OMNI HOTELIER
+  // =========================================================================
+  {
+    const slide = pres.addSlide();
+    applyContentSlide(slide, 'APPENDIX · RECOMMENDED THIRD-PARTY BOOKING ENGINE', 'OMNI Hotelier (~Rp 2M/mo): High-converting booking engine & 2-way OTA distribution', 'Slide 10 (Appendix)', 'B45309');
+
+    const cards = [
+      {
+        tag: '2-WAY CHANNEL MANAGER',
+        title: 'Automated OTA Sync',
+        desc1: 'Single Inventory Pool: Real-time 2-way synchronization to Booking.com, Agoda, Traveloka, Tiket.com, and Expedia.',
+        desc2: 'Zero Double-Bookings: Automatically updates room allotment across all OTAs the moment a direct or OTA reservation occurs. Eliminates manual morning updates.'
+      },
+      {
+        tag: 'DIRECT BOOKING ENGINE (IBE)',
+        title: 'Mobile Direct Checkout',
+        desc1: 'Official Hotel White-Label: Fast booking engine on hotel domain with real-time room photo switcher, rate plans, and secret promo codes.',
+        desc2: 'Instant Indonesian Payments: QRIS (0.7% MDR), Virtual Account, Credit Card (3D Secure), and E-Wallets. Uang langsung masuk ke rekening hotel.'
+      },
+      {
+        tag: 'COST & NATIVE AI SYNERGY',
+        title: 'Save 50% vs Legacy Systems',
+        desc1: 'High ROI: At ~IDR 2.000.000/month, OMNI saves hotel ±IDR 12.000.000/year compared to expensive foreign engines (ROIBack ±IDR 2M+/mo).',
+        desc2: 'Native API to JourneyOn AI: Connects directly with our AI Concierge, allowing real-time rate queries and instant locked booking links in WhatsApp chats.'
+      }
+    ];
+
+    cards.forEach((c, idx) => {
+      const xPos = 0.8 + idx * 2.9;
+      slide.addShape(pres.ShapeType.roundRect, { x: xPos, y: 1.35, w: 2.65, h: 2.7, r: 0.08, fill: { color: BG_WHITE }, line: { color: CARD_BORDER, width: 1 } });
+      slide.addShape(pres.ShapeType.rect, { x: xPos, y: 1.35, w: 2.65, h: 0.06, fill: { color: idx === 1 ? COLOR_KICKER : (idx === 2 ? COLOR_OPTIMAL : BRAND_DARK) } });
+      slide.addText(c.tag, { x: xPos + 0.18, y: 1.48, w: 2.3, h: 0.2, fontSize: 7, bold: true, color: COLOR_KICKER, fontFace: 'Helvetica', charSpacing: 0.8 });
+      slide.addText(c.title, { x: xPos + 0.18, y: 1.72, w: 2.3, h: 0.45, fontSize: 10.5, bold: true, color: COLOR_TEXT_HEAD, fontFace: 'Georgia' });
+      slide.addText(c.desc1, { x: xPos + 0.18, y: 2.22, w: 2.3, h: 0.85, fontSize: 7.6, color: COLOR_TEXT_BODY, fontFace: 'Helvetica', lineSpacingMultiple: 1.25 });
+      slide.addText(c.desc2, { x: xPos + 0.18, y: 3.12, w: 2.3, h: 0.85, fontSize: 7.6, color: COLOR_TEXT_BODY, fontFace: 'Helvetica', lineSpacingMultiple: 1.25 });
+    });
+
+    slide.addShape(pres.ShapeType.roundRect, { x: 0.8, y: 4.25, w: 8.4, h: 0.55, r: 0.06, fill: { color: BRAND_DARK } });
+    slide.addText([{ text: 'Direct Vendor Subscription: ~IDR 2.000.000 / month ' }, { text: 'directly billed by OMNI Hotelier with zero markup from JourneyOn', options: { bold: true, color: COLOR_HIGHLIGHT } }, { text: '. Proven reliability across Bali & East Java.' }], { x: 0.95, y: 4.35, w: 8.1, h: 0.35, fontSize: 8.5, color: 'FFFFFF', fontFace: 'Helvetica' });
   }
 
   const outPptx = 'PITCH_DECK_KETAPANG_INDAH_V2.pptx';
