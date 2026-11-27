@@ -265,11 +265,11 @@ async function buildV2Deck() {
     const cards = [
       {
         tag: 'PILLAR 1 · ONE-TIME SETUP',
-        val: 'IDR 25.000.000',
+        val: 'IDR 30.000.000',
         label: 'Website Revamp & GEO Engine',
         color: BRAND_DARK,
         bullets: [
-          'Published Market Rate: IDR 45.000.000',
+          'Published Market Rate: IDR 50.000.000',
           'Loyalty Partner Discount: -IDR 20.000.000 (Nett)',
           'Full Next.js 14 rebuild, server cloud isolation, Schema.org @graph 152 keys, /llms.txt, conversion tracking & 1st year maintenance.'
         ]
