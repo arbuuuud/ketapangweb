@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Technical Website Audit Report - Ketapang Indah Hotel Banyuwangi</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap');
+
+  @page {
+    size: A4 portrait;
+    margin: 1.2cm 1.4cm 1.2cm 1.4cm;
+  }
+
+  * {
+    box-sizing: border-box;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #1e293b;
+    line-height: 1.4;
+    font-size: 8.5pt;
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+  }
+
+  .page {
+    page-break-after: always;
+    height: 100vh;
+    max-height: 270mm;
+    position: relative;
+    box-sizing: border-box;
+    padding-bottom: 25px;
+  }
+  .page:last-child {
+    page-break-after: avoid;
+  }
+
+  /* Header Bar */
+  .doc-header {
+    border-bottom: 2px solid #D4AF37;
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .doc-brand {
+    font-size: 15pt;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    color: #0F172A;
+  }
+  .doc-brand span {
+    color: #D4AF37;
+  }
+  .doc-meta {
+    text-align: right;
+    font-size: 8pt;
+    color: #64748b;
+    line-height: 1.35;
+  }
+  .doc-meta strong {
+    color: #0F172A;
+  }
+
+  /* Titles */
+  h1.doc-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 16pt;
+    color: #0F172A;
+    margin: 0 0 2px 0;
+    line-height: 1.2;
+  }
+  .doc-subtitle {
+    font-size: 8.5pt;
+    color: #64748b;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+
+  h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 10.5pt;
+    color: #0F172A;
+    border-left: 3.5px solid #D4AF37;
+    padding-left: 8px;
+    margin: 11px 0 5px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  p {
+    margin: 0 0 6px 0;
+    color: #334155;
+    text-align: justify;
+  }
+
+  /* Metadata Box */
+  .meta-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 8px 12px;
+    margin-bottom: 11px;
+    font-size: 8pt;
+    line-height: 1.35;
+  }
+  .meta-box strong {
+    color: #0F172A;
+    display: inline-block;
+    min-width: 85px;
+  }
+
+  /* Grade Box */
+  .grade-banner {
+    background: #0F172A;
+    color: #ffffff;
+    border-radius: 6px;
+    padding: 8px 12px;
+    margin-bottom: 11px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 4px solid #ef4444;
+  }
+  .grade-badge {
+    background: #ef4444;
+    color: #ffffff;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 16pt;
+    font-weight: 800;
+    padding: 2px 14px;
+    border-radius: 4px;
+  }
+
+  /* Scorecard Table */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 8px 0 10px 0;
+    font-size: 7.8pt;
+  }
+  th, td {
+    padding: 5px 8px;
+    border: 1px solid #cbd5e1;
+    text-align: left;
+  }
+  th {
+    background-color: #0F172A;
+    color: #ffffff;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+  }
+  tr:nth-child(even) {
+    background-color: #f8fafc;
+  }
+  td.critical {
+    color: #dc2626;
+    font-weight: 700;
+  }
+  td.optimal {
+    color: #059669;
+    font-weight: 700;
+  }
+
+  /* Vulnerability Cards */
+  .vuln-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-left: 3px solid #dc2626;
+    border-radius: 4px;
+    padding: 6px 10px;
+    margin-bottom: 6px;
+  }
+  .vuln-card h4 {
+    margin: 0 0 3px 0;
+    color: #0F172A;
+    font-size: 8.5pt;
+    display: flex;
+    justify-content: space-between;
+  }
+  .vuln-card h4 span {
+    color: #dc2626;
+    font-size: 7.5pt;
+    font-weight: 600;
+  }
+  .vuln-card p {
+    font-size: 7.6pt;
+    color: #475569;
+    line-height: 1.35;
+    margin: 0;
+  }
+
+  /* Remediation Grid */
+  .remedy-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin: 8px 0;
+  }
+  .remedy-box {
+    background: #f8fafc;
+    border: 1px solid #cbd5e1;
+    border-top: 2.5px solid #059669;
+    border-radius: 4px;
+    padding: 8px 10px;
+  }
+  .remedy-box h4 {
+    margin: 0 0 4px 0;
+    font-size: 8.5pt;
+    color: #0F172A;
+    font-weight: 700;
+  }
+  .remedy-box p {
+    margin: 0;
+    font-size: 7.6pt;
+    color: #475569;
+    line-height: 1.35;
+  }
+
+  /* Highlight Banner */
+  .highlight-banner {
+    background: #1A3A38;
+    color: #ffffff;
+    border-radius: 6px;
+    padding: 10px 14px;
+    margin: 10px 0;
+    border-left: 4px solid #D4AF37;
+  }
+  .highlight-banner h4 {
+    margin: 0 0 3px 0;
+    color: #E5B044;
+    font-size: 9.5pt;
+    font-weight: 700;
+  }
+  .highlight-banner p {
+    margin: 0;
+    color: #e2e8f0;
+    font-size: 8pt;
+    line-height: 1.35;
+  }
+
+  /* Footer */
+  .footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    font-size: 7pt;
+    color: #94a3b8;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 4px;
+  }
+</style>
+</head>
+<body>
+
+<!-- ========================================================================= -->
+<!-- PAGE 1: DIAGNOSTIC AUDIT, METADATA & EXECUTIVE SUMMARY -->
+<!-- ========================================================================= -->
+<div class="page">
+  <div class="doc-header">
+    <div class="doc-brand">JOURNEY<span>ON</span></div>
+    <div class="doc-meta">
+      <strong>TECHNICAL AUDIT REPORT</strong><br>
+      <strong>AUDIT REF:</strong> AUD-KIH-2026-001<br>
+      <strong>TARGET:</strong> https://www.ketapangindahhotel.com/
+    </div>
+  </div>
+
+  <h1 class="doc-title">Website Technical & Generative AI Readiness Audit</h1>
+  <div class="doc-subtitle">Diagnostic Inspection of Architecture, Performance, SEO, Security & Generative Engine Optimization (GEO)</div>
+
+  <div class="meta-grid">
+    <div class="meta-box">
+      <strong>Property:</strong> Ketapang Indah Hotel Banyuwangi (4-Star)<br>
+      <strong>Scale:</strong> 152 Rooms & Cottages · 6 Hectares · Bali Strait Beachfront<br>
+      <strong>Audit Date:</strong> November 2026
+    </div>
+    <div class="meta-box">
+      <strong>Current CMS:</strong> OctoberCMS (Apache / PHP Monolith circa 2018)<br>
+      <strong>Booking Engine:</strong> BackHotelite (External Iframe Redirect)<br>
+      <strong>Conducted By:</strong> JourneyOn AI Hospitality Engineering Team
+    </div>
+  </div>
+
+  <div class="grade-banner">
+    <div>
+      <div style="font-size: 9.5pt; font-weight: 700; color: #f87171; letter-spacing: 0.5px;">OVERALL SYSTEM HEALTH GRADE</div>
+      <div style="font-size: 8pt; color: #cbd5e1;">Outdated monolithic framework, heavy code bloat, and total generative AI invisibility.</div>
+    </div>
+    <div class="grade-badge">D+</div>
+  </div>
+
+  <h2>1. Diagnostic Scorecard & Benchmark Summary</h2>
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 32%;">Technical Audit Category</th>
+        <th style="width: 20%;">Current Ketapang Score</th>
+        <th style="width: 24%;">4-Star Industry Standard</th>
+        <th style="width: 24%;">JourneyOn GEO Benchmark</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Generative AI Readiness (GEO Engine)</strong></td>
+        <td class="critical">0 / 100 (Invisible)</td>
+        <td>65 / 100</td>
+        <td class="optimal">100 / 100</td>
+      </tr>
+      <tr>
+        <td><strong>Schema.org Machine Structured Data</strong></td>
+        <td class="critical">0 / 100 (Missing)</td>
+        <td>70 / 100</td>
+        <td class="optimal">100 / 100</td>
+      </tr>
+      <tr>
+        <td><strong>Page Speed & Core Web Vitals</strong></td>
+        <td class="critical">45 / 100 (High Latency)</td>
+        <td>80 / 100</td>
+        <td class="optimal">96+ / 100</td>
+      </tr>
+      <tr>
+        <td><strong>Technical On-Page SEO & Titles</strong></td>
+        <td class="critical">40 / 100 (Duplicate)</td>
+        <td>85 / 100</td>
+        <td class="optimal">98 / 100</td>
+      </tr>
+      <tr>
+        <td><strong>HTTP Security Headers</strong></td>
+        <td class="critical">10 / 100 (High Risk)</td>
+        <td>80 / 100</td>
+        <td class="optimal">100 / 100</td>
+      </tr>
+      <tr>
+        <td><strong>Direct Booking Funnel & Mobile UX</strong></td>
+        <td style="color: #b45309; font-weight: 700;">55 / 100 (Friction)</td>
+        <td>85 / 100</td>
+        <td class="optimal">96 / 100</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>2. Executive Summary of Primary Deficits</h2>
+  <p>
+    Ketapang Indah Hotel represents Banyuwangi's premier coastal hospitality asset, boasting 152 guest keys, a pristine 6-hectare coconut grove directly facing Bali Strait sunrises, Marlin Restaurant & Beach Club, and the 700-pax Grand Ballroom. However, an in-depth code audit of <code>https://www.ketapangindahhotel.com/</code> reveals that the digital flagship is held back by an obsolete monolithic architecture (OctoberCMS on Apache/PHP):
+  </p>
+  <p>
+    <strong>1. Generative AI Invisibility (0 / 100):</strong> The HTML DOM contains <strong>0 occurrences</strong> of Schema.org JSON-LD microdata across room, dining, and event pages. AI search engines (ChatGPT, Perplexity, Gemini) cannot parse room sqm, bed configurations, or ballroom capacities. Furthermore, <code>/llms.txt</code> returns HTTP 404.<br>
+    <strong>2. Broken Sitemap Architecture:</strong> The official <code>robots.txt</code> points crawlers to <code>https://www.ketapangindahhotel.com/sitemap.xml</code>, which returns an <strong>HTTP 404 Not Found error</strong>, degrading search engine indexing.<br>
+    <strong>3. Severe Asset Bloat & Competing Scripts:</strong> The browser is forced to download <strong>23 external JavaScript files</strong> and <strong>14 stylesheets</strong>, including two competing jQuery versions (1.12.4 and 3.3.1), dead widgets (<code>instawidget.net</code>), and 5 separate icon font libraries loaded simultaneously.<br>
+    <strong>4. OTA Commission Leakage:</strong> Mobile loading friction causes guests to abandon direct booking and turn to OTAs (Traveloka, Agoda), surrendering <strong>18% to 22% in commissions</strong> on rooms that should be 100% direct.
+  </p>
+
+  <div class="footer">
+    <span>Technical Audit Ref: AUD-KIH-2026-001</span>
+    <span>Confidential — Ketapang Indah Hotel Banyuwangi</span>
+    <span>Page 1 of 3</span>
+  </div>
+</div>
+
+<!-- ========================================================================= -->
+<!-- PAGE 2: IN-DEPTH TECHNICAL VULNERABILITY ANALYSIS -->
+<!-- ========================================================================= -->
+<div class="page">
+  <div class="doc-header">
+    <div class="doc-brand">JOURNEY<span>ON</span></div>
+    <div class="doc-meta">
+      <strong>IN-DEPTH VULNERABILITY REPORT</strong><br>
+      DOM, Network, Security & AI Diagnostics
+    </div>
+  </div>
+
+  <h2>3. In-Depth Technical Vulnerability Analysis</h2>
+
+  <div class="vuln-card">
+    <h4>DEFICIT 1: ZERO SCHEMA.ORG STRUCTURED DATA & AI INGESTION 404 <span>CRITICAL DEFICIT</span></h4>
+    <p>
+      • <strong>Live Diagnostic:</strong> Full source examination of <code>/</code>, <code>/rooms</code>, <code>/dining</code>, and <code>/meetings/packages</code> reveals <strong>zero Schema.org JSON-LD blocks</strong> (<code>&lt;script type="application/ld+json"&gt;</code> is 0).<br>
+      • <strong>Commercial Impact:</strong> When high-spending travelers query ChatGPT or Perplexity: <em>"Best beachfront resort in Banyuwangi near Ketapang port with sunrise view of Bali Strait and family cottages"</em>, AI crawlers find zero structured entities (<code>Hotel</code>, <code>HotelRoom</code>, <code>MeetingRoom</code>). AI models cite regional competitors instead.<br>
+      • <strong>Protocol Missing:</strong> Accessing <code>https://www.ketapangindahhotel.com/llms.txt</code> returns <code>HTTP 404 Not Found</code>.
+    </p>
+  </div>
+
+  <div class="vuln-card">
+    <h4>DEFICIT 2: BROKEN SITEMAP IN ROBOTS.TXT ROUTING <span>CRAWLER NAVIGATION ERROR</span></h4>
+    <p>
+      • <strong>Live Diagnostic:</strong> <code>/robots.txt</code> directs search engines to <code>https://www.ketapangindahhotel.com/sitemap.xml</code>.<br>
+      • <strong>Defect:</strong> The sitemap link returns an immediate <strong>HTTP 404 Not Found error</strong>. Search spiders and AI retrieval agents hit a dead end, causing delayed re-indexing of rates, room descriptions, and seasonal holiday packages.
+    </p>
+  </div>
+
+  <div class="vuln-card">
+    <h4>DEFICIT 3: 23 JAVASCRIPTS, 14 CSS & COMPETING JQUERY LIBRARIES <span>SEVERE CODE BLOAT</span></h4>
+    <p>
+      • <strong>Colliding Libraries:</strong> The site loads <code>jquery-1.12.4.js</code> (designed for Internet Explorer 8 compatibility in 2016) simultaneously with <code>jquery-3.3.1.js</code>, causing memory bloat, render-blocking latency, and script collision risks.<br>
+      • <strong>Defunct & Debug Code:</strong> Loads <code>instawidget.net</code> (broken external service producing console errors) and <code>ScrollMagic debug.addIndicators.min.js</code> (developer test tool inadvertently left active in production).<br>
+      • <strong>Font Bloat:</strong> Imports <strong>5 separate icon sets</strong> (FontAwesome 5, Feather, Material Icons, Semantic UI, Themify).
+    </p>
+  </div>
+
+  <div class="vuln-card">
+    <h4>DEFICIT 4: UNIFORM & UNOPTIMIZED PAGE TITLES <span>SEO METADATA NEGLECT</span></h4>
+    <p>
+      • <strong>Identical Title Across Subpages:</strong> The exact same title tag <code>&lt;title&gt;Ketapang Indah Hotel - Official site - best deal&lt;/title&gt;</code> is used across <code>/</code>, <code>/rooms</code>, <code>/dining</code>, and <code>/meetings/packages</code>.<br>
+      • <strong>Penalty:</strong> Search engines penalize duplicate titles. Crawlers cannot distinguish room suites from conference halls.
+    </p>
+  </div>
+
+  <div class="vuln-card">
+    <h4>DEFICIT 5: ABSENCE OF HTTP SECURITY HEADERS <span>HIGH SERVER EXPOSURE</span></h4>
+    <p>
+      • <strong>Missing Protections:</strong> The Apache server omits essential security headers: <code>Strict-Transport-Security (HSTS)</code>, <code>X-Frame-Options</code>, <code>X-Content-Type-Options</code>, <code>Content-Security-Policy (CSP)</code>, and <code>Referrer-Policy</code>.<br>
+      • <strong>Consequence:</strong> Vulnerable to MIME-type sniffing, clickjacking on booking forms, and insecure cipher downgrades.
+    </p>
+  </div>
+
+  <div class="vuln-card">
+    <h4>DEFICIT 6: DIRECT RESERVATION FRICTION & OTA COMMISSION TRAP <span>COMMERCIAL LEAKAGE</span></h4>
+    <p>
+      • <strong>Conversion Barrier:</strong> Booking engine calls rely on heavy script initialization. Corporate and overseas travelers on mobile experience input delay and switch to OTAs (Traveloka, Agoda, Booking.com).<br>
+      • <strong>Financial Bleed:</strong> The resort loses <strong>18% to 22% in commissions</strong> on guests who specifically visited the official site!
+    </p>
+  </div>
+
+  <div class="footer">
+    <span>Technical Audit Ref: AUD-KIH-2026-001</span>
+    <span>Confidential — Ketapang Indah Hotel Banyuwangi</span>
+    <span>Page 2 of 3</span>
+  </div>
+</div>
+
+<!-- ========================================================================= -->
+<!-- PAGE 3: MODERN REMEDIATION BLUEPRINT & CONCLUSION -->
+<!-- ========================================================================= -->
+<div class="page">
+  <div class="doc-header">
+    <div class="doc-brand">JOURNEY<span>ON</span></div>
+    <div class="doc-meta">
+      <strong>REMEDIATION BLUEPRINT</strong><br>
+      GEO Data Engine & Direct Booking Recovery
+    </div>
+  </div>
+
+  <h2>4. Remediation Blueprint: The JourneyOn GEO Architecture</h2>
+
+  <div class="remedy-grid">
+    <div class="remedy-box">
+      <h4>1. Modern Headless Jamstack Flagship</h4>
+      <p>
+        Replace the legacy OctoberCMS monolith with Next.js 14 & Tailwind CSS. Consolidate 23 scripts into clean, tree-shaken static assets, achieving sub-second page loads (&lt;0.8s) and a <strong>96+ Google Lighthouse mobile score</strong>.
+      </p>
+    </div>
+    <div class="remedy-box">
+      <h4>2. Native Schema.org Knowledge Graph (@graph)</h4>
+      <p>
+        Deploy deep SSR structured data: <code>Hotel</code>, all 5 <code>HotelRoom</code> tiers (Ocean Suite 75 sqm to Standard 22 sqm), <code>FoodEstablishment</code> (Marlin Beach Club), and <code>MeetingRoom</code> (Grand Ballroom 700 pax).
+      </p>
+    </div>
+    <div class="remedy-box">
+      <h4>3. Official /llms.txt & Dynamic Sitemap</h4>
+      <p>
+        Publish standardized <code>/llms.txt</code> factsheets providing verified resort specifications for ChatGPT, Perplexity, and Gemini, backed by an automated dynamic XML sitemap to ensure 100% crawl coverage.
+      </p>
+    </div>
+    <div class="remedy-box">
+      <h4>4. Frictionless BackHotelite Direct Bar</h4>
+      <p>
+        Integrate an ultra-fast, native booking bar passing check-in/out dates and guests directly into the official BackHotelite booking engine, eliminating OTA leakage and capturing 100% direct margins.
+      </p>
+    </div>
+  </div>
+
+  <h2>5. Commercial Impact: Recapturing OTA Margins</h2>
+  <div class="highlight-banner">
+    <h4>COMMERCIAL REVENUE LOGIC: ZERO COMMISSION EXPANSION</h4>
+    <p>
+      • For a 152-room coastal resort, shifting just <strong>100 room nights per month</strong> from OTAs to direct booking recaptures <strong>~IDR 18,000,000 to IDR 25,000,000 / month</strong> (~IDR 216M to IDR 300M / year) in saved commission fees.<br>
+      • The proposed Next-Gen Website Revamp + GEO Internal Data Engine pays for itself within months solely through direct revenue preservation.<br>
+      • Establishing first-mover Generative AI authority locks in Ketapang Indah as the <strong>#1 AI-recommended coastal resort in East Java</strong> before regional competitors adapt.
+    </p>
+  </div>
+
+  <h2>6. Conclusion & Action Plan</h2>
+  <p style="font-size: 8pt; margin-bottom: 12px;">
+    Ketapang Indah Hotel's legacy digital infrastructure is currently creating commercial leakage through code bloat, absent machine schemas, and high mobile bounce rates. Migrating to the modern <strong>Next-Gen Website + GEO Internal Data Engine</strong> will immediately rectify all 6 critical vulnerabilities, elevate brand prestige, and maximize direct booking profitability.
+  </p>
+
+  <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 4px; padding: 10px 14px; font-size: 8pt; display: flex; justify-content: space-between; align-items: center;">
+    <div>
+      <strong style="color: #0F172A;">Report Prepared By:</strong> JourneyOn AI Hospitality Engineering Team<br>
+      <span style="color: #64748b;">Inquiries: partnership@journeyon.id · fajar@inotel.co</span>
+    </div>
+    <div style="text-align: right; font-weight: 700; color: #1A3A38;">
+      Accompanying Proposal:<br>
+      <span style="color: #9E8A55;">Next-Gen Web & GEO Engine Proposal</span>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>Technical Audit Ref: AUD-KIH-2026-001</span>
+    <span>Confidential — Ketapang Indah Hotel Banyuwangi</span>
+    <span>Page 3 of 3</span>
+  </div>
+</div>
+
+</body>
+</html>

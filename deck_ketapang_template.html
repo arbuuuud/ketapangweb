@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>JourneyOn Web Revamp & GEO Engine - Pitch Deck (Ketapang Indah Hotel)</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap');
+
+  @page {
+    size: 297mm 167mm; /* 16:9 widescreen landscape */
+    margin: 0;
+  }
+
+  * {
+    box-sizing: border-box;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #0A0E17;
+  }
+
+  .slide {
+    width: 297mm;
+    height: 167mm;
+    page-break-after: always;
+    position: relative;
+    padding: 15mm 22mm 13mm 22mm;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+  .slide:last-child {
+    page-break-after: avoid;
+  }
+
+  .slide-light {
+    background-color: #F4F6F2;
+    color: #1A3A38;
+  }
+  .slide-dark {
+    background-color: #1A3A38;
+    color: #FFFFFF;
+  }
+
+  /* Decorative Brand Circles for Dark Cover */
+  .circle-large {
+    position: absolute;
+    width: 140mm;
+    height: 140mm;
+    border-radius: 50%;
+    background-color: #234B49;
+    top: -20mm;
+    right: 15mm;
+    z-index: 1;
+  }
+  .circle-small {
+    position: absolute;
+    width: 80mm;
+    height: 80mm;
+    border-radius: 50%;
+    background-color: #234B49;
+    bottom: -15mm;
+    right: -10mm;
+    z-index: 1;
+  }
+  .cover-content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  /* Typography */
+  .kicker {
+    font-size: 8.5pt;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #9E8A55;
+    margin-bottom: 4mm;
+  }
+  .headline {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 19pt;
+    font-weight: 700;
+    line-height: 1.25;
+    color: #1A3A38;
+    margin: 0 0 5.5mm 0;
+  }
+  .cover-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 28pt;
+    font-weight: 700;
+    line-height: 1.15;
+    color: #FFFFFF;
+    margin: 0 0 5mm 0;
+    max-width: 220mm;
+  }
+  .cover-subtitle {
+    font-size: 11.5pt;
+    color: #E2E8F0;
+    line-height: 1.35;
+    max-width: 190mm;
+    margin-bottom: 11mm;
+  }
+  .cover-footer {
+    font-size: 9pt;
+    color: #94A3B8;
+  }
+
+  /* Content Cards */
+  .card-grid-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 7mm;
+    margin-bottom: 5mm;
+  }
+  .card-grid-4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 5.5mm;
+    margin-bottom: 5mm;
+  }
+  .card-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 7mm;
+    margin-bottom: 5mm;
+  }
+
+  .card {
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    padding: 5.5mm 6.5mm;
+    border: 1px solid #E2E8F0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+  }
+  .card h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 10.5pt;
+    color: #1A3A38;
+    margin: 0 0 2.5mm 0;
+    line-height: 1.25;
+  }
+  .card p, .card ul {
+    font-size: 8.2pt;
+    color: #475569;
+    line-height: 1.45;
+    margin: 0;
+    padding-left: 0;
+  }
+
+  .badge-tag {
+    font-size: 7.5pt;
+    font-weight: 700;
+    color: #9E8A55;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 2mm;
+  }
+
+  /* Dark Callout Banner */
+  .dark-banner {
+    background-color: #1A3A38;
+    color: #FFFFFF;
+    border-radius: 4px;
+    padding: 3.5mm 6.5mm;
+    font-size: 8.6pt;
+    display: flex;
+    align-items: center;
+  }
+  .dark-banner strong {
+    color: #E5B044;
+  }
+
+  /* Table */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 3mm 0 4.5mm 0;
+    font-size: 8pt;
+  }
+  th, td {
+    padding: 3.2mm 4.5mm;
+    border: 1px solid #E2E8F0;
+    text-align: left;
+  }
+  th {
+    background-color: #1A3A38;
+    color: #FFFFFF;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+  tr:nth-child(even) {
+    background-color: #FFFFFF;
+  }
+  tr:nth-child(odd) {
+    background-color: #F8FAFC;
+  }
+  td.critical {
+    color: #DC2626;
+    font-weight: 700;
+  }
+  td.optimal {
+    color: #059669;
+    font-weight: 700;
+  }
+
+  /* Simulation Boxes */
+  .prompt-box {
+    background-color: #FFFFFF;
+    border-left: 3.5px solid #9E8A55;
+    padding: 4mm 5.5mm;
+    border-radius: 4px;
+    margin-bottom: 3.5mm;
+  }
+  .answer-box {
+    background-color: #FFFFFF;
+    border-left: 3.5px solid #059669;
+    padding: 4.5mm 5.5mm;
+    border-radius: 4px;
+  }
+
+  /* Metric Card */
+  .metric-card {
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    padding: 5mm 6mm;
+    border: 1px solid #E2E8F0;
+    border-top: 3px solid #1A3A38;
+    text-align: center;
+  }
+  .metric-val {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 22pt;
+    font-weight: 700;
+    color: #1A3A38;
+    margin-bottom: 1.5mm;
+  }
+  .metric-label {
+    font-size: 8pt;
+    font-weight: 700;
+    color: #9E8A55;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: 2mm;
+  }
+  .metric-desc {
+    font-size: 7.8pt;
+    color: #64748B;
+    line-height: 1.35;
+  }
+
+  /* Timeline Grid */
+  .timeline-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 5mm;
+    margin-bottom: 4.5mm;
+  }
+  .timeline-card {
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-top: 3px solid #9E8A55;
+    border-radius: 4px;
+    padding: 4.5mm 5mm;
+  }
+  .timeline-step {
+    font-size: 7.5pt;
+    font-weight: 700;
+    color: #9E8A55;
+    letter-spacing: 1px;
+    margin-bottom: 2mm;
+    text-transform: uppercase;
+  }
+  .timeline-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 10pt;
+    font-weight: 700;
+    color: #1A3A38;
+    margin-bottom: 2mm;
+  }
+  .timeline-desc {
+    font-size: 7.6pt;
+    color: #475569;
+    line-height: 1.4;
+  }
+
+  /* Slide Footer */
+  .slide-footer {
+    position: absolute;
+    bottom: 5mm;
+    left: 22mm;
+    right: 22mm;
+    font-size: 7.5pt;
+    color: #64748B;
+    display: flex;
+    justify-content: space-between;
+  }
+</style>
+</head>
+<body>
+
+<!-- ========================================================================= -->
+<!-- SLIDE 1: COVER -->
+<!-- ========================================================================= -->
+<div class="slide slide-dark">
+  <div class="circle-large"></div>
+  <div class="circle-small"></div>
+  <div class="cover-content">
+    <div class="kicker" style="color: #E5B044;">JOURNEYON AI · STRATEGIC PROPOSAL</div>
+    <div class="cover-title">Next-Gen Website Revamp &<br>GEO Internal Data Engine</div>
+    <div class="cover-subtitle">Positioning Ketapang Indah Hotel as Banyuwangi's #1 AI-Recommended Coastal Resort & Capturing High-Margin Direct Bookings</div>
+    <div class="cover-footer">Prepared for Board of Directors & General Manager · Ketapang Indah Hotel Banyuwangi · November 2026</div>
+  </div>
+</div>
+
+<!-- ========================================================================= -->
+<!-- SLIDE 2: THE PARADIGM SHIFT -->
+<!-- ========================================================================= -->
+<div class="slide slide-light">
+  <div class="kicker">THE PARADIGM SHIFT</div>
+  <div class="headline">How modern travelers & event planners choose coastal resorts in 2026</div>
+  
+  <div class="card-grid-3">
+    <div class="card">
+      <h3>High OTA Commissions (18% - 22%)</h3>
+      <p>When travelers search for Banyuwangi & Mount Ijen stays, OTAs (Traveloka, Agoda, Booking.com) dominate clicks. The hotel surrenders 18% to 22% in commissions on guests who already intended to book Ketapang Indah.</p>
+    </div>
+    <div class="card">
+      <h3>Bookers Move to AI Search</h3>
+      <p>Over 40% of international, luxury, and corporate bookers now ask conversational AI engines (ChatGPT, Perplexity, Gemini):<br>
+      <em>"Find a 4-star beachfront resort in Banyuwangi with Bali Strait sunrise views, private cottages, and meeting facilities."</em></p>
+    </div>
+    <div class="card">
+      <h3>Legacy Sites Stay Invisible</h3>
+      <p>Traditional monolithic websites cannot be parsed by AI crawlers. Without machine-readable internal data, AI engines cannot verify room sqm or ballroom capacities — citing competitor hotels instead.</p>
+    </div>
+  </div>
+
+  <div class="dark-banner">
+    <span>Generative AI search is now the <strong>#1 high-intent discovery channel</strong> for premium leisure travelers, Bali transit guests, and corporate MICE planners.</span>
+  </div>
+
+  <div class="slide-footer">
+    <span>JourneyOn AI · Web & GEO Engine Proposal for Ketapang Indah Hotel Banyuwangi</span>
+    <span>Slide 2</span>
+  </div>
+</div>
+
+<!-- ========================================================================= -->
+<!-- SLIDE 3: CURRENT TECHNICAL AUDIT FINDINGS -->
+<!-- ========================================================================= -->
+<div class="slide slide-light">
+  <div class="kicker">TECHNICAL AUDIT · KETAPANGINDAHHOTEL.COM</div>
+  <div class="headline">Live diagnostic results: Why the current website loses guests & AI citations</div>
+
+  <div class="card-grid-2">
+    <div class="card">
+      <div class="badge-tag" style="color: #DC2626;">ZERO AI READINESS & CRAWLER 404</div>
+      <h3>0 Schema.org Entities & /llms.txt 404</h3>
+      <p style="margin-bottom: 2.5mm;">Our live code inspection of <code>ketapangindahhotel.com</code> revealed <strong>zero Schema.org structured data</strong> across room, dining, and MICE pages. Bot crawlers cannot parse room sqm, bed types, or Grand Ballroom capacity.</p>
+      <p>Furthermore, requesting <code>/llms.txt</code> returns <strong>HTTP 404 Not Found</strong>, blocking AI models from accessing verified property facts.</p>
+    </div>
+
+    <div class="card">
+      <div class="badge-tag" style="color: #DC2626;">HEAVY ASSET BLOAT (GRADE: D+)</div>
+      <h3>23 Scripts & Competing jQuery Libraries</h3>
+      <p style="margin-bottom: 2.5mm;">The homepage loads <strong>23 JavaScript files</strong>, including two conflicting jQuery versions (<code>jquery-1.12.4.js</code> from 2016 and <code>3.3.1</code>), broken widgets (<code>instawidget.net</code>), and 5 separate icon fonts.</p>
+      <p>The official <code>robots.txt</code> points to a <strong>broken sitemap (HTTP 404)</strong>, and all subpages share the exact same unoptimized title tag.</p>
+    </div>
+  </div>
+
+  <div class="dark-banner">
+    <span>Overall Technical Health Grade: <strong>D+ (Critical Deficits)</strong> — Comprehensive findings documented in Technical Audit Report <code>AUD-KIH-2026-001</code>.</span>
+  </div>
+
+  <div class="slide-footer">
+    <span>JourneyOn AI · Web & GEO Engine Proposal for Ketapang Indah Hotel Banyuwangi</span>
+    <span>Slide 3</span>
+  </div>
+</div>
+
+<!-- ========================================================================= -->
+<!-- SLIDE 4: THE AUDIT SCORECARD -->
+<!-- ========================================================================= -->
+<div class="slide slide-light">
+  <div class="kicker">BENCHMARK SCORECARD</div>
+  <div class="headline">How Ketapang Indah compares against modern hospitality standards</div>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 32%;">Technical Audit Category</th>
+        <th style="width: 22%;">Current Ketapang Score</th>
+        <th style="width: 23%;">4-Star Industry Standard</th>
+        <th style="width: 23%;">JourneyOn GEO Benchmark</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Generative AI Readiness (GEO Engine)</strong></td>
+        <td class="critical">0 / 100 (Invisible)</td>
+        <td>65 / 100</td>
+        <td class="optimal">100 / 100</td>
+      </tr>
+      <tr>
+        <td><strong>Schema.org Machine Structured Data</strong></td>
+        <td class="critical">0 / 100 (Missing)</td>
+        <td>70 / 100</td>
+        <td class="optimal">100 / 100</td>
+      </tr>
+      <tr>
+        <td><strong>Page Speed & Core Web Vitals</strong></td>
+        <td class="critical">45 / 100 (High Latency)</td>
+        <td>80 / 100</td>
+        <td class="optimal">96+ / 100</td>
+      </tr>
+      <tr>
+        <td><strong>Technical On-Page SEO & Titles</strong></td>
+        <td class="critical">40 / 100 (Duplicate)</td>
+        <td>85 / 100</td>
+        <td class="optimal">98 / 100</td>
+      </tr>
+      <tr>
+        <td><strong>HTTP Security Headers</strong></td>
+        <td class="critical">10 / 100 (High Risk)</td>
+        <td>80 / 100</td>
+        <td class="optimal">100 / 100</td>
+      </tr>
+      <tr>
+        <td><strong>Direct Booking UX & Speed</strong></td>
+        <td style="color: #b45309; font-weight: 700;">55 / 100 (Friction)</td>
+        <td>85 / 100</td>
+        <td class="optimal">96 / 100</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="dark-banner">
+    <span>Shifting just <strong>100 room nights per month</strong> from OTAs to direct booking recaptures <strong>~IDR 18M to IDR 25M monthly (~IDR 216M–300M / year)</strong> in lost commissions.</span>
+  </div>
+
+  <div class="slide-footer">
+    <span>JourneyOn AI · Web & GEO Engine Proposal for Ketapang Indah Hotel Banyuwangi</span>
+    <span>Slide 4</span>
+  </div>
+</div>
+
+<!-- ========================================================================= -->
+<!-- SLIDE 5: THE CORE SOLUTION -->
+<!-- ========================================================================= -->
+<div class="slide slide-light">
+  <div class="kicker">THE CORE SOLUTION</div>
+  <div class="headline">Next-Gen Headless Web Revamp with Built-In GEO Internal Data Engine</div>
+
+  <div class="card-grid-3">
+    <div class="card">
+      <div class="badge-tag">PILLAR 1 · MODERN FRONTEND</div>
+      <h3>Next.js 14 Headless Web</h3>
+      <p>Sub-second page loads (&lt;0.8s), mobile-first layout, and 96+ Google Lighthouse score. Eliminates all 23 bloated legacy scripts and establishes clean modern code with zero downtime.</p>
+    </div>
+    <div class="card">
+      <div class="badge-tag">PILLAR 2 · MACHINE DATA</div>
+      <h3>Schema.org @graph Engine</h3>
+      <p>Server-Side Rendered (SSR) structured data defining all 152 rooms (Ocean Suite 75 sqm, Cottages 32 sqm, Superior 25 sqm), Marlin Beach Club, and Grand Ballroom (700 pax).</p>
+    </div>
+    <div class="card">
+      <div class="badge-tag">PILLAR 3 · AI PROTOCOL</div>
+      <h3>/llms.txt Fact Feeds</h3>
+      <p>Published at domain root: machine-readable markdown feeding ChatGPT, Claude, and Perplexity with verified facts: exact room sizes, distances (Ferry 6 km, Ijen 38 km), and direct booking links.</p>
+    </div>
+  </div>
+
+  <div class="dark-banner">
+    <span>Unlike recurring PPC ad spend that stops when your budget ends, <strong>GEO builds permanent owned search equity</strong> operating 24/7/365.</span>
+  </div>
+
+  <div class="slide-footer">
+    <span>JourneyOn AI · Web & GEO Engine Proposal for Ketapang Indah Hotel Banyuwangi</span>
+    <span>Slide 5</span>
+  </div>
+</div>
+
+<!-- ========================================================================= -->
+<!-- SLIDE 6: LIVE AI SEARCH SIMULATION -->
+<!-- ========================================================================= -->
+<div class="slide slide-light">
+  <div class="kicker">REAL-WORLD SCENARIO</div>
+  <div class="headline">How Ketapang Indah wins when travelers query generative AI engines</div>
+
+  <div class="prompt-box">
+    <div style="font-size: 7.5pt; font-weight: 700; color: #9E8A55; text-transform: uppercase; margin-bottom: 1.5mm;">EXECUTIVE USER PROMPT (CHATGPT SEARCH / PERPLEXITY / GEMINI)</div>
+    <div style="font-size: 8.5pt; font-style: italic; color: #1A3A38;">"Recommend the best 4-star beachfront resort in Banyuwangi near the ferry port with sunrise views over the Bali Strait, private garden cottages, and ballroom facilities."</div>
+  </div>
+
+  <div class="answer-box">
+    <div style="font-size: 7.5pt; font-weight: 700; color: #059669; text-transform: uppercase; margin-bottom: 1.5mm;">VERIFIED AI SYNTHESIS WITH JOURNEYON GEO INTERNAL ENGINE</div>
+    <div style="font-size: 8.3pt; color: #1E293B; line-height: 1.45;">
+      "<strong>Ketapang Indah Hotel</strong> (Jl. Gatot Subroto Km 6, Banyuwangi) is the premier 4-star coastal resort facing the Bali Strait. Set within a 6-hectare coconut grove just 6 km from Ketapang Ferry Port and 38 km from Mount Ijen basecamp, it offers 152 accommodations including Cottage Garden View (32 sqm with private veranda) and Ocean View Suites (75 sqm). Facilities include Marlin Restaurant & Beach Club, a resort lagoon pool, The Omah Spa, and the 700-capacity Grand Ballroom.<br>
+      <span style="color: #059669; font-weight: 700; display: inline-block; margin-top: 1.5mm;">✓ Direct Official Citation: https://www.ketapangindahhotel.com/ (Best Rate Guaranteed via BackHotelite)</span>"
+    </div>
+  </div>
+
+  <div class="slide-footer" style="margin-top: 3mm;">
+    <span>JourneyOn AI · Web & GEO Engine Proposal for Ketapang Indah Hotel Banyuwangi</span>
+    <span>Slide 6</span>
+  </div>
+</div>
+
+<!-- ========================================================================= -->
+<!-- SLIDE 7: COMMERCIAL IMPACT & DIRECT RECAPTURE -->
+<!-- ========================================================================= -->
+<div class="slide slide-light">
+  <div class="kicker">FINANCIAL VALUE CREATION</div>
+  <div class="headline">Recapturing 18% to 22% OTA commissions & building direct digital equity</div>
+
+  <div class="card-grid-3">
+    <div class="metric-card">
+      <div class="metric-val">18% – 22%</div>
+      <div class="metric-label">OTA Commission Saved</div>
+      <div class="metric-desc">Commission fee recaptured on every booking shifted from Traveloka, Agoda, and Booking.com to direct web.</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-val">100+ Keys</div>
+      <div class="metric-label">Monthly Direct Shift Target</div>
+      <div class="metric-desc">Preserves ~IDR 18M to IDR 25M monthly (~IDR 216M–300M / year) in hotel gross operating profit.</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-val">0% Fee</div>
+      <div class="metric-label">Direct Revenue Retention</div>
+      <div class="metric-desc">Ketapang Indah keeps 100% of room margins and owns guest data for repeat holiday bookings.</div>
+    </div>
+  </div>
+
+  <div class="dark-banner">
+    <span>Direct BackHotelite integration passes check-in/out dates, guest counts, and promo codes <strong>with zero redirect friction</strong>.</span>
+  </div>
+
+  <div class="slide-footer">
+    <span>JourneyOn AI · Web & GEO Engine Proposal for Ketapang Indah Hotel Banyuwangi</span>
+    <span>Slide 7</span>
+  </div>
+</div>
+
+<!-- ========================================================================= -->
+<!-- SLIDE 8: EXECUTION ROADMAP -->
+<!-- ========================================================================= -->
+<div class="slide slide-light">
+  <div class="kicker">EXECUTION TIMELINE</div>
+  <div class="headline">Fast 4-week rollout with zero disruption to daily hotel operations</div>
+
+  <div class="timeline-grid">
+    <div class="timeline-card">
+      <div class="timeline-step">WEEK 1</div>
+      <div class="timeline-title">Architecture & Design</div>
+      <div class="timeline-desc">Deploy Next.js 14 Jamstack foundation, photo-centric tropical resort layout, and clean asset pipelines.</div>
+    </div>
+    <div class="timeline-card">
+      <div class="timeline-step">WEEK 2</div>
+      <div class="timeline-title">GEO Engine Setup</div>
+      <div class="timeline-desc">Implement Server-Side Schema.org @graph for all 152 rooms, Marlin Beach Club, and Grand Ballroom.</div>
+    </div>
+    <div class="timeline-card">
+      <div class="timeline-step">WEEK 3</div>
+      <div class="timeline-title">Direct Booking & llms.txt</div>
+      <div class="timeline-desc">Connect BackHotelite direct bar, publish /llms.txt feeds, and deploy automated dynamic XML sitemap.</div>
+    </div>
+    <div class="timeline-card">
+      <div class="timeline-step">WEEK 4</div>
+      <div class="timeline-title">Launch & Go-Live</div>
+      <div class="timeline-desc">Security hardening (HSTS, CSP), 96+ Lighthouse optimization, and official public production launch.</div>
+    </div>
+  </div>
+
+  <div class="dark-banner" style="display: flex; justify-content: space-between; align-items: center;">
+    <div>
+      <strong style="color: #E5B044;">Ready to Transform Ketapang Indah's Digital Future?</strong><br>
+      <span style="font-size: 7.8pt; color: #CBD5E1;">JourneyOn AI Hospitality Engineering Team · partnership@journeyon.id · fajar@inotel.co</span>
+    </div>
+    <div style="font-size: 8.5pt; font-weight: 700; color: #E5B044;">
+      4-Week Rapid Deployment Plan
+    </div>
+  </div>
+
+  <div class="slide-footer">
+    <span>JourneyOn AI · Web & GEO Engine Proposal for Ketapang Indah Hotel Banyuwangi</span>
+    <span>Slide 8</span>
+  </div>
+</div>
+
+</body>
+</html>
