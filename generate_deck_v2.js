@@ -41,7 +41,7 @@ function applyContentSlide(slide, kickerText, headlineText, slideNum, kickerColo
 
   if (slideNum) {
     slide.addText(typeof slideNum === 'number' ? `Slide ${slideNum}` : slideNum, {
-      x: 7.8, y: 5.2, w: 1.4, h: 0.2,
+      x: 7.5, y: 5.2, w: 1.7, h: 0.2,
       fontSize: 7.5, color: COLOR_TEXT_MUTED, fontFace: 'Helvetica', align: 'right'
     });
   }
@@ -63,7 +63,7 @@ async function buildV2Deck() {
     
     slide.addText('JOURNEYON AI · STRATEGIC DIRECT REVENUE DECK (V2)', { x: 0.8, y: 0.7, w: 6.5, h: 0.3, fontSize: 8.5, bold: true, color: COLOR_HIGHLIGHT, charSpacing: 2, fontFace: 'Helvetica' });
     slide.addText('Turning Inquiries into\nDirect Revenue', { x: 0.8, y: 1.2, w: 7.5, h: 1.7, fontSize: 28, bold: true, color: 'FFFFFF', fontFace: 'Georgia', lineSpacingMultiple: 1.15 });
-    slide.addText('Next-Gen Web & GEO Engine · 24/7 AI WhatsApp Concierge · Recommended OMNI IBE Sync', { x: 0.8, y: 3.2, w: 7.2, h: 0.6, fontSize: 11.5, color: 'E2E8F0', fontFace: 'Helvetica', lineSpacingMultiple: 1.2 });
+    slide.addText('Next-Gen Web & GEO Engine · 24/7 AI Booking Assistance (Web & WhatsApp) · Direct Booking Sync', { x: 0.8, y: 3.2, w: 7.2, h: 0.6, fontSize: 11.5, color: 'E2E8F0', fontFace: 'Helvetica', lineSpacingMultiple: 1.2 });
     slide.addText('Prepared for Board of Directors & General Manager · Ketapang Indah Hotel Banyuwangi · November 2026', { x: 0.8, y: 4.75, w: 7.5, h: 0.3, fontSize: 8.5, color: '94A3B8', fontFace: 'Helvetica' });
   }
 
@@ -118,8 +118,8 @@ async function buildV2Deck() {
 
     const pillars = [
       { tag: 'PILLAR 1 · THE FOUNDATION', title: 'Modern Web & GEO Engine', color: BRAND_DARK, desc1: 'Next.js 14 Headless Web: Sub-second speed (<0.8s), Core Web Vitals 96+, photo-centric tropical layout, and isolated cloud server security.', desc2: 'Generative Engine Optimization: SSR Schema.org @graph (152 keys, ballroom 700 pax) + domain /llms.txt so AI engines cite Ketapang Indah #1.' },
-      { tag: 'PILLAR 2 · ACTIVE CONVERTER', title: '24/7 AI WhatsApp Concierge', color: COLOR_OPTIMAL, desc1: 'Always-On Revenue Assistant: Operates 24/7 on WhatsApp & Web. Answers in <3s in 132+ languages, pulling live rates from your booking engine.', desc2: 'Closes & Upsells: Defuses OTA price hesitation, routes 700-pax MICE leads, and pauses automatically when staff types (Zero-Clash).' },
-      { tag: 'PARTNER INTEGRATION', title: 'Direct Booking Engine Sync', color: COLOR_KICKER, desc1: 'Connected to Recommended IBE (OMNI): JourneyOn AI connects natively to OMNI Hotelier (~Rp 2M/mo subscribed directly by hotel) for real-time rates.', desc2: 'Frictionless Direct Booking: Mobile-first direct booking drawer and locked checkout links delivered directly inside WhatsApp chats.' }
+      { tag: 'PILLAR 2 · ACTIVE CONVERTER', title: '24/7 AI Booking Assistance', color: COLOR_OPTIMAL, desc1: 'Omnichannel Revenue Assistant: Operates 24/7 on Web Chat Drawer & Official WhatsApp. Answers in <3s in 132+ languages, pulling live rates directly.', desc2: 'Closes & Upsells: Defuses OTA price hesitation, qualifies 700-pax MICE leads, and pauses automatically when staff types (Zero-Clash).' },
+      { tag: 'PARTNER INTEGRATION', title: 'Direct Booking Engine Sync', color: COLOR_KICKER, desc1: 'Connected to Recommended IBE (OMNI): JourneyOn AI connects natively to OMNI Hotelier (~Rp 2M/mo subscribed directly by hotel) for real-time rates.', desc2: 'Frictionless Direct Booking: Mobile-first direct booking drawer and locked checkout links delivered directly inside Web Chat & WhatsApp.' }
     ];
 
     pillars.forEach((p, idx) => {
@@ -133,7 +133,7 @@ async function buildV2Deck() {
     });
 
     slide.addShape(pres.ShapeType.roundRect, { x: 0.8, y: 4.25, w: 8.4, h: 0.55, r: 0.06, fill: { color: BRAND_DARK } });
-    slide.addText([{ text: 'Ecosystem Synergy: The ' }, { text: 'Website & GEO', options: { bold: true, color: COLOR_HIGHLIGHT } }, { text: ' capture high-intent demand, ' }, { text: 'AI Concierge', options: { bold: true, color: COLOR_HIGHLIGHT } }, { text: ' converts conversations, and ' }, { text: 'Direct IBE', options: { bold: true, color: COLOR_HIGHLIGHT } }, { text: ' locks transactions 24/7.' }], { x: 0.95, y: 4.35, w: 8.1, h: 0.35, fontSize: 8.5, color: 'FFFFFF', fontFace: 'Helvetica' });
+    slide.addText([{ text: 'Ecosystem Synergy: The ' }, { text: 'Website & GEO', options: { bold: true, color: COLOR_HIGHLIGHT } }, { text: ' capture high-intent demand, ' }, { text: 'AI Booking Assistance', options: { bold: true, color: COLOR_HIGHLIGHT } }, { text: ' converts conversations, and ' }, { text: 'Direct IBE', options: { bold: true, color: COLOR_HIGHLIGHT } }, { text: ' locks transactions 24/7.' }], { x: 0.95, y: 4.35, w: 8.1, h: 0.35, fontSize: 8.5, color: 'FFFFFF', fontFace: 'Helvetica' });
   }
 
   // =========================================================================
@@ -183,15 +183,15 @@ async function buildV2Deck() {
   }
 
   // =========================================================================
-  // SLIDE 5: PILLAR 2 - 24/7 AI WHATSAPP CONCIERGE
+  // SLIDE 5: PILLAR 2 - 24/7 AI BOOKING ASSISTANCE
   // =========================================================================
   {
     const slide = pres.addSlide();
-    applyContentSlide(slide, 'PILLAR 2 · 24/7 AUTONOMOUS REVENUE CONCIERGE', 'Turning every guest conversation into a confirmed direct booking around the clock', 5);
+    applyContentSlide(slide, 'PILLAR 2 · 24/7 AUTONOMOUS REVENUE CONCIERGE', 'Turning every guest conversation into a confirmed direct booking across Web & WhatsApp', 5);
 
     const cards = [
       { tag: '24/7 INSTANT SPEED', title: '<3s Response Time', desc: 'Catches the 27% of high-value booking inquiries arriving off-hours (20.00–06.00 WIB) when front desk is away, preventing drop-offs to OTAs.' },
-      { tag: 'MULTILINGUAL AI', title: '132+ Languages', desc: 'Natively converses in English, Indonesian, Mandarin, Russian, French, and German. Critical for international Mount Ijen transit travelers.' },
+      { tag: 'OMNICHANNEL AI', title: 'Web Chat & WhatsApp', desc: 'Seamlessly deployed on website chat drawer and official WhatsApp. Converses natively in 132+ languages for Mount Ijen transit guests.' },
       { tag: 'PRICE NEGOTIATION', title: 'Active Rate-Match', desc: 'Detects price hesitation when guests cite OTA rates. Applies secret direct promo codes and highlights perks (sunrise breakfast, Ijen box).' },
       { tag: 'HUMAN-AI SYNERGY', title: 'Zero-Clash Takeover', desc: 'AI automatically pauses the moment hotel staff types a reply. No awkward message collisions or overlapping responses.' }
     ];
@@ -214,15 +214,15 @@ async function buildV2Deck() {
   // =========================================================================
   {
     const slide = pres.addSlide();
-    applyContentSlide(slide, 'PILLAR 2 · LIVE CLOSING SIMULATION & ROUTING', 'Closing reservations in under 2 minutes & routing MICE leads 24/7', 6);
+    applyContentSlide(slide, 'PILLAR 2 · LIVE CLOSING SIMULATION & ROUTING', 'Closing reservations in under 2 minutes & routing MICE leads across Web & WhatsApp', 6);
 
-    // Left: WhatsApp Chat
+    // Left: Chat Preview
     slide.addShape(pres.ShapeType.roundRect, { x: 0.8, y: 1.35, w: 4.1, h: 2.7, r: 0.08, fill: { color: 'E5DDD5' }, line: { color: 'CBD5E1', width: 1 } });
-    slide.addText('Ketapang Indah Hotel · WhatsApp Official (● Online 24/7 AI)', { x: 1.0, y: 1.45, w: 3.7, h: 0.22, fontSize: 7.5, bold: true, color: '0F172A', fontFace: 'Helvetica' });
+    slide.addText('Ketapang Indah Hotel · AI Booking Assistance (Web & WhatsApp)', { x: 1.0, y: 1.45, w: 3.7, h: 0.22, fontSize: 7.2, bold: true, color: '0F172A', fontFace: 'Helvetica' });
 
     // Guest Bubble 1
     slide.addShape(pres.ShapeType.roundRect, { x: 1.8, y: 1.72, w: 2.9, h: 0.45, r: 0.05, fill: { color: 'E7FFDB' }, line: { color: 'C7ECC5', width: 0.5 } });
-    slide.addText('Hi! Cottage Garden View for 4 pax, 14–17 Dec (3 nights)? Agoda Rp 4.2M total. Any direct promo?', { x: 1.88, y: 1.75, w: 2.75, h: 0.38, fontSize: 6.8, color: '1E293B', fontFace: 'Helvetica' });
+    slide.addText('Hi! Looking for Cottage Garden View for 4 pax, 14–17 Dec (3 nights)? Agoda Rp 4.2M total. Any direct promo?', { x: 1.88, y: 1.75, w: 2.75, h: 0.38, fontSize: 6.8, color: '1E293B', fontFace: 'Helvetica' });
 
     // AI Bubble 1
     slide.addShape(pres.ShapeType.roundRect, { x: 1.0, y: 2.22, w: 3.65, h: 0.95, r: 0.05, fill: { color: BG_WHITE }, line: { color: 'E2E8F0', width: 0.5 } });
@@ -256,76 +256,16 @@ async function buildV2Deck() {
   }
 
   // =========================================================================
-  // SLIDE 7: FINANCIAL FRAMEWORK & RAPID BREAK-EVEN
+  // SLIDE 7: RAPID 14-DAY ROADMAP
   // =========================================================================
   {
     const slide = pres.addSlide();
-    applyContentSlide(slide, 'FINANCIAL FRAMEWORK · INVESTMENT & DISTRIBUTION MODEL', 'Transparent pricing designed to pay for itself in Month 1', 7);
-
-    const cards = [
-      {
-        tag: 'PILLAR 1 · ONE-TIME SETUP',
-        val: 'IDR 30.000.000',
-        label: 'Website Revamp & GEO Engine',
-        color: BRAND_DARK,
-        bullets: [
-          'Published Market Rate: IDR 50.000.000',
-          'Loyalty Partner Discount: -IDR 20.000.000 (Nett)',
-          'Full Next.js 14 rebuild, server cloud isolation, Schema.org @graph 152 keys, /llms.txt, conversion tracking & 1st year maintenance.'
-        ]
-      },
-      {
-        tag: 'PILLAR 2 · AI ASSISTANCE',
-        val: 'IDR 2.500.000 Setup',
-        label: '+ IDR 2.500.000 / Month',
-        color: COLOR_KICKER,
-        bullets: [
-          'Setup & Knowledge Ingestion: IDR 2.500.000 (One-Time)',
-          'Monthly Fee: IDR 5.000.000/mo -> IDR 2.500.000 / month (50% Loyalty Discount because paired with 10% commission).',
-          '24/7 WhatsApp & Web AI, 132+ languages, Zero-Clash takeover, live rate-match & multi-dept routing.'
-        ]
-      },
-      {
-        tag: 'PERFORMANCE MODEL',
-        val: '10% Commission',
-        label: 'JourneyOn Direct Booking Fee',
-        color: COLOR_OPTIMAL,
-        bullets: [
-          'Performance-only: charged strictly on successful direct web & AI reservations.',
-          'Cuts OTA fees by half: Saves 8%–12% net margin vs 18%–22% OTA commissions.',
-          '100% Guest Data Ownership retained by hotel.',
-          'Note: Recommended IBE OMNI (~IDR 2M/mo) subscribed directly by hotel.'
-        ]
-      }
-    ];
-
-    cards.forEach((c, idx) => {
-      const xPos = 0.8 + idx * 2.9;
-      slide.addShape(pres.ShapeType.roundRect, { x: xPos, y: 1.35, w: 2.65, h: 2.7, r: 0.08, fill: { color: BG_WHITE }, line: { color: CARD_BORDER, width: 1 } });
-      slide.addShape(pres.ShapeType.rect, { x: xPos, y: 1.35, w: 2.65, h: 0.06, fill: { color: c.color } });
-      slide.addText(c.tag, { x: xPos + 0.18, y: 1.48, w: 2.3, h: 0.2, fontSize: 7, bold: true, color: c.color, fontFace: 'Helvetica', charSpacing: 0.8 });
-      slide.addText(c.val, { x: xPos + 0.18, y: 1.72, w: 2.3, h: 0.35, fontSize: 13, bold: true, color: c.color, fontFace: 'Georgia', align: 'center' });
-      slide.addText(c.label, { x: xPos + 0.18, y: 2.08, w: 2.3, h: 0.22, fontSize: 7, bold: true, color: COLOR_KICKER, fontFace: 'Helvetica', align: 'center', textTransform: 'uppercase' });
-      
-      const bObj = c.bullets.map(b => ({ text: b, options: { bullet: true, fontSize: 7.2, color: COLOR_TEXT_BODY, lineSpacingMultiple: 1.2 } }));
-      slide.addText(bObj, { x: xPos + 0.18, y: 2.35, w: 2.3, h: 1.6, fontFace: 'Helvetica' });
-    });
-
-    slide.addShape(pres.ShapeType.roundRect, { x: 0.8, y: 4.25, w: 8.4, h: 0.55, r: 0.06, fill: { color: BRAND_DARK } });
-    slide.addText([{ text: 'Break-Even Calculation: Shifting just ' }, { text: '15–20 room nights per month', options: { bold: true, color: COLOR_HIGHLIGHT } }, { text: ' from OTAs to direct booking ' }, { text: 'fully recovers the setup cost in month 1', options: { bold: true, color: COLOR_HIGHLIGHT } }, { text: '.' }], { x: 0.95, y: 4.35, w: 8.1, h: 0.35, fontSize: 8.5, color: 'FFFFFF', fontFace: 'Helvetica' });
-  }
-
-  // =========================================================================
-  // SLIDE 8: RAPID 14-DAY ROADMAP
-  // =========================================================================
-  {
-    const slide = pres.addSlide();
-    applyContentSlide(slide, 'RAPID IMPLEMENTATION · 14-DAY TIMELINE', 'Fast 14-day turnaround with zero operational disruption to hotel operations', 8);
+    applyContentSlide(slide, 'RAPID IMPLEMENTATION · 14-DAY TIMELINE', 'Fast 14-day turnaround with zero operational disruption to hotel operations', 7);
 
     const steps = [
       { step: 'PHASE 1 · DAYS 1–4', title: 'Cloud Isolation & Web', desc: 'Deploy Next.js 14 on isolated cloud VPS. Setup WAF, SSL, and DNS remapping with zero interference to hotel mail servers.' },
       { step: 'PHASE 2 · DAYS 5–8', title: 'Booking Engine Sync', desc: 'Assist OMNI Hotelier setup & verify 2-way Channel Manager to Booking.com, Agoda, Traveloka, and Tiket.com. Test payment gateway.' },
-      { step: 'PHASE 3 · DAYS 9–11', title: 'AI Knowledge Ingestion', desc: 'Ingest 152 rooms, ballroom specs, and Marlin menus into AI Concierge. Connect official hotel WhatsApp & Web Drawer.' },
+      { step: 'PHASE 3 · DAYS 9–11', title: 'AI Knowledge Ingestion', desc: 'Ingest 152 rooms, ballroom specs, and Marlin menus into AI Concierge. Connect Web Chat Drawer & Official WhatsApp.' },
       { step: 'PHASE 4 · DAYS 12–14', title: 'QA & Official Launch', desc: 'Execute live booking test, zero-clash human takeover verification, front office training, and official go-live!' }
     ];
 
@@ -343,7 +283,7 @@ async function buildV2Deck() {
   }
 
   // =========================================================================
-  // SLIDE 9: THANK YOU & DISCUSSION
+  // SLIDE 8: THANK YOU & DISCUSSION
   // =========================================================================
   {
     const slide = pres.addSlide();
@@ -365,11 +305,114 @@ async function buildV2Deck() {
   }
 
   // =========================================================================
-  // SLIDE 10: [APPENDIX] RECOMMENDED IBE & CHANNEL MANAGER: OMNI HOTELIER
+  // SLIDE 9: PRICING 1 · WEBSITE REVAMP & AI BOOKING ASSISTANCE
   // =========================================================================
   {
     const slide = pres.addSlide();
-    applyContentSlide(slide, 'APPENDIX · RECOMMENDED THIRD-PARTY BOOKING ENGINE', 'OMNI Hotelier (~Rp 2M/mo): High-converting booking engine & 2-way OTA distribution', 'Slide 10 (Appendix)', 'B45309');
+    applyContentSlide(slide, 'FINANCIAL FRAMEWORK (1/3) · CORE INVESTMENT MODEL', 'Transparent pricing designed to pay for itself in Month 1', 'Slide 9 (Pricing 1/3)');
+
+    const cards = [
+      {
+        tag: 'PILLAR 1 · ONE-TIME SETUP',
+        val: 'IDR 30.000.000',
+        label: 'Website Revamp & GEO Engine',
+        color: BRAND_DARK,
+        bullets: [
+          'Published Market Rate: IDR 50.000.000',
+          'Exclusive Loyalty Discount: -IDR 20.000.000 (Nett)',
+          'Full Next.js 14 rebuild, server cloud isolation, Schema.org @graph 152 keys, /llms.txt, conversion tracking & 1st year maintenance.'
+        ]
+      },
+      {
+        tag: 'PILLAR 2 · AI BOOKING ASSISTANCE',
+        val: 'IDR 2.500.000 Setup',
+        label: '+ IDR 3.000.000 / Month',
+        color: COLOR_KICKER,
+        bullets: [
+          'Setup & Knowledge Ingestion: IDR 2.500.000 (One-Time)',
+          'Monthly Subscription: IDR 5.000.000/mo -> IDR 3.000.000 / month (Exclusive Ketapang Discount).',
+          'Omnichannel 24/7: Deployed on Web Chat Drawer & Official WhatsApp (+62 877-5678-0745), 132+ languages, live rate sync & Zero-Clash takeover.'
+        ]
+      },
+      {
+        tag: 'ROOM PERFORMANCE MODEL',
+        val: '10% Commission',
+        label: 'Direct Booking Fee',
+        color: COLOR_OPTIMAL,
+        bullets: [
+          'Performance-only: charged strictly on successful direct web & AI reservations.',
+          'Cuts OTA fees by half: Saves 8%–12% net margin vs 18%–22% OTA commissions.',
+          '100% Guest Data Ownership retained by hotel.',
+          'Note: Recommended IBE OMNI (~IDR 2M/mo) subscribed directly by hotel.'
+        ]
+      }
+    ];
+
+    cards.forEach((c, idx) => {
+      const xPos = 0.8 + idx * 2.9;
+      slide.addShape(pres.ShapeType.roundRect, { x: xPos, y: 1.35, w: 2.65, h: 2.7, r: 0.08, fill: { color: BG_WHITE }, line: { color: CARD_BORDER, width: 1 } });
+      slide.addShape(pres.ShapeType.rect, { x: xPos, y: 1.35, w: 2.65, h: 0.06, fill: { color: c.color } });
+      slide.addText(c.tag, { x: xPos + 0.18, y: 1.48, w: 2.3, h: 0.2, fontSize: 7, bold: true, color: c.color, fontFace: 'Helvetica', charSpacing: 0.8 });
+      slide.addText(c.val, { x: xPos + 0.18, y: 1.72, w: 2.3, h: 0.35, fontSize: 13, bold: true, color: c.color, fontFace: 'Georgia', align: 'center' });
+      slide.addText(c.label, { x: xPos + 0.18, y: 2.08, w: 2.3, h: 0.22, fontSize: 7.2, bold: true, color: COLOR_KICKER, fontFace: 'Helvetica', align: 'center', textTransform: 'uppercase' });
+      
+      const bObj = c.bullets.map(b => ({ text: b, options: { bullet: true, fontSize: 7.2, color: COLOR_TEXT_BODY, lineSpacingMultiple: 1.2 } }));
+      slide.addText(bObj, { x: xPos + 0.18, y: 2.35, w: 2.3, h: 1.6, fontFace: 'Helvetica' });
+    });
+
+    slide.addShape(pres.ShapeType.roundRect, { x: 0.8, y: 4.25, w: 8.4, h: 0.55, r: 0.06, fill: { color: BRAND_DARK } });
+    slide.addText([{ text: 'Break-Even Calculation: Shifting just ' }, { text: '15–20 room nights per month', options: { bold: true, color: COLOR_HIGHLIGHT } }, { text: ' from OTAs to direct booking ' }, { text: 'fully recovers the setup cost in month 1', options: { bold: true, color: COLOR_HIGHLIGHT } }, { text: '.' }], { x: 0.95, y: 4.35, w: 8.1, h: 0.35, fontSize: 8.5, color: 'FFFFFF', fontFace: 'Helvetica' });
+  }
+
+  // =========================================================================
+  // SLIDE 10: PRICING 2 · FEATURE: AI BOOKING ASSISTANCE MICE PREMIUM
+  // =========================================================================
+  {
+    const slide = pres.addSlide();
+    applyContentSlide(slide, 'FINANCIAL FRAMEWORK (2/3) · MICE & BANQUET REVENUE ENGINE', 'MICE Premium: 24/7 Corporate & Event RFP Qualification on 10% Revenue Share', 'Slide 10 (Pricing 2/3)');
+
+    // Card 1
+    slide.addShape(pres.ShapeType.roundRect, { x: 0.8, y: 1.35, w: 2.65, h: 2.7, r: 0.08, fill: { color: BG_WHITE }, line: { color: CARD_BORDER, width: 1 } });
+    slide.addShape(pres.ShapeType.rect, { x: 0.8, y: 1.35, w: 2.65, h: 0.06, fill: { color: BRAND_DARK } });
+    slide.addText('THE MICE OPPORTUNITY', { x: 0.98, y: 1.48, w: 2.3, h: 0.2, fontSize: 7, bold: true, color: BRAND_DARK, fontFace: 'Helvetica', charSpacing: 0.8 });
+    slide.addText('Blambangan Ballroom (700 Pax)', { x: 0.98, y: 1.72, w: 2.3, h: 0.45, fontSize: 10.5, bold: true, color: COLOR_TEXT_HEAD, fontFace: 'Georgia' });
+    slide.addText('High-Ticket Event Demand: Corporate gatherings, government conventions, and beachfront weddings represent Ketapang Indah\'s highest-margin revenue stream.', { x: 0.98, y: 2.22, w: 2.3, h: 0.85, fontSize: 7.6, color: COLOR_TEXT_BODY, fontFace: 'Helvetica', lineSpacingMultiple: 1.25 });
+    slide.addText('The Bottleneck: Organizers inquire off-hours or expect instant proposals. Slow manual email response causes organizers to book competing hotels.', { x: 0.98, y: 3.12, w: 2.3, h: 0.85, fontSize: 7.6, color: COLOR_TEXT_BODY, fontFace: 'Helvetica', lineSpacingMultiple: 1.25 });
+
+    // Card 2
+    slide.addShape(pres.ShapeType.roundRect, { x: 3.7, y: 1.35, w: 2.65, h: 2.7, r: 0.08, fill: { color: BG_WHITE }, line: { color: CARD_BORDER, width: 1 } });
+    slide.addShape(pres.ShapeType.rect, { x: 3.7, y: 1.35, w: 2.65, h: 0.06, fill: { color: COLOR_OPTIMAL } });
+    slide.addText('AI MICE QUALIFICATION', { x: 3.88, y: 1.48, w: 2.3, h: 0.2, fontSize: 7, bold: true, color: COLOR_OPTIMAL, fontFace: 'Helvetica', charSpacing: 0.8 });
+    slide.addText('Automated RFP Intake & Dispatch', { x: 3.88, y: 1.72, w: 2.3, h: 0.45, fontSize: 10.5, bold: true, color: COLOR_TEXT_HEAD, fontFace: 'Georgia' });
+    slide.addText('Structured Lead Intake: Ingests event dates, attendee count, layout (theater, classroom, roundtable), catering tiers, and estimated budget via Web Chat & WhatsApp.', { x: 3.88, y: 2.22, w: 2.3, h: 0.85, fontSize: 7.6, color: COLOR_TEXT_BODY, fontFace: 'Helvetica', lineSpacingMultiple: 1.25 });
+    slide.addText('Instant Sales Alert: Delivers pre-qualified lead briefs straight to the Director of Sales / MICE PIC with automated client follow-ups & PDF brochure holds.', { x: 3.88, y: 3.12, w: 2.3, h: 0.85, fontSize: 7.6, color: COLOR_TEXT_BODY, fontFace: 'Helvetica', lineSpacingMultiple: 1.25 });
+
+    // Card 3
+    slide.addShape(pres.ShapeType.roundRect, { x: 6.6, y: 1.35, w: 2.65, h: 2.7, r: 0.08, fill: { color: BG_WHITE }, line: { color: CARD_BORDER, width: 1 } });
+    slide.addShape(pres.ShapeType.rect, { x: 6.6, y: 1.35, w: 2.65, h: 0.06, fill: { color: COLOR_HIGHLIGHT } });
+    slide.addText('MICE COMMERCIAL MODEL', { x: 6.78, y: 1.48, w: 2.3, h: 0.2, fontSize: 7, bold: true, color: 'B45309', fontFace: 'Helvetica', charSpacing: 0.8 });
+    slide.addText('10% Rev Share', { x: 6.78, y: 1.72, w: 2.3, h: 0.35, fontSize: 13, bold: true, color: 'B45309', fontFace: 'Georgia', align: 'center' });
+    slide.addText('Confirmed MICE Production', { x: 6.78, y: 2.08, w: 2.3, h: 0.22, fontSize: 7.2, bold: true, color: COLOR_KICKER, fontFace: 'Helvetica', align: 'center', textTransform: 'uppercase' });
+
+    const miceBullets = [
+      'Zero Fixed Retainer: No additional monthly subscription fee for MICE.',
+      '10% Revenue Sharing: Charged strictly on confirmed, completed direct MICE & wedding bookings closed via the AI system.',
+      'Zero Risk: JourneyOn only earns when Ketapang Indah successfully books banquet revenue!'
+    ];
+    const miceObj = miceBullets.map(b => ({ text: b, options: { bullet: true, fontSize: 7.2, color: COLOR_TEXT_BODY, lineSpacingMultiple: 1.2 } }));
+    slide.addText(miceObj, { x: 6.78, y: 2.35, w: 2.3, h: 1.6, fontFace: 'Helvetica' });
+
+    // Bottom Banner
+    slide.addShape(pres.ShapeType.roundRect, { x: 0.8, y: 4.25, w: 8.4, h: 0.55, r: 0.06, fill: { color: BRAND_DARK } });
+    slide.addText([{ text: 'Zero-Risk Alignment: Transform high-ticket MICE inquiries into guaranteed banquet revenue with ' }, { text: 'zero operational overhead and zero upfront financial risk', options: { bold: true, color: COLOR_HIGHLIGHT } }, { text: '.' }], { x: 0.95, y: 4.35, w: 8.1, h: 0.35, fontSize: 8.5, color: 'FFFFFF', fontFace: 'Helvetica' });
+  }
+
+  // =========================================================================
+  // SLIDE 11: PRICING 3 / APPENDIX · RECOMMENDED IBE: OMNI HOTELIER
+  // =========================================================================
+  {
+    const slide = pres.addSlide();
+    applyContentSlide(slide, 'FINANCIAL FRAMEWORK (3/3) · RECOMMENDED THIRD-PARTY BOOKING ENGINE', 'OMNI Hotelier (~Rp 2M/mo): High-converting booking engine & 2-way OTA distribution', 'Slide 11 (Pricing 3/3 · Appendix)', 'B45309');
 
     const cards = [
       {
@@ -388,7 +431,7 @@ async function buildV2Deck() {
         tag: 'COST & NATIVE AI SYNERGY',
         title: 'Save 50% vs Legacy Systems',
         desc1: 'High ROI: At ~IDR 2.000.000/month, OMNI saves hotel ±IDR 12.000.000/year compared to expensive foreign engines (ROIBack ±IDR 2M+/mo).',
-        desc2: 'Native API to JourneyOn AI: Connects directly with our AI Concierge, allowing real-time rate queries and instant locked booking links in WhatsApp chats.'
+        desc2: 'Native API to JourneyOn AI: Connects directly with our AI Booking Assistance, allowing real-time rate queries and instant locked booking links in chat.'
       }
     ];
 
